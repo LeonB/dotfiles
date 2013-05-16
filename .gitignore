@@ -9,6 +9,7 @@
 !/.bashrc.d/
 !/.gemrc
 !/.gitignore
+!/.pearrc
 !/.pip/pip.conf
 !/.pydistutils.cfg
 !/.tmux.conf
