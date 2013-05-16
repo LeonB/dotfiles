@@ -4,6 +4,9 @@
 /.vim/backup/
 /.vim/bundle/
 
+!/.bash_aliases
+!/.bashrc
+!/.bashrc.d/
 !/.gitignore
 !/.tmux.conf
 !/.vim/
