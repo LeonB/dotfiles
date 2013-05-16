@@ -1,0 +1,10 @@
+!/.gitignore
+!/.vim/
+!/.vim/bundle/vundle/
+!/.vimrc
+.ropeproject
+/.tmux.conf
+/*
+/*/
+/.vim/backup/
+/.vim/bundle/
