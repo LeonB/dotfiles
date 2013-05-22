@@ -8,6 +8,7 @@
 !/.bashrc
 !/.bashrc.d/
 !/.gemrc
+!/.gitconfig
 !/.gitignore
 !/.irbrc
 !/.pearrc

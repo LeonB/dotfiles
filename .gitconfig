@@ -1,0 +1,11 @@
+[user]
+	email = leon@tim-online.nl
+	name = Leon Bogaert
+[status]
+	showUntrackedFiles = all
+[push]
+	default = simple
+[color]
+	diff = auto
+[alias]
+	unstage = reset HEAD --
