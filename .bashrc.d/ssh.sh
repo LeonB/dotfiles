@@ -1,1 +1,2 @@
-$HOME/Software/bin/compile_ssh_config
+# Compile ~/.ssh/config on every shell start
+compile_ssh_config
