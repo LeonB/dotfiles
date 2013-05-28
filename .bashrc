@@ -121,9 +121,3 @@ do
         source $file
     fi
 done
-
-# bash aliases & scripts
-for file in ~/Software/bin/bash/*.sh
-do
-    source $file
-done
