@@ -7,5 +7,4 @@ alias nano="vim"
 #alias rm="gvfs-trash"
 alias term="gnome-terminal"
 alias open="xdg-open"
-alias remotefs='. /home/leon/Software/bin/remotefs' #to make the `cd` work
 alias hamster='hamster-cli'
