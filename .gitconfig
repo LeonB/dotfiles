@@ -9,3 +9,5 @@
 	diff = auto
 [alias]
 	unstage = reset HEAD --
+[merge]
+	ff = only
