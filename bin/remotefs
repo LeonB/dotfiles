@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# -u = no output buffering
+/usr/bin/python -u $HOME/bin/remotefs.py $*
