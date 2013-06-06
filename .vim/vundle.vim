@@ -140,4 +140,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'cakebaker/scss-syntax.vim'
 
 "simplify the line movement in vim
-Bundle 'yueyoum/vim-linemovement'
+"Bundle 'yueyoum/vim-linemovement'
+
+"swap line plugin for vim
+"Bundle 'dougnukem/vim-swap-lines'
+

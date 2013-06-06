@@ -86,7 +86,7 @@ let g:Tb_MoreThanOne=99999999 "Always open the tabbar.vim
 runtime vundle.vim
 runtime plugin_mappings.vim
 
-runtime macros/smarthome_end.vim
+runtime macros.vim
 runtime theme.vim
 "runtime plugins/autonum.vim "Deze zou ik zelf overnieuw moeten maken
 "au FileType html,xhtml,xml,php so ~/.vim/bundle/HTML-AutoCloseTag/ftplugin/html_autoclosetag.vim

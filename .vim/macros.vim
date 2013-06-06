@@ -33,3 +33,4 @@
 
 runtime macros/smarthome_end.vim
 runtime macros/linenumber_toggle.vim
+runtime macros/move_lines.vim
