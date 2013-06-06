@@ -136,3 +136,6 @@ autocmd BufWinEnter * if line2byte(line("$") + 1) > 1000000 | syntax clear | end
 
 " Add eol to files that don't have it
 "au BufWritePre * if !&bin | set eol | endif
+
+" Fix for not detecting puppet filetype properly :s
+au! BufRead,BufNewFile *.pp setfiletype puppet
