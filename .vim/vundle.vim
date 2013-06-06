@@ -1,6 +1,9 @@
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+"Puppet niceties for your Vim setup
+Bundle 'rodjek/vim-puppet'
+
 " original repos on github
 "let Vundle manage Vundle
 Bundle 'gmarik/vundle'
@@ -72,9 +75,6 @@ Bundle 'LeonB/vim-markdown-preview'
 "VimTips / fortune
 "Bundle 'hobbestigrou/vimtips-fortune'
 
-"Puppet niceties for your Vim setup
-Bundle 'rodjek/vim-puppet'
-
 "PHP-Correct-Indenting VIM script
 Bundle '2072/PHP-Indenting-for-VIm'
 
@@ -122,9 +122,12 @@ Bundle 'LeonB/HTML-AutoCloseTag'
 "Bundle 'autonumbering-in-vim'
 
 "Help folks to align text, eqns, declarations, tables, etc
-Bundle 'Align'
+"Bundle 'Align'
 
-"Automatic folding of PHP functions, classes,.. (also folds related PhpDoc) 
+"Vim script for text filtering and alignment
+Bundle 'godlygeek/tabular'
+
+"Automatic folding of PHP functions, classes,.. (also folds related PhpDoc)
 Bundle 'phpfolding.vim'
 
 "The ultimate statusline/prompt utility
