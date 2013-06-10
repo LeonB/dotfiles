@@ -32,8 +32,9 @@ let g:NERDTreeWinSize = 50
 "CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-
+"let g:ctrlp_by_filename = 1
 "let g:ctrlp_cmd = 'CtrlPMixed'
+
 "linemovement.vim
 let g:linemovement_up="<c-Up>"
 let g:linemovement_down="<c-Down>"

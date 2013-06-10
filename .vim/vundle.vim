@@ -58,7 +58,7 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'bitc/vim-bad-whitespace'
 
 "A vim script to provide a ropevim omnicomplete function
-Bundle 'rygwdn/rope-omni'
+"Bundle 'rygwdn/rope-omni'
 
 "Color theme Hemisu
 Bundle 'noahfrederick/Hemisu'
@@ -131,7 +131,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'phpfolding.vim'
 
 "The ultimate statusline/prompt utility
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 "A modern side panel for Vim
 "Bundle 'mihaifm/vimpanel'
