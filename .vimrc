@@ -32,17 +32,18 @@ set showcmd
 "set indenting on
 filetype plugin indent on
 
-"behave like other text editors (ctrl+c, ctrl+v, backspace, tab)
-"runtime mswin.vim
-
 "make backspace work like most other apps
 set backspace=2
 
-"this is because mswin fucks up het arrow-keys
-":vmap <down> j
-":vmap <up> k
-":vmap <left> h
-":vmap <right> l
+"Disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
 
 "allow multiple open files
 :set hidden
@@ -139,3 +140,4 @@ autocmd BufWinEnter * if line2byte(line("$") + 1) > 1000000 | syntax clear | end
 
 " Fix for not detecting puppet filetype properly :s
 au! BufRead,BufNewFile *.pp setfiletype puppet
+
