@@ -5,14 +5,14 @@ import os
 import subprocess
 import sys
 
-def mount_remote_fs(hostname, mount_path):
+def mount_remote_fs(hostname, remote_path, mount_path):
     if not os.path.isdir(mount_path):
         # Create the mount point
         os.mkdir(mount_path)
 
     if not os.path.ismount(mount_path):
         # mount it
-        cmd = mount_command(hostname, mount_path)
+        cmd = mount_command(hostname, remote_path, mount_path)
         subprocess.check_call(cmd)
 
     sys.stdout.write("Mounted %s on %s\n" % (hostname, mount_path))
@@ -43,8 +43,8 @@ def unmount_remote_fs(hostname, mount_path):
     else:
         sys.stdout.write("%s is not mounted\n" % mount_path)
 
-def mount_command(hostname, mount_path):
-    uri = hostname + ':'
+def mount_command(hostname, remote_path, mount_path):
+    uri = hostname + ':' + remote_path
     cmd = ['/usr/bin/sshfs', uri, mount_path]
     if args.options:
         cmd.append('-o')
@@ -89,6 +89,11 @@ def parse_args():
     parser.add_argument('mount_path', nargs='?')
     args = parser.parse_args()
 
+    if ':' in args.hostname:
+        args.hostname, args.remote_path = args.hostname.split(':')
+    else:
+        args.remote_path = ''
+
     # If no mount path: assign a default one
     if not args.mount_path:
         args.mount_path = os.path.expandvars("$HOME/Public/" + args.hostname)
@@ -98,10 +103,10 @@ def parse_args():
 # Do stuff
 args = parse_args()
 if args.unmount:
-    unmount_remote_fs(args.hostname, args.mount_path)
+    unmount_remote_fs(args.hostname, args,nargs.mount_path)
 else:
     try:
-        mount_remote_fs(args.hostname, args.mount_path)
+        mount_remote_fs(args.hostname, args.remote_path, args.mount_path)
     except KeyboardInterrupt as e:
         unmount_remote_fs(args.hostname, args.mount_path)
         sys.exit(0)
