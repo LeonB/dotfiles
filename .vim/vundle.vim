@@ -128,7 +128,7 @@ Bundle 'LeonB/HTML-AutoCloseTag'
 Bundle 'godlygeek/tabular'
 
 "Automatic folding of PHP functions, classes,.. (also folds related PhpDoc)
-Bundle 'phpfolding.vim'
+"Bundle 'phpfolding.vim'
 
 "The ultimate statusline/prompt utility
 "Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
