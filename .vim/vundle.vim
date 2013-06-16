@@ -48,9 +48,6 @@ Bundle 'sjl/gundo.vim'
 "precision colorscheme for the vim text editor
 Bundle 'altercation/vim-colors-solarized'
 
-"A parser for a condensed HTML format
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-
 "MatchParen for HTML tags
 "Bundle 'gregsexton/MatchTag'
 
@@ -65,9 +62,6 @@ Bundle 'noahfrederick/Hemisu'
 
 "Color theme Bad Wolf
 Bundle 'sjl/badwolf'
-
-"HTML/XML tag motion
-Bundle 'tejr/nextag.git'
 
 "Markdown previewer
 Bundle 'LeonB/vim-markdown-preview'
@@ -104,7 +98,8 @@ Bundle 'taglist.vim'
 "Minimalistic buffer tabs saving screen space
 "Bundle 'buftabs'
 
-"Bundle 'bufpos' "switch buffer with Alt-<number>
+"switch buffer with Alt-<number>
+"Bundle 'bufpos'
 
 "extended % matching for HTML
 Bundle 'matchit.zip'
@@ -116,12 +111,13 @@ Bundle 'matchit.zip'
 "Bundle 'HTML-AutoCloseTag'
 
 "Fork of HTML-AutoCloseTag that works with php indenting
-Bundle 'LeonB/HTML-AutoCloseTag'
+"Bundle 'LeonB/HTML-AutoCloseTag'
 
 "auto-numbers a list
 "Bundle 'autonumbering-in-vim'
 
 "Help folks to align text, eqns, declarations, tables, etc
+"(Tabular is better)
 "Bundle 'Align'
 
 "Vim script for text filtering and alignment
