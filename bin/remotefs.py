@@ -103,7 +103,7 @@ def parse_args():
 # Do stuff
 args = parse_args()
 if args.unmount:
-    unmount_remote_fs(args.hostname, args,nargs.mount_path)
+    unmount_remote_fs(args.hostname, args.mount_path)
 else:
     try:
         mount_remote_fs(args.hostname, args.remote_path, args.mount_path)
