@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Updating rbenv..."
+cd $HOME/.rbenv/
+git pull
+echo "Updating ruby-build..."
+cd $HOME/.rbenv/plugins/ruby-build/
+git pull
