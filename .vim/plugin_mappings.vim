@@ -39,3 +39,12 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:linemovement_up="<c-Up>"
 let g:linemovement_down="<c-Down>"
 
+"Tabularize.vim
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a> :Tabularize /=><CR>
+  vmap <Leader>a> :Tabularize /=><CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
