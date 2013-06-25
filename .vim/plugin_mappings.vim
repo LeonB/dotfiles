@@ -29,6 +29,9 @@ let g:syntastic_mode_map = { 'mode': 'passive' }
 "NERDtree
 let g:NERDTreeWinSize = 50
 
+"NERDcommenter
+let g:NERDSpaceDelims = 1
+
 "CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
