@@ -1,0 +1,10 @@
+#!/bin/bash
+
+commit=$1
+export_file=$2
+
+if [ -z "$export_file" ]; then
+	export_file="$1.tar"
+fi
+
+git diff-tree -r --no-commit-id --name-only --diff-filter=ACMRT $commit | xargs tar -rf $export_file
