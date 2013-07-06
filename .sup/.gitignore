@@ -1,0 +1,9 @@
+*.bak
+/contacts.txt
+/drafts/
+/exception-log.txt
+/labels.txt
+/log
+/sent.mbox
+/sup-exception-log.txt
+/xapian/

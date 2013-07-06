@@ -1,0 +1,16 @@
+--- 
+- !masanjin.net,2006-10-01/Redwood/Maildir 
+  uri: maildir:/home/leon/Maildir
+  usual: true
+  archived: false
+  id: 1
+  labels: []
+
+- !masanjin.net,2006-10-01/Redwood/Maildir 
+  uri: maildir:/home/leon/Maildir/.Sent
+  usual: true
+  archived: true
+  id: 2
+  labels:
+  - sent
+
