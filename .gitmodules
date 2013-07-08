@@ -9,7 +9,7 @@
 	url = https://github.com/carsomyr/rbenv-bundler.git
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
-	url = git://github.com/robbyrussell/oh-my-zsh.git
+	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule ".oh-my-zsh"]
 	path = .vim/bundle/vundle
 	url = https://github.com/gmarik/vundle.git
