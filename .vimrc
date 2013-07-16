@@ -50,6 +50,8 @@ inoremap <Right> <NOP>
 
 set enc=utf-8
 set fileencoding=utf-8
+set spelllang=nl,en
+set spellfile=~/.vim/spell/custom.add
 
 set nocompatible          "Use VIM not vi (affects other options?)
 set textwidth=80          "force text width off (prev at 80 chars/line)
