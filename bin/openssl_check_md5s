@@ -1,0 +1,79 @@
+#!/bin/bash
+
+PARAMETERS=$*
+
+get_filetype()
+{
+	file="$1"
+	echo ${file##*.}
+}
+
+md5_cert()
+{
+	file="$1"
+	openssl x509 -noout -modulus -in $file | openssl md5
+	exit 0
+}
+
+md5_key()
+{
+	file="$1"
+	grep "ENCRYPTED" $file &> /dev/null
+	RETVAL=$?
+
+	if [ $RETVAL -eq 0 ]
+	then
+		echo "file is encrypted: skipping"
+		exit 1
+	fi
+
+	openssl rsa -noout -modulus -in $file | openssl md5
+}
+
+md5_csr()
+{
+	file="$1"
+	openssl req -noout -modulus -in $file | openssl md5
+	exit 0
+}
+
+for parameter in $PARAMETERS
+do
+	if [ ! -f $parameter ]
+	then
+		continue
+	fi
+
+	filetype=$(get_filetype "$parameter")
+	md5=""
+
+	case "$filetype" in
+		"cert" | "crt" )
+			md5=$(md5_cert "$parameter")
+			retval=$?
+			;;
+
+		"key" | "key.unencrypted" )
+			md5=$(md5_key "$parameter")
+			retval=$?
+			;;
+
+		"csr" )
+			md5=$(md5_csr "$parameter")
+			retval=$?
+			;;
+	esac
+
+	if [ "$md5" = "" ]
+	then
+		continue
+	fi
+
+	if [ $retval -eq 0 ]
+	then
+		md5=$(echo $md5 | cut -d " " -f2)
+	fi
+
+	echo -e "$parameter:\t$md5"
+done
+

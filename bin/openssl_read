@@ -1,0 +1,53 @@
+#!/bin/bash
+
+get_filetype()
+{
+	file="$1"
+	echo ${file##*.}
+}
+
+md5_cert()
+{
+	file="$1"
+	openssl x509 -in $file -text -noout
+	exit 0
+}
+
+md5_key()
+{
+	file="$1"
+	openssl rsa -in $file -text -noout
+	exit 0
+}
+
+md5_csr()
+{
+	file="$1"
+	openssl req -in $file -text -noout
+	exit 0
+}
+
+FILE=$1
+
+if [ ! -f $FILE ]
+then
+	exit 2
+fi
+
+filetype=$(get_filetype "$FILE")
+md5=""
+
+case "$filetype" in
+	"cert" | "crt" )
+		echo "$(md5_cert $FILE)"
+		;;
+
+	"key" | "key.unencrypted" )
+		echo "$(md5_key $FILE)"
+		;;
+
+	"csr" )
+		echo "$(md5_csr $FILE)"
+		;;
+esac
+

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+SERVERNAME="$1"
+OUTPUT_FILE="$SERVERNAME.cert"
+
+if [ "$1" = "" ]
+then
+	exit 255
+fi
+
+if [ -f "$OUTPUT_FILE" ]
+then
+	echo "File $OUTPUT_FILE already exists"
+	exit 254
+fi
+
+openssl s_client -showcerts -connect $SERVERNAME:443 > $OUTPUT_FILE </dev/null
