@@ -64,7 +64,7 @@ Bundle 'noahfrederick/Hemisu'
 Bundle 'sjl/badwolf'
 
 "Markdown previewer
-Bundle 'LeonB/vim-markdown-preview'
+" Bundle 'LeonB/vim-markdown-preview'
 
 "VimTips / fortune
 "Bundle 'hobbestigrou/vimtips-fortune'
