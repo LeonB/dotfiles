@@ -1,0 +1,3 @@
+#!/bin/bash
+
+gimli -removefrontmatter -outputdir `pwd` -f $*
