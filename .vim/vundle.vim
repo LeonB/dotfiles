@@ -144,3 +144,8 @@ Bundle 'cakebaker/scss-syntax.vim'
 "swap line plugin for vim
 "Bundle 'dougnukem/vim-swap-lines'
 
+" unite-ssh doesn't work at the moment
+" Bundle 'Shougo/unite.vim'
+" Bundle 'Shougo/vimproc'
+" Bundle 'Shougo/vimfiler'
+" Bundle 'Shougo/unite-ssh'
