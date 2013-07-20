@@ -11,5 +11,4 @@ end
 highlight BadWhitespace ctermbg=red guisp=red gui=undercurl guifg=NONE guibg=NONE
 
 " Lines longer that 80-characters: colorize
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.*/
+hi ColorColumn guibg=#293739 ctermbg=235

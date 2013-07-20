@@ -55,7 +55,8 @@ set spellfile=~/.vim/spell/custom.add
 
 set nocompatible          "Use VIM not vi (affects other options?)
 set textwidth=80          "force text width off (prev at 80 chars/line)
-"set colorcolumn=+1        "Highlight text after 'textwidth'
+" Set different bgcolor for everything > `textwidth`
+execute "set colorcolumn=" . "+" . join(range(1,150), ',+')
 set formatoptions=tcqnlr  "include numbered lists when formatting with gq
 set autoindent            "set automatic indenting
 set modelines=0           "prevent some security exploits
