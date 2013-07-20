@@ -51,3 +51,6 @@ if exists(":Tabularize")
   nmap <Leader>a: :Tabularize /:\zs<CR>
   vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
+
+"airline
+let g:airline_powerline_fonts = 1
