@@ -17,8 +17,8 @@ colorscheme molokai
 
 "set guifont=Monospace\ 10
 "set guifont=Monaco\ 10
-"set guifont=UbuntuMono\ 12
-set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
+set guifont=UbuntuMono\ 12
+" set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
 "set anti
 "set noanti
 "set guifont=Consolas\ 10
