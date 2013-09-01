@@ -1,3 +1,4 @@
+filetype off "see: https://github.com/spf13/spf13-vim/pull/128
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
