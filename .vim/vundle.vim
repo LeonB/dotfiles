@@ -8,6 +8,9 @@ Bundle 'rodjek/vim-puppet'
 "let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
+" Vim/Ruby Configuration File
+Bundle 'vim-ruby/vim-ruby'
+
 " Moloikai color scheme
 Bundle 'vim-scripts/molokai'
 
@@ -16,6 +19,9 @@ Bundle 'sickill/vim-monokai'
 
 " Molokai color scheme for Vim
 "Bundle 'tomasr/molokai'
+
+" Perl/Ruby style regexp notation for Vim
+Bundle 'othree/eregex.vim'
 
 " Vim plugin for intensely orgasmic commenting
 Bundle 'scrooloose/nerdcommenter'
@@ -72,6 +78,15 @@ Bundle 'sjl/badwolf'
 "PHP-Correct-Indenting VIM script
 Bundle '2072/PHP-Indenting-for-VIm'
 
+" Vastly improved Javascript indentation and syntax support in Vim.
+Bundle "pangloss/vim-javascript"
+
+" CoffeeScript support for vim
+Bundle 'kchmck/vim-coffee-script'
+
+" A vim plugin to display the indention levels with thin vertical lines
+" Bundle 'Yggdroot/indentLine'
+
 " vim-scripts repos
 
 "recently opened/edited files
@@ -127,7 +142,13 @@ Bundle 'godlygeek/tabular'
 "Bundle 'phpfolding.vim'
 
 "The ultimate statusline/prompt utility
-"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" super simple vim plugin to show the list of buffers in the command bar
+" Bundle 'bling/vim-bufferline'
+
+" lean & mean statusline for vim that's light as air
+" Bundle 'bling/vim-airline'
 
 "A modern side panel for Vim
 "Bundle 'mihaifm/vimpanel'
