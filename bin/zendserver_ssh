@@ -1,0 +1,11 @@
+#!/bin/bash
+
+shopt -s expand_aliases # for aliases to work
+
+# RUBYLIB="$HOME/src/vagrant.git/lib/"
+# alias vagrant="$HOME/src/vagrant.git/bin/vagrant"
+
+# VBoxManage startvm "Ubuntu 12.04: Zend Server" --type headless
+
+cd $HOME/Workspaces/prive/vagrant-zend-server
+vagrant ssh $@

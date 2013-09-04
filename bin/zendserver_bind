@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# http://superuser.com/questions/289539/custom-bash-tab-completion
+# man complete
+# man compgen
+# /etc/bash_completion.d/
+
+/usr/bin/bindfs --no-allow-other $HOME/Workspaces/werk/sites/$1 $HOME/Public/$1
