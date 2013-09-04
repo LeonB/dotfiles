@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Also look at http://ifconfig.me
+curl ifconfig.me
