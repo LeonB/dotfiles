@@ -1,4 +1,3 @@
 #!/bin/bash
 
-# Also look at http://ifconfig.me
-curl ifconfig.me
+dig +short myip.opendns.com @resolver1.opendns.com
