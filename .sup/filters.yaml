@@ -1,0 +1,12 @@
+---
+# add label "jira" if from JIRA
+from:jira@timonline.atlassian.net: L:jira
+
+# add label "jira" if sent to JIRA
+to:jira@timonline.atlassian.net: L:jira
+
+# Bit awkward syntax
+?
+ - from:@tim-online.nl
+ - !from:leon@tim-online.nl
+: L:timonline
