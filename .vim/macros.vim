@@ -20,7 +20,7 @@
 
 "duplicate line
 "mark position(z), yank, paste, move to(z)
-:nmap <C-d> mzyyp`z
+" :nmap <C-d> mzyyp`z
 "go to normal mode, mark position(z), yank, pate, move to(z), down, appendmode 
 :imap <C-d> <esc>mzyyp`zja
 
