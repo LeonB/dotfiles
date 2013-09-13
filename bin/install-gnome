@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Keyboard
+gsettings set org.gnome.desktop.input-sources sources "[('xkb','us+altgr-intl')]"
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:ctrl_modifier']"
+
+# Unity GUI
+gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ icon-size 36
+gsettings set com.canonical.indicator.datetime show-data true
+gsettings set com.canonical.indicator.datetime show-day true
+gsettings set com.canonical.indicator.datetime time-format '24-hour'
