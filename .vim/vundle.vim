@@ -2,172 +2,146 @@ filetype off "see: https://github.com/spf13/spf13-vim/pull/128
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-"Puppet niceties for your Vim setup
-Bundle 'rodjek/vim-puppet'
-
-" original repos on github
 "let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-" Vim/Ruby Configuration File
-Bundle 'vim-ruby/vim-ruby'
+" Syntax / File types  / Indenting {{{1
 
-" Moloikai color scheme
-Bundle 'vim-scripts/molokai'
+    "Puppet niceties for your Vim setup
+    Bundle 'rodjek/vim-puppet'
 
-" Monokai colorschem
-Bundle 'sickill/vim-monokai'
+    " Vim/Ruby Configuration File
+    Bundle 'vim-ruby/vim-ruby'
 
-" Molokai color scheme for Vim
-"Bundle 'tomasr/molokai'
+    "PHP-Correct-Indenting VIM script
+    Bundle '2072/PHP-Indenting-for-VIm'
 
-" Perl/Ruby style regexp notation for Vim
-Bundle 'othree/eregex.vim'
+    "Automatic folding of PHP functions, classes,.. (also folds related PhpDoc)
+    "Bundle 'phpfolding.vim'
 
-" Vim plugin for intensely orgasmic commenting
-Bundle 'scrooloose/nerdcommenter'
+    "Vim syntax file for scss (Sassy CSS)
+    Bundle 'cakebaker/scss-syntax.vim'
 
-" A tree explorer plugin for vim
-Bundle 'scrooloose/nerdtree'
+    "precision colorscheme for the vim text editor
+    Bundle 'altercation/vim-colors-solarized'
 
-"Syntax checking hacks for Vim"
-Bundle 'scrooloose/syntastic'
+    " Vastly improved Javascript indentation and syntax support in Vim.
+    Bundle "pangloss/vim-javascript"
 
-" Highlight colors in css files
-"Bundle 'skammer/vim-css-color'
-Bundle 'ap/vim-css-color'
+    " CoffeeScript support for vim
+    Bundle 'kchmck/vim-coffee-script'
 
-"Provides insert mode auto-completion for quotes, parens, brackets, etc
-Bundle 'Raimondi/delimitMate'
+    "Vim Markdown runtime files
+    Bundle 'tpope/vim-markdown'
 
-"quoting/parenthesizing made simple
-Bundle 'tpope/vim-surround'
+" }}}1
 
-"enable repeating supported plugin maps with \".\"
-Bundle 'tpope/vim-repeat'
+" Color schemes {{{1
 
-"Vim Markdown runtime files
-Bundle 'tpope/vim-markdown'
+    " Moloikai color scheme
+    Bundle 'vim-scripts/molokai'
 
-"visualize your Vim undo tree
-Bundle 'sjl/gundo.vim'
+    " Monokai colorschem
+    Bundle 'sickill/vim-monokai'
 
-"precision colorscheme for the vim text editor
-Bundle 'altercation/vim-colors-solarized'
+    " Molokai color scheme for Vim
+    "Bundle 'tomasr/molokai'
 
-"MatchParen for HTML tags
-"Bundle 'gregsexton/MatchTag'
+    "Color theme Hemisu
+    Bundle 'noahfrederick/Hemisu'
 
-"Highlights whitespace at the end of lines
-Bundle 'bitc/vim-bad-whitespace'
+    "Color theme Bad Wolf
+    Bundle 'sjl/badwolf'
 
-"A vim script to provide a ropevim omnicomplete function
-"Bundle 'rygwdn/rope-omni'
+" }}}1
 
-"Color theme Hemisu
-Bundle 'noahfrederick/Hemisu'
+" Navigation {{{1
 
-"Color theme Bad Wolf
-Bundle 'sjl/badwolf'
+    " A tree explorer plugin for vim
+    Bundle 'scrooloose/nerdtree'
 
-"Markdown previewer
-" Bundle 'LeonB/vim-markdown-preview'
+    "easily switch between buffers
+    Bundle 'bufexplorer.zip'
 
-"VimTips / fortune
-"Bundle 'hobbestigrou/vimtips-fortune'
+    "Fuzzy file, buffer, mru and tag finder
+    Bundle 'kien/ctrlp.vim'
 
-"PHP-Correct-Indenting VIM script
-Bundle '2072/PHP-Indenting-for-VIm'
+    "recently opened/edited files
+    Bundle 'mru.vim'
 
-" Vastly improved Javascript indentation and syntax support in Vim.
-Bundle "pangloss/vim-javascript"
+    "Fuzzy file, buffer, mru, tag, etc finder.
+    Bundle 'kien/ctrlp.vim'
 
-" CoffeeScript support for vim
-Bundle 'kchmck/vim-coffee-script'
+    "Source code browser
+    Bundle 'taglist.vim'
 
-" A vim plugin to display the indention levels with thin vertical lines
-" Bundle 'Yggdroot/indentLine'
+    "extended % matching for HTML
+    Bundle 'matchit.zip'
 
-" vim-scripts repos
+    "Updates entries in a tags file automatically when saving
+    Bundle 'AutoTag'
 
-"recently opened/edited files
-Bundle 'mru.vim'
+" }}}1
 
-"easily switch between buffers
-Bundle 'bufexplorer.zip'
+" GUI {{{1
 
-"Updates entries in a tags file automatically when saving
-Bundle 'AutoTag'
+    " Highlight colors in css files
+    "Bundle 'skammer/vim-css-color'
+    Bundle 'ap/vim-css-color'
 
-"buffer/file/command/tag/etc explorer with fuzzy matching
-"Bundle 'FuzzyFinder'
+    "Highlights whitespace at the end of lines
+    Bundle 'bitc/vim-bad-whitespace'
 
-"Fuzzy file, buffer, mru and tag finder
-Bundle 'kien/ctrlp.vim'
+    "MatchParen for HTML tags
+    "Bundle 'gregsexton/MatchTag'
 
-"Vim-script library
-Bundle 'L9'
+    "The ultimate statusline/prompt utility
+    " Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
-"Source code browser
-Bundle 'taglist.vim'
+    " super simple vim plugin to show the list of buffers in the command bar
+    " Bundle 'bling/vim-bufferline'
 
-"Minimalistic buffer tabs saving screen space
-"Bundle 'buftabs'
+    " lean & mean statusline for vim that's light as air
+    " Bundle 'bling/vim-airline'
 
-"switch buffer with Alt-<number>
-"Bundle 'bufpos'
+    "A modern side panel for Vim
+    "Bundle 'mihaifm/vimpanel'
 
-"extended % matching for HTML
-Bundle 'matchit.zip'
+    " A vim plugin to display the indention levels with thin vertical lines
+    " Bundle 'Yggdroot/indentLine'
 
-"Maintains a history of previous yanks, changes and deletes
-"Bundle 'YankRing.vim'
+" }}}1
 
-"Automatically closes HTML tags once you finish typing them
-"Bundle 'HTML-AutoCloseTag'
+" Commands {{{1
 
-"Fork of HTML-AutoCloseTag that works with php indenting
-"Bundle 'LeonB/HTML-AutoCloseTag'
+    " Perl/Ruby style regexp notation for Vim
+    Bundle 'othree/eregex.vim'
 
-"auto-numbers a list
-"Bundle 'autonumbering-in-vim'
+    " Vim plugin for intensely orgasmic commenting
+    Bundle 'scrooloose/nerdcommenter'
 
-"Help folks to align text, eqns, declarations, tables, etc
-"(Tabular is better)
-"Bundle 'Align'
+    "Syntax checking hacks for Vim"
+    Bundle 'scrooloose/syntastic'
 
-"Vim script for text filtering and alignment
-Bundle 'godlygeek/tabular'
+    "Provides insert mode auto-completion for quotes, parens, brackets, etc
+    " Bundle 'Raimondi/delimitMate'
 
-"Automatic folding of PHP functions, classes,.. (also folds related PhpDoc)
-"Bundle 'phpfolding.vim'
+    "Vim script for text filtering and alignment
+    Bundle 'godlygeek/tabular'
 
-"The ultimate statusline/prompt utility
-" Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" }}}1
 
-" super simple vim plugin to show the list of buffers in the command bar
-" Bundle 'bling/vim-bufferline'
+" Text objects {{{1
 
-" lean & mean statusline for vim that's light as air
-" Bundle 'bling/vim-airline'
+    "quoting/parenthesizing made simple
+    Bundle 'tpope/vim-surround'
 
-"A modern side panel for Vim
-"Bundle 'mihaifm/vimpanel'
+" }}}1
 
-"Fuzzy file, buffer, mru, tag, etc finder.
-Bundle 'kien/ctrlp.vim'
+" Libs {{{1
 
-"Vim syntax file for scss (Sassy CSS)
-Bundle 'cakebaker/scss-syntax.vim'
+    "enable repeating supported plugin maps with \".\"
+    Bundle 'tpope/vim-repeat'
 
-"simplify the line movement in vim
-"Bundle 'yueyoum/vim-linemovement'
+" }}}1
 
-"swap line plugin for vim
-"Bundle 'dougnukem/vim-swap-lines'
-
-" unite-ssh doesn't work at the moment
-" Bundle 'Shougo/unite.vim'
-" Bundle 'Shougo/vimproc'
-" Bundle 'Shougo/vimfiler'
-" Bundle 'Shougo/unite-ssh'
