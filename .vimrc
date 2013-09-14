@@ -66,7 +66,8 @@ let mapleader = ","       "Change \ to , (nercommenter, fuzzyfinder (t))
 set laststatus=2          "Always show the statusline in all windows
 set noshowmode            "Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set tabstop=4             "Show a tab as four spaces
-set shiftwidth=4          "set expandtab
+set shiftwidth=4          "Insert four spaces when using indent
+set expandtab             "Use spaces instead of tabs
 set ffs=unix              "Always use unix line endings"
 set list                  "Show special keys
 set clipboard=unnamedplus "Sync vim clipboard with system clipboard
@@ -144,3 +145,5 @@ autocmd BufWinEnter * if line2byte(line("$") + 1) > 1000000 | syntax clear | end
 " Fix for not detecting puppet filetype properly :s
 au! BufRead,BufNewFile *.pp setfiletype puppet
 
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 expandtab
