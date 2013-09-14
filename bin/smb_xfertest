@@ -1,0 +1,378 @@
+#!/bin/sh
+#
+# xfertest -- test transfer speeds of ftp, samba and rcp.
+#
+Program='Samba'
+Verbose=0
+Filesize=0
+Debug=0
+#JUNK='2>&1' # make output appear for debugging.
+JUNK='>/dev/null 2>&1'
+
+
+main() {
+	while [ "$1" != "" ]; do
+		case "$1" in
+		-s)	Program='Samba';;
+		-f)	Program='Ftp';;
+		-r)	Program='Rcp';;
+		-n)	Program='Nfs';;
+		-v)	Verbose=1;;
+		-d)	Debug=1; Verbose=1;;
+		*)	break;;
+		esac
+		shift
+	done
+	if [ $# -lt 2 ]; then
+		say "xfertest: you must provide a host and a test file."
+		say "Usage: $0 [-sfr -v] host file"
+		exit 1
+	fi
+
+
+	host="$1"
+	file="$2"
+
+	if [ ! -f "$file" ]; then
+		say "$0: $file not found, halting."
+		exit 1
+	else
+		Filesize=`ls -l $file | awk '{print $5}'`
+	fi
+	cp $file /tmp
+	cd /tmp
+	$Program $host $file
+}
+
+#
+# Rcp -- time Remote CoPy
+#
+Rcp() {
+	host="$1"
+	file="$2"
+
+	if [ "$Verbose" -eq 1 ]; then
+		say "benchmarking rcp on $host with file $file"
+		say "getting $file 5 times"
+	fi
+	rcp $host:$file . # Prime the pump
+	for i in 1 2 3 4 5; do
+		time rcp $host:$file .
+	done 2>&1 | timeStats "rcp get $Filesize"
+
+	if [ "$Verbose" -eq 1 ]; then
+		say "putting $file 5 times"
+	fi
+	f=`basename $file`
+	rcp $f $host:$file 
+ 
+	for i in 1 2 3 4 5; do
+		time rcp $f $host:$file
+	done 2>&1 | timeStats "rcp put $Filesize"
+}
+
+
+
+#
+# Nfs -- time nfs via timing cp. "host" will be ignored.
+#
+Nfs() {
+	host="$1"
+	file="$2"
+
+	if [ "$file" != "" ]; then
+		:
+	else
+		say "you must supply a host (which is then ingored)"
+		exit 1
+	fi
+
+	if [ "$Verbose" -eq 1 ]; then
+		say "benchmarking nfs (cp) on $host with file $file"
+		say "getting $file 5 times"
+	fi
+	cp $file . # Prime the pump
+	for i in 1 2 3 4 5; do
+		time cp $file ./junk
+	done 2>&1 | timeStats "nfs get $Filesize"
+
+	if [ "$Verbose" -eq 1 ]; then
+		say "putting $file 5 times"
+	fi
+	f=`basename $file`
+	cp $f $file 
+ 
+	for i in 1 2 3 4 5; do
+		time cp $f $file
+	done 2>&1 | timeStats "nfs put $Filesize"
+}
+
+
+#
+# timeStats -- summarize stats from /bin/time, used for nfs/cp and rcp
+#
+timeStats() {
+	nawk '
+	BEGIN {
+		avg=0.0;
+	}
+	/.*/ { 
+		if (debug) {
+			print "#", $0; 
+		}
+	}
+
+	/real/ {
+		avg += $2;
+		if (verbose) {
+			print $2;
+		}
+		next;
+	}
+	/user|sys|^[ 	]*$/ {
+		next;
+	}
+	/.*/ {
+		print $0;
+	}
+	END {
+		if (verbose) {
+			print "#pg op  size time kb/sec";
+		}
+		if (avg == 0.0 ) {
+			printf("%s 0.0 N/A\n",description);
+		}
+		else {
+			time = avg / 5;
+			printf("%s %.2f %.2f\n",description,\
+				 time, (size/time) /1000);
+		}
+	}
+' description="$1" verbose=$Verbose size=$Filesize debug=$Debug
+}
+
+
+#
+# ftp -- time File Transfer Program
+#
+Ftp() {
+	host="$1"
+	file="$2"
+
+	if [ "$Verbose" -eq 1 ]; then
+		say "benchmarking ftp on $host with file $file"
+	fi
+	say "Warning: this will temporarily overwrite your .netrc password"
+	say "$0: enter password to use for ftp"
+	read password
+
+	trap '' 1 2 3 4 5 6 7 8 9 # Disable ^C et all.
+	if [ -f $HOME/.netrc ]; then
+		mv $HOME/.netrc $HOME/saved.netrc
+	fi
+	cat >$HOME/.netrc <<!
+machine $host
+login `whoami`
+password $password
+!
+	chmod 700 $HOME/.netrc
+
+	if [ "$Verbose" -eq 1 ]; then
+		say "getting $file 5 times"
+	fi
+	# Prime the punp.
+	ftp $host >/dev/null 2>&1 <<!
+get $file junk
+quit
+!
+
+	# Do the test
+	ftp -v $host >/tmp/$$ 2>&1 <<!
+get $file junk
+get $file junk
+get $file junk
+get $file junk
+get $file junk
+quit
+!
+	cat /tmp/$$ | timeFtp "ftp get $Filesize"
+	rm /tmp/$$
+
+	if [ "$Verbose" -eq 1 ]; then
+		say "putting $file 5 times"
+	fi
+	# Prime
+	ftp $host >/dev/null 2>&1 <<!
+put $file junk
+quit
+!
+
+	# Test
+ftp -v $host >/tmp/$$ 2>&1 <<!
+put $file junk
+put $file junk
+put $file junk
+put $file junk
+put $file junk
+quit
+!
+	cat /tmp/$$ | timeFtp "ftp put $Filesize"
+	rm /tmp/$$
+
+	rm $HOME/.netrc
+	if [ -f $HOME/saved.netrc ]; then
+		mv $HOME/saved.netrc $HOME/.netrc
+	fi
+
+}
+
+#
+# timeFtp 
+#
+timeFtp() {
+
+	nawk '
+	BEGIN {
+		avg = 0.0;
+	}
+	/.*/ { 
+		if (debug) {
+			print "#", $0; 
+		}
+	}
+	/.* bytes .* in/ {
+		avg += $5
+		if (verbose) {
+			print $0;
+		}
+		next;
+	}
+	/[0-9]*/ {
+		next;
+	}
+	/.*/ {
+		print $0;
+	}
+	END {
+		if (verbose) {
+			print "#pg op  size time kb/sec";
+		}
+		if (avg == 0.0 ) {
+			printf("%s 0.0 N/A\n",description);
+		}
+		else {
+			time = avg / 5;
+			printf("%s %.2f %.2f\n",description, time, (size/time) /1000);
+		}
+	}
+' description="$1" verbose=$Verbose size=$Filesize  debug=$Debug
+}
+
+
+#
+# Samba -- time Smbclient get/put, "host" parameter must be a service,
+#	"file" a file relative to it
+#
+Samba() {
+	host="$1"
+	file="$2"
+
+	if [ "$Verbose" -eq 1 ]; then
+		say "benchmarking Samba's smbclient on $host with file $file"
+	fi
+	say "$0: enter password to use for samba"
+	read password
+
+	trap '' 1 2 3 4 5 6 7 8 9 # Disable ^C et all.
+	if [ "$Verbose" -eq 1 ]; then
+		say "getting $file 5 times"
+	fi
+	smbclient $host $password  >/dev/null 2>&1 <<!
+get $file junk
+quit
+!
+	smbclient $host $password >/tmp/$$ 2>&1 <<!
+get $file junk
+get $file junk
+get $file junk
+get $file junk
+get $file junk
+quit
+!
+	cat /tmp/$$ | timeSamba "smb get $Filesize"
+	rm /tmp/$$
+
+	if [ "$Verbose" -eq 1 ]; then
+		say "putting $file 5 times"
+	fi
+	smbclient $host $password  >/dev/null 2>&1 <<!
+put $file junk
+quit
+!
+
+	smbclient $host $password >/tmp/$$ 2>&1 <<!
+put $file junk
+put $file junk
+put $file junk
+put $file junk
+put $file junk
+quit
+!
+
+	cat /tmp/$$ | timeSamba "smb put $Filesize"
+	rm /tmp/$$
+
+}
+
+#
+# timeSamba -- summarize stats from Samba
+#
+timeSamba() {
+	nawk '
+	BEGIN {
+		avg=0.0;
+	}
+	/.*/ { 
+		if (debug) {
+			print "#", $0; 
+		}
+	}
+	/^\(/ {
+		sub("[(]", "", $1);
+		avg += size/($1*1000)
+		if (verbose) {
+			print size/($1*1000), "sec, ", $1, "kb/sec";
+		}
+		next;
+	}
+	/^putting/ {
+		sub("[(]", "", $10);
+		avg += size/($10*1000)
+                if (verbose) {
+                        print size/($10*1000), "sec, ", $10, "kb/sec";
+                }
+                next;
+	}		
+	END {
+		if (verbose) {
+			print "#pg op  size time kb/sec";
+		}
+		if (avg == 0.0 ) {
+			printf("%s 0.0 N/A\n",description);
+		}
+		else {
+			time = avg / 5;
+			printf("%s %.2f %.2f\n",description, time, (size/time) /1000);
+		}
+	}
+' description="$1" verbose=$Verbose size=$Filesize  debug=$Debug
+}
+
+
+	
+say() {
+	echo "$*" 1>&2
+}
+
+main "$@"
+
