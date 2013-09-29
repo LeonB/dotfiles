@@ -45,6 +45,11 @@ bindsym $mod+Shift+J move down
 bindsym $mod+Shift+K move up
 bindsym $mod+Shift+L move right
 
+# move focuses window to workspace on the right
+bindsym Control+Mod1+Shift+Left move to workspace next
+# move focuses window to workspace on the left
+bindsym Control+Mod1+Shift+Right move to workspace prev
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -52,7 +57,6 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-
 bindsym $mod+backslash split h
 # split in vertical orientation
 bindsym $mod+minus split v
@@ -101,6 +105,11 @@ bindsym $mod+Shift+asterisk move container to workspace 8
 bindsym $mod+Shift+parenleft move container to workspace 9
 bindsym $mod+Shift+parenright move container to workspace 10
 
+# jump to workspace on the right
+bindsym Control+Mod1+Right workspace next
+# jump to workspace on the left
+bindsym Control+Mod1+Left workspace next
+
 # reload the configuration file
 bindsym $mod+Shift+C reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -138,7 +147,10 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	status_command i3status
+    position top
 }
+
+new_window pixel
 
 # set environment
 exec export DE=gnome &
@@ -147,7 +159,7 @@ exec export DE=gnome &
 exec gnome-settings-daemon &
 
 # Start synapse
-exec synapse &
+exec synapse -s &
 
 # start the keyring
 exec gnome-keyring-daemon --start &
@@ -158,5 +170,8 @@ exec gnome-screensaver &
 # Start applets
 exec gnome-sound-applet &
 exec nm-applet &
+exec dropbox start &
+exec diodon start &
 
 bindsym $mod+Tab exec /home/leon/src/simpleswitcher.git/simpleswitcher -i3 -now -font "snap-10" -fg "#505050" -bg "#000000" -hlfg "#ffb964" -hlbg "#000000" -o 85
+bindsym Mod1+Tab exec /home/leon/src/simpleswitcher.git/simpleswitcher -i3 -now -font "snap-10" -fg "#505050" -bg "#000000" -hlfg "#ffb964" -hlbg "#000000" -o 85
