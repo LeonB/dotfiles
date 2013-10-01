@@ -2,24 +2,8 @@
 
 # cat /etc/services
 
-# ufw default deny outgoing
-
-# ufw allow out to 192.168.5.1 port 8080
-# ufw allow out to 192.168.5.1 port domain
-# ufw allow out to 10.76.122.0/24 port imaps
-# ufw allow out to 255.255.255.255 port 17500 # dropbox
-# ufw allow out http
-# ufw allow out https
-# ufw allow out ssh
-# ufw allow out to 192.168.5.1 port domain
-# ufw allow out to 10.76.122.21 port domain
-# ufw allow out to 10.76.122.21 port imaps
-# ufw allow out to 10.76.122.150 port imaps
-# ufw allow out to 157.56.252.166 port imaps
-
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 outlook_com_ips=`sed '/^\#/d' "${DIR}/outlook.com.ips"`
-# outlook_com_ips=`host -t MX outlook.com | grep -v alias | rev | cut -d ' '  -f 1 | rev`
 gmail_com_ips=`host smtp.gmail.com | grep -v alias | rev | cut -d ' '  -f 1 | rev`
 
 # Reset all ufw rules
