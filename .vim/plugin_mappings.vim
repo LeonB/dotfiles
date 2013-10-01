@@ -64,3 +64,7 @@ let g:airline_powerline_fonts = 1
 let g:bufferline_echo=0
 " set statusline=%{bufferline#generate_string()}
 " let g:airline_theme='light'
+
+"easytags
+" look for a project specific tags file
+let g:easytags_dynamic_files = 1
