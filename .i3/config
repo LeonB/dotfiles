@@ -175,3 +175,7 @@ exec diodon start &
 
 bindsym $mod+Tab exec /home/leon/src/simpleswitcher.git/simpleswitcher -i3 -now -font "snap-10" -fg "#505050" -bg "#000000" -hlfg "#ffb964" -hlbg "#000000" -o 85
 bindsym Mod1+Tab exec /home/leon/src/simpleswitcher.git/simpleswitcher -i3 -now -font "snap-10" -fg "#505050" -bg "#000000" -hlfg "#ffb964" -hlbg "#000000" -o 85
+
+bindsym XF86AudioLowerVolume exec pavolume.sh down
+bindsym XF86AudioRaiseVolume exec pavolume.sh up
+bindsym XF86AudioMute exec pavolume.sh toggle
