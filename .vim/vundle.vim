@@ -72,14 +72,18 @@ Bundle 'gmarik/vundle'
     "Fuzzy file, buffer, mru, tag, etc finder.
     Bundle 'kien/ctrlp.vim'
 
-    "Source code browser
-    Bundle 'taglist.vim'
-
     "extended % matching for HTML
     Bundle 'matchit.zip'
 
     "Updates entries in a tags file automatically when saving
-    Bundle 'AutoTag'
+    " Bundle 'AutoTag'
+
+    " Automated tag file generation and syntax highlighting of tags in Vim
+    Bundle 'xolox/vim-easytags'
+    Bundle 'xolox/vim-misc'
+
+    " Vim plugin that displays tags in a window, ordered by class etc.
+    Bundle 'majutsushi/tagbar'
 
 " }}}1
 
