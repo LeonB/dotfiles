@@ -80,8 +80,9 @@ set nopaste               "disable indenting when pasting
 let g:netrw_keepdir=0 "keep the current directory the same as the browsing directory
 
 " Directories for swp files
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
+" // uses the whole path for tmp files to avoid collisions
+set backupdir=~/.vim/backup//
+set directory=~/.vim/backup//
 
 "Some gui options:
 :set completeopt=longest,preview,menuone
