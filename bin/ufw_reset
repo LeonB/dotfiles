@@ -13,19 +13,27 @@ yes | ufw reset
 # Accept all outgoing accept for controlable ports (dns, imap, pop3, etc. )
 
 # DEFAULT
+echo "Setting defauls"
 ufw default allow outgoing
 ufw default deny incoming
 
 # DNS
+echo "Setting DNS"
 ufw allow out to 10.76.122.21 port domain
 ufw allow out to 192.168.1.1 port domain
 ufw allow out to 192.168.5.1 port domain
 ufw allow out to 192.168.5.200 port domain # VPN
-ufw allow out to 1208.67.222.222 port domain # OpenDNS
-ufw allow out to 1208.67.220.220 port domain # OpenDNS
+ufw allow out to 208.67.222.222 port domain # OpenDNS
+ufw allow out to 208.67.220.220 port domain # OpenDNS
 ufw deny out to any port domain
 
+# VPN
+echo "Setting VPN"
+ufw allow out to any port openvpn
+ufw allow in from any port openvpn
+
 # SMTP
+echo "Setting SMTP"
 # ufw allow out to 10.76.122.150 port smtp
 # for ip in $outlook_com_ips; do
     # ufw allow out to $ip port smtp; # outlook.com
@@ -33,6 +41,7 @@ ufw deny out to any port domain
 ufw deny out to any port smtp
 
 # SMTP submission + SMTPS
+echo "Setting submission + SMTPS"
 for protocol in smtps submission; do
     ufw allow out to 10.76.122.150 port $protocol
     for ip in $outlook_com_ips; do
@@ -45,12 +54,15 @@ for protocol in smtps submission; do
 done;
 
 # IMAP
+echo "Setting IMAP"
 ufw deny out to any port imap
 
 # POP3
+echo "Setting POP3"
 ufw deny out to any port pop3
 
 # IMAPS
+echo "Setting IMAPS"
 ufw allow out to 10.76.122.150 port imaps
 for ip in $outlook_com_ips; do
     ufw allow out to $ip port imaps; # outlook.com
@@ -58,16 +70,20 @@ done;
 ufw deny out to any port imaps
 
 # IRC
+echo "Setting IRC"
 ufw allow out to 192.168.5.0/24 port irc
 ufw deny out to any port irc
 
 # PUPPET
+echo "Setting Puppet"
 ufw allow out to 192.168.5.0/24 port 8140
 ufw deny out to any port 8140
 
 # BACULA
+echo "Setting Bacula"
 ufw allow in from 192.168.5.0/24 to any port bacula-fd
 ufw allow out to 192.168.5.0/24 port bacula-dir
 ufw allow out to 192.168.5.0/24 port bacula-sd
 
+echo "Enabling UFW"
 ufw enable
