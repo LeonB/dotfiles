@@ -1,0 +1,11 @@
+[DEFAULT]
+hotkey=<Ctrl>a
+ignored_windows=
+    ^Desktop$
+    ^Guake!$
+    ^Hud$
+    ^XdndCollectionWindowImp$
+    ^unity-dash$
+    ^unity-launcher$
+    ^unity-panel$
+    ^unity-panel$
