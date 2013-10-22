@@ -75,7 +75,7 @@ set listchars=tab:›\ ,trail:·,extends:>,precedes:< "what special keys should 
 set nopaste               "disable indenting when pasting
 " set ttyfast               "u got a fast terminal
 " set ttyscroll=3           "redraw instead of scrolling (may cause flickering)
-set lazyredraw            "do not redraw as many
+" set lazyredraw            "do not redraw as many
 
 " disable fileencoding, fileformat (ffs), (no)expandtab, shiftwidth,
 " softtabstop, tabstop & textwidth when using editorconfig-vim
