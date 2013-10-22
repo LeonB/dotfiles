@@ -20,3 +20,5 @@ gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshel
 # gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ alt-tab-forward "<Alt>Tab"
 gsettings reset org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ alt-tab-forward
 gsettings set com.canonical.indicator.keyboard visible false
+gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2
+gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2
