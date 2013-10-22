@@ -149,3 +149,10 @@ Bundle 'gmarik/vundle'
 
 " }}}1
 
+" Config {{{1
+
+    " EditorConfig plugin for Vim http://editorconfig.org
+    " #slow-on-sshfs
+    Bundle 'editorconfig/editorconfig-vim'
+
+" }}}1

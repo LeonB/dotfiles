@@ -77,6 +77,9 @@ set nopaste               "disable indenting when pasting
 " set ttyscroll=3           "redraw instead of scrolling (may cause flickering)
 set lazyredraw            "do not redraw as many
 
+" disable fileencoding, fileformat (ffs), (no)expandtab, shiftwidth,
+" softtabstop, tabstop & textwidth when using editorconfig-vim
+
 " Disable netrw
 ":let loaded_netrw = 1
 ":let loaded_netrwPlugin = 1
