@@ -79,7 +79,7 @@ def get_mountpoints():
 def parse_args():
     parser = argparse.ArgumentParser(description='Mount a remote fs on a preconfigured location')
     parser.add_argument('-u', '--unmount', action='store_true', help='aasasd')
-    parser.add_argument('-o', '--options', default='Ciphers=arcfour,auto_cache,no_readahead')
+    parser.add_argument('-o', '--options', default='auto_unmount,Ciphers=arcfour,auto_cache,no_readahead')
 
     exclusive_grp = parser.add_mutually_exclusive_group()
     exclusive_grp.add_argument('-c', '--compression', action='store_true', default=True)
