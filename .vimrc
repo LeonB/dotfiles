@@ -140,17 +140,8 @@ autocmd InsertLeave * if pumvisible() ==0|pclose|endif
 "let MRU_Use_Current_Window = 1
 "autocmd VIMEnter * MRU
 
-"Yankring file
-let g:yankring_history_file = '.yankring_history'
-
 " Disable syntax highlighting on huge files
 autocmd BufWinEnter * if line2byte(line("$") + 1) > 1000000 | syntax clear | endif
 
 " Add eol to files that don't have it
-"au BufWritePre * if !&bin | set eol | endif
-
-" Fix for not detecting puppet filetype properly :s
-au! BufRead,BufNewFile *.pp setfiletype puppet
-
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
-autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 expandtab
+" au BufWritePre * if !&bin | set eol | endif
