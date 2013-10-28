@@ -6,4 +6,4 @@
 --regex-PHP=/(public\s+|static\s+|protected\s+|private\s+)\$([^ 	=]+)/\2/p/
 --regex-PHP=/const\s+([^ 	=]+)/\1/d/
 --regex-PHP=/final\s+(public\s+|static\s+|abstract\s+|protected\s+|private\s+)function\s+\&?\s*([^ (]+)/\2/f/
---PHP-kinds=+cfpd
+--PHP-kinds=+cfpd-v
