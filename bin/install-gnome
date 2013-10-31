@@ -12,6 +12,13 @@ gsettings set com.canonical.indicator.datetime time-format '24-hour'
 # Gnome
 # gsettings set org.gnome.desktop.background show-desktop-icons false
 # gsettings reset org.gnome.desktop.background show-desktop-icons
+gsettings set org.gnome.totem autoload-subtitles true
+
+# Totem
+gsettings set org.gnome.totem lock-screensaver-on-audio false
+
+# Gnome Terminal (still uses gconf?)
+gconftool-2 --type string --set /schemas/apps/gnome-terminal/keybindings/help disabled
 
 # Unity GUI
 # also see ~/.config/compiz-1/compizconfig/config for the profile (unity by default)
