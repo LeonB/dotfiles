@@ -117,6 +117,8 @@ Bundle 'gmarik/vundle'
     " A vim plugin to display the indention levels with thin vertical lines
     " Bundle 'Yggdroot/indentLine'
 
+    " Display your undo history in a graph.
+    " Bundle 'mbbill/undotree'
 " }}}1
 
 " Commands {{{1
