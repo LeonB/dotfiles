@@ -155,4 +155,7 @@ Bundle 'gmarik/vundle'
     " #slow-on-sshfs
     Bundle 'editorconfig/editorconfig-vim'
 
+    " sensible.vim: Defaults everyone can agree on
+    Bundle 'tpope/vim-sensible'
+
 " }}}1

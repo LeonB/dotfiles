@@ -5,18 +5,9 @@ syntax on
 "enable line numbering
 :set number
 
-"enable ruler (right-below)
-set ruler
-
-"use default perl regex
-"nnoremap / /\v
-"use default perl regex
-"vnoremap / /\v
 set ignorecase "searches are case insensitive...
 set smartcase " ... unless they contain at least one capital letter
-set gdefault
-set incsearch " incremental searching
-set showmatch
+set gdefault "replace globally by default
 "set foldcolumn=1 "display sidebar with folds
 
 "highlight search results
@@ -28,14 +19,8 @@ set hlsearch
 "enable mouse
 "set mouse=a
 
-" Show (partial) command in status line.
-set showcmd
-
 "set indenting on
 filetype plugin indent on
-
-"make backspace work like most other apps
-set backspace=2
 
 "Disable arrow keys
 noremap <Up> <NOP>
@@ -50,7 +35,6 @@ inoremap <Right> <NOP>
 "allow multiple open files
 :set hidden
 
-set enc=utf-8
 set fileencoding=utf-8
 set spelllang=nl,en
 set spellfile=~/.vim/spell/custom.add
@@ -60,10 +44,8 @@ set textwidth=80          "force text width off (prev at 80 chars/line)
 " Set different bgcolor for everything > `textwidth`
 execute "set colorcolumn=" . "+" . join(range(1,150), ',+')
 set formatoptions=tcqnlr  "include numbered lists when formatting with gq
-set autoindent            "set automatic indenting
 set modelines=0           "prevent some security exploits
 let mapleader = ","       "Change \ to , (nercommenter, fuzzyfinder (t))
-set laststatus=2          "Always show the statusline in all windows
 set noshowmode            "Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set tabstop=4             "Show a tab as four spaces
 set shiftwidth=4          "Insert four spaces when using indent
@@ -133,9 +115,6 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 " or ctrl-e is used: close the preview buffer
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() ==0|pclose|endif
-
-"Set wildmenu (Shows completions in the status line)
-:set wmnu
 
 "let MRU_Use_Current_Window = 1
 "autocmd VIMEnter * MRU
