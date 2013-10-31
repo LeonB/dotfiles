@@ -34,6 +34,9 @@ Bundle 'gmarik/vundle'
     "Vim Markdown runtime files
     Bundle 'tpope/vim-markdown'
 
+    " jinja plugins for vim (syntax and indent)
+    Bundle 'lepture/vim-jinja'
+
 " }}}1
 
 " Color schemes {{{1
