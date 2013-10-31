@@ -145,6 +145,14 @@ Bundle 'gmarik/vundle'
     "quoting/parenthesizing made simple
     Bundle 'tpope/vim-surround'
 
+    " Vim plugin: Text objects for functions
+    Bundle 'kana/vim-textobj-function'
+    Bundle 'kana/vim-textobj-user'
+
+    " Vim plugin that defines a new text object representing lines of code at
+    " the same indent level. Useful for python/vim scripts, etc
+    Bundle 'michaeljsmith/vim-indent-object'
+
 " }}}1
 
 " Libs {{{1
