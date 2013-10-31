@@ -52,6 +52,11 @@ def mount_command(hostname, remote_path, mount_path):
     if args.compression:
         cmd.append('-C')
 
+    # sshfs overwrites this; find another way to make ssh agent forwarding work
+    # with sshfs (fork a ssh process?)
+    # cmd.append('-o')
+    # cmd.append('ssh_command=ssh -A -o ClearAllForwardings=no')
+
     return cmd
 
 def unmount_command(hostname, mount_path):
