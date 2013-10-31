@@ -64,7 +64,7 @@ Bundle 'gmarik/vundle'
     Bundle 'scrooloose/nerdtree'
 
     "easily switch between buffers
-    Bundle 'bufexplorer.zip'
+    Bundle 'jlanzarotta/bufexplorer'
 
     "Fuzzy file, buffer, mru and tag finder
     Bundle 'kien/ctrlp.vim'
