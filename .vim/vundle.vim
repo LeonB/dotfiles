@@ -138,6 +138,9 @@ Bundle 'gmarik/vundle'
     "Vim script for text filtering and alignment
     Bundle 'godlygeek/tabular'
 
+    ":substitute preview
+    Bundle 'osyo-manga/vim-over'
+
 " }}}1
 
 " Text objects {{{1
