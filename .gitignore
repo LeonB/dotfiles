@@ -1,3 +1,4 @@
 .ropeproject
 /.pip/pip.log
 /ctags
+/.sup/lock
