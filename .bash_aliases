@@ -8,3 +8,4 @@ alias nano="vim"
 alias term="gnome-terminal"
 alias open="xdg-open"
 alias hamster='hamster-cli'
+alias ack='ack-grep'
