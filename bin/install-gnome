@@ -17,6 +17,12 @@ gsettings set com.canonical.indicator.datetime time-format '24-hour'
 # gsettings reset org.gnome.desktop.background show-desktop-icons
 gsettings set org.gnome.totem autoload-subtitles true
 
+# Extra gnome shortcuts
+# simpleswitcher
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'simpleswitcher'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command '/home/leon/src/simpleswitcher.git/simpleswitcher -font "Ubuntu Mono-12" -fg "#505050" -bg "#000000" -hlfg "#ffb964" -hlbg "#000000" -o 95 -now'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Alt>1'
+
 # Totem
 gsettings set org.gnome.totem lock-screensaver-on-audio false
 
