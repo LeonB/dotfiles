@@ -141,6 +141,9 @@ Bundle 'gmarik/vundle'
     ":substitute preview
     Bundle 'osyo-manga/vim-over'
 
+    "Vim plugin for the Perl module / CLI script 'ack'
+    Bundle 'mileszs/ack.vim'
+
 " }}}1
 
 " Text objects {{{1
