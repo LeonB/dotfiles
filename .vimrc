@@ -68,7 +68,7 @@ set directory=~/.vim/backup//
 let g:Tb_MoreThanOne=99999999 "Always open the tabbar.vim
 :let g:buftabs_only_basename=1 "Only show the basename, not the full path
 
-runtime plugin_mappings.vim
+runtime! plugin_config/*.vim
 
 runtime macros.vim
 runtime theme.vim
