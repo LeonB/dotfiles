@@ -19,9 +19,9 @@ ufw default deny incoming
 
 # DNS
 echo "Setting DNS"
-ufw allow out to 10.76.122.21 port domain
-ufw allow out to 192.168.1.1 port domain
-ufw allow out to 192.168.5.1 port domain
+ufw allow out to 192.168.1.1 port domain # @work
+ufw allow out to 192.168.0.1 port domain # @parents
+ufw allow out to 192.168.5.1 port domain # @home
 ufw allow out to 192.168.5.200 port domain # VPN
 ufw allow out to 208.67.222.222 port domain # OpenDNS
 ufw allow out to 208.67.220.220 port domain # OpenDNS
