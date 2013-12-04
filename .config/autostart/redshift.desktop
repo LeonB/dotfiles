@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/redshift
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=false
+Name[en_US]=redshift
+Name=redshift
+Comment[en_US]=Redshift adjusts the color temperature according to the position of the sun
+Comment=Redshift adjusts the color temperature according to the position of the sun
