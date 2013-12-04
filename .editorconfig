@@ -16,6 +16,7 @@ trim_trailing_whitespace = true
 max_line_length = 80
 
 [*.md]
+indent_size = 2
 
 [*.{rake,rb,erb}]
 indent_size = 2
