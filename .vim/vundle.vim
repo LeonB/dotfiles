@@ -22,9 +22,6 @@ Bundle 'gmarik/vundle'
     "Vim syntax file for scss (Sassy CSS)
     Bundle 'cakebaker/scss-syntax.vim'
 
-    "precision colorscheme for the vim text editor
-    Bundle 'altercation/vim-colors-solarized'
-
     " Vastly improved Javascript indentation and syntax support in Vim.
     Bundle "pangloss/vim-javascript"
 
@@ -56,6 +53,15 @@ Bundle 'gmarik/vundle'
     "Color theme Bad Wolf
     Bundle 'sjl/badwolf'
 
+    "precision colorscheme for the vim text editor
+    Bundle 'altercation/vim-colors-solarized'
+
+    " Dark, high contrast vim colorscheme
+    Bundle 'MaxSt/FlatColor'
+
+    " Dark, high contrast gvim colorscheme inspired by molokai and bad wolf.
+    Bundle 'nielsmadan/harlequin'
+
 " }}}1
 
 " Navigation {{{1
@@ -79,9 +85,10 @@ Bundle 'gmarik/vundle'
     Bundle 'matchit.zip'
 
     "Updates entries in a tags file automatically when saving
-    " Bundle 'AutoTag'
+    " Bundle 'craigemery/vim-autotag'
 
     " Automated tag file generation and syntax highlighting of tags in Vim
+    " #slow-on-sshfs
     Bundle 'xolox/vim-easytags'
     Bundle 'xolox/vim-misc'
 
@@ -144,6 +151,12 @@ Bundle 'gmarik/vundle'
     "Vim plugin for the Perl module / CLI script 'ack'
     Bundle 'mileszs/ack.vim'
 
+    "Vim plugin for the_silver_searcher, 'ag', a replacement for 'ack'
+    " Bundle 'rking/ag.vim'
+
+    " This is an atomic save function for vim
+    Bundle 'vim-scripts/Atomic-Save'
+
 " }}}1
 
 " Text objects {{{1
@@ -159,12 +172,19 @@ Bundle 'gmarik/vundle'
     " the same indent level. Useful for python/vim scripts, etc
     Bundle 'michaeljsmith/vim-indent-object'
 
+    "Vim text objects for search matches
+    Bundle 'Raimondi/vim_search_objects'
+
 " }}}1
 
 " Libs {{{1
 
     "enable repeating supported plugin maps with \".\"
     Bundle 'tpope/vim-repeat'
+
+    " Vim plugin, provides insert mode auto-completion for quotes, parens,
+    " brackets, etc.
+    Bundle 'Raimondi/delimitMate'
 
 " }}}1
 
