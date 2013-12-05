@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Compare current gsettings with old version:
+# gsettings list-recursively | diff $HOME/Documents/Config/gsettings.txt -
+
 # Power settings
 gsettings set org.gnome.settings-daemon.plugins.power lid-close-ac-action 'nothing'
 
@@ -16,6 +19,7 @@ gsettings set com.canonical.indicator.datetime time-format '24-hour'
 # gsettings set org.gnome.desktop.background show-desktop-icons false
 # gsettings reset org.gnome.desktop.background show-desktop-icons
 gsettings set org.gnome.totem autoload-subtitles true
+gsettings set org.gtk.Settings.FileChooser show-hidden false
 
 # Extra gnome shortcuts
 # simpleswitcher
