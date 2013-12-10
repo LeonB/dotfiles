@@ -34,7 +34,7 @@ set textwidth=80          "force text width off (prev at 80 chars/line)
 " Set different bgcolor for everything > `textwidth`
 execute "set colorcolumn=" . "+" . join(range(1,150), ',+')
 set formatoptions=tcqnlr  "include numbered lists when formatting with gq
-set modelines=0           "prevent some security exploits
+set modelines=1           "prevent some security exploits
 let mapleader = ","       "Change \ to , (nercommenter, fuzzyfinder (t))
 set noshowmode            "Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set tabstop=4             "Show a tab as four spaces
