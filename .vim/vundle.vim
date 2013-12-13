@@ -62,6 +62,9 @@ Bundle 'gmarik/vundle'
     " Dark, high contrast gvim colorscheme inspired by molokai and bad wolf.
     Bundle 'nielsmadan/harlequin'
 
+    " precision colorscheme for the vim text editor
+    Bundle 'altercation/vim-colors-solarized'
+
 " }}}1
 
 " Navigation {{{1
