@@ -68,6 +68,12 @@ Bundle 'gmarik/vundle'
     " precision colorscheme for the vim text editor
     Bundle 'altercation/vim-colors-solarized'
 
+    " a low-contrast Vim color scheme based on Seoul Colors
+    Bundle 'junegunn/seoul256.vim'
+
+    " A GUI & 256 color port of the Railscasts Textmate theme to Vim
+    Bundle 'dhruvasagar/vim-railscasts-theme'
+
 " }}}1
 
 " Navigation {{{1
