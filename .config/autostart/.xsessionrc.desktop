@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=sh -c '$HOME/.xsessionrc'
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=.xsessionrc
+Name=.xsessionrc
+Comment[en_US]=Load ~/.xsessrionrc file
+Comment=Load ~/.xsessrionrc file

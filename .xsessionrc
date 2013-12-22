@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+
+# Test if $1 is available
+isavailable() {
+    which "$1" >/dev/null
+}
+
+# read ~/.Xmodmap if it exists
+if test -f "${HOME}/.Xmodmap"
+then
+    xmodmap "${HOME}/.Xmodmap"
+fi
+
+# If the xcape program is available, use it.
+if isavailable xcape
+then
+    # Make Caps lock behave like Ctrl AND escape
+    xcape -e 'Control_L=Escape'
+fi
+
+# vim: ft=sh
