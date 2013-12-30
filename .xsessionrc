@@ -12,10 +12,15 @@ then
 fi
 
 # If the xcape program is available, use it.
-if isavailable xcape
+# Check if we have run-one available to us
+if isavailable xcape && isavailable run-one
 then
     # Make Caps lock behave like Ctrl AND escape
-    xcape -e 'Control_L=Escape'
+    # xcape -e 'Control_L=Escape'
+
+    # Make Caps lock behave like escape
+    # Control_L would match Ctrl AND Caps lock
+    run-one xcape -e '#66=Escape'
 fi
 
 # vim: ft=sh
