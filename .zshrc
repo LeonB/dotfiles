@@ -41,10 +41,13 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
+plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+# zstyle ':vcs_info:*' disable-patterns "$HOME/Public(|/**)"
 
 # Set Vim mode
 bindkey -v
