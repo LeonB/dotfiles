@@ -7,5 +7,5 @@ alias nano="vim"
 #alias rm="gvfs-trash"
 alias term="gnome-terminal"
 alias open="xdg-open"
-alias hamster='hamster-cli'
+alias emacs='emacs -nw'
 alias ack='ack-grep'
