@@ -30,6 +30,7 @@ set spelllang=nl,en
 set spellfile=~/.vim/spell/custom.add
 
 set nocompatible          "Use VIM not vi (affects other options?)
+set re=1                  "Use the old regex engine for the time (is faster)
 set textwidth=80          "force text width off (prev at 80 chars/line)
 " Set different bgcolor for everything > `textwidth`
 execute "set colorcolumn=" . "+" . join(range(1,150), ',+')
