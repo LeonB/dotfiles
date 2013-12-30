@@ -1,13 +1,15 @@
 [user]
-	email = leon@tim-online.nl
-	name = Leon Bogaert
+    email = leon@tim-online.nl
+    name = Leon Bogaert
 [status]
-	showUntrackedFiles = all
+    showUntrackedFiles = all
 [push]
-	default = simple
+    default = simple
 [color]
-	diff = auto
+    diff = auto
 [alias]
-	unstage = reset HEAD --
+    unstage = reset HEAD --
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit
+    ; tree2 = log --oneline --decorate --all --graph
 [merge]
-	ff = only
+    ff = only
