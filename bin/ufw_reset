@@ -3,8 +3,12 @@
 # cat /etc/services
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-outlook_com_ips=`sed '/^\#/d' "${DIR}/outlook.com.ips"`
+outlook_com_ips=`host smtp.office365.com | grep -v alias | rev | cut -d ' '  -f 1 | rev`
 gmail_com_ips=`host smtp.gmail.com | grep -v alias | rev | cut -d ' '  -f 1 | rev`
+
+function ufw() {
+    /usr/sbin/ufw $* > /dev/null
+}
 
 # Reset all ufw rules
 yes | ufw reset
@@ -13,7 +17,7 @@ yes | ufw reset
 # Accept all outgoing accept for controlable ports (dns, imap, pop3, etc. )
 
 # DEFAULT
-echo "Setting defauls"
+echo "Setting defaults"
 ufw default allow outgoing
 ufw default deny incoming
 
