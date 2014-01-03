@@ -3,8 +3,8 @@
 # cat /etc/services
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-outlook_com_ips=`host smtp.office365.com | grep -v alias | rev | cut -d ' '  -f 1 | rev`
-gmail_com_ips=`host smtp.gmail.com | grep -v alias | rev | cut -d ' '  -f 1 | rev`
+outlook_com_ips=`sed '/^\#/d' "${DIR}/outlook.com.ips"`
+gmail_ips=`host smtp.gmail.com | grep -v alias | rev | cut -d ' '  -f 1 | rev`
 
 function ufw() {
     /usr/sbin/ufw $* > /dev/null
@@ -39,10 +39,6 @@ ufw allow in from any port openvpn
 
 # SMTP
 echo "Setting SMTP"
-# ufw allow out to 10.76.122.150 port smtp
-# for ip in $outlook_com_ips; do
-    # ufw allow out to $ip port smtp; # outlook.com
-# done;
 ufw deny out to any port smtp
 
 # SMTP submission + SMTPS
