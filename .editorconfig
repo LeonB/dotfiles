@@ -18,10 +18,7 @@ max_line_length = 80
 [*.md]
 indent_size = 2
 
-[Gemfile]
-indent_size = 2
-
-[*.{rake,rb,erb}]
+[*.{rake,rb,erb,gemspec}]
 indent_size = 2
 
 [*.vim]
