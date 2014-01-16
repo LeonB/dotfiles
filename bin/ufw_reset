@@ -30,6 +30,7 @@ ufw allow out to 10.0.0.2 port domain # @Apply
 ufw allow out to 192.168.5.200 port domain # VPN
 ufw allow out to 208.67.222.222 port domain # OpenDNS
 ufw allow out to 208.67.220.220 port domain # OpenDNS
+ufw allow out to 172.20.10.1 port domain # iPhone Hotspot
 ufw deny out to any port domain
 
 # VPN
