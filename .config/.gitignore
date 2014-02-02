@@ -1,0 +1,5 @@
+/*
+!.gitignore
+!/autostart/
+!image_optim.yml
+!redshift.conf
