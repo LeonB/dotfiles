@@ -146,7 +146,10 @@ Bundle 'gmarik/vundle'
     Bundle 'othree/eregex.vim'
 
     " Vim plugin for intensely orgasmic commenting
-    Bundle 'scrooloose/nerdcommenter'
+    " Bundle 'scrooloose/nerdcommenter'
+
+    " commentary.vim: comment stuff out
+    Bundle 'tpope/vim-commentary'
 
     "Syntax checking hacks for Vim"
     Bundle 'scrooloose/syntastic'
