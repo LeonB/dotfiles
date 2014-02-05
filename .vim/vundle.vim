@@ -155,7 +155,7 @@ Bundle 'gmarik/vundle'
     Bundle 'scrooloose/syntastic'
 
     "Provides insert mode auto-completion for quotes, parens, brackets, etc
-    " Bundle 'Raimondi/delimitMate'
+    Bundle 'Raimondi/delimitMate'
 
     "Vim script for text filtering and alignment
     Bundle 'godlygeek/tabular'
@@ -196,10 +196,6 @@ Bundle 'gmarik/vundle'
 
     "enable repeating supported plugin maps with \".\"
     Bundle 'tpope/vim-repeat'
-
-    " Vim plugin, provides insert mode auto-completion for quotes, parens,
-    " brackets, etc.
-    Bundle 'Raimondi/delimitMate'
 
 " }}}1
 
