@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ~/Workspaces/prive/wdid
+bin/wdid $@
