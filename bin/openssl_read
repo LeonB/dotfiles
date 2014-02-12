@@ -38,11 +38,11 @@ filetype=$(get_filetype "$FILE")
 md5=""
 
 case "$filetype" in
-	"cert" | "crt" )
+	"cer" | "cert" | "crt" )
 		echo "$(md5_cert $FILE)"
 		;;
 
-	"key" | "key.unencrypted" )
+	"pem" | "key" | "key.unencrypted" )
 		echo "$(md5_key $FILE)"
 		;;
 
