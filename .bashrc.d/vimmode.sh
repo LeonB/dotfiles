@@ -1,1 +1,2 @@
-set -o vi
+# set -o vi
+set editing-mode vi
