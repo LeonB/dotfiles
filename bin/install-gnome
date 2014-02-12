@@ -11,6 +11,10 @@ gsettings set org.gnome.desktop.input-sources sources "[('xkb','us+altgr-intl')]
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:ctrl_modifier']"
 # gsettings set org.gnome.desktop.input-sources xkb-options "[]"
 
+# Load .Xmodmap when gnome-settings-daemon start
+# gconftool-2 --type list --list-type string --set /desktop/gnome/peripherals/keyboard/general/known_file_list "[.Xmodmap]"
+# gconftool-2 --type list --list-type string --set /desktop/gnome/peripherals/keyboard/general/update_handlers "[.Xmodmap]"
+
 # Localisation
 gsettings set com.canonical.indicator.datetime show-date true
 gsettings set com.canonical.indicator.datetime show-day true
