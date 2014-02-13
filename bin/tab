@@ -1,0 +1,68 @@
+#!/usr/bin/env ruby
+
+require 'terminal-table'
+require 'csv'
+
+##===============================================================================
+#
+#         FILE:  tab
+#
+#        USAGE:  "tab" or "untab"
+#
+#  DESCRIPTION:  This will turn comma seperated input from stdin into a text table.  
+#                It can also then convert it back if program is invoked as "untab".
+#
+#                As well as being used on the command line, tab/untab can be
+#                used from within vi, and can work on tables that are commented
+#                out with # or //.
+#
+#      OPTIONS: 
+#                -------------------------------------------------------------------------
+#                | Command/Option | Purpose                                              | 
+#                |----------------|------------------------------------------------------|
+#                | tab            | Reads from stdin and tabulates comma seperated input | 
+#                | tab <-t>       | Tabulates input and assumes first row are titles     | 
+#                | tab <-h>       | Prints this help                                     | 
+#                | tab <-nb>      | Tabulates without a border                           | 
+#                | tab <-fw X>    | Wrap fields greater than X big don't break words     | 
+#                | tab <-fs X>    | Wrap fields greater than X big and break words       | 
+#                | tab <-vp X>    | Vertically pad table by X lines                      | 
+#                | tab <-hp X>    | Horizontally pad fields by X chars                   | 
+#                | tab <-b X>     | Tabulates with a border made from char X             | 
+#                |----------------|------------------------------------------------------|
+#                | untab          | Reads from stdin and untabulates table input         | 
+#                | untab <-b X>   | Untabulate a table with border char X                | 
+#                | untab <-nb>    | Untabulate a borderless table                        | 
+#                -------------------------------------------------------------------------
+
+# Use in Vim: :%!tab
+csv = ''
+
+# until ARGV.empty? do
+#   puts "From arguments: #{ARGV.shift}"
+# end
+
+# while input = gets
+#     csv += input
+# end
+
+csv = (STDIN.tty?) ? 'not reading from stdin' : $stdin.read
+
+table = Terminal::Table.new do |t|
+  i = -1
+  CSV.parse(csv, :headers => true, :return_headers => true) do |row|
+    i = i + 1
+
+    if row.header_row?
+      t.headings = row.fields
+      next
+    end
+
+    t << :separator if t.rows.size != 0
+    t << row.fields
+  end
+end
+
+puts table
+
+# set vim: ft=ruby
