@@ -35,6 +35,10 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 # Totem
 gsettings set org.gnome.totem lock-screensaver-on-audio false
 
+# Diodon
+gsettings set net.launchpad.Diodon.clipboard clipboard-size 25
+gsettings set net.launchpad.Diodon.clipboard instant-paste false
+
 # Gnome Terminal (still uses gconf?)
 gconftool-2 --type string --set /schemas/apps/gnome-terminal/keybindings/help disabled
 
