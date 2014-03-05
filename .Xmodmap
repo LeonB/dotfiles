@@ -1,0 +1,13 @@
+!
+! Make caps lock control. Uncomment the commented out lines below to swap
+! caps lock and control.
+!
+remove Lock = Caps_Lock
+
+!Disable Left Control completely
+remove Control = Control_L
+
+!keysym Control_L = Caps_Lock
+keysym Caps_Lock = Control_L
+!add Lock = Caps_Lock
+add Control = Control_L
