@@ -1,0 +1,3 @@
+text/html;                      /usr/bin/lynx %s; nametemplate=%s.html
+text/html;                      /usr/bin/lynx -dump %s; nametemplate=%s.html; copiousoutput
+image/*;                        /usr/bin/eog '%s'; test=test -n "$DISPLAY"
