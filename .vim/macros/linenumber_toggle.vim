@@ -1,1 +1,1 @@
- nnoremap <silent> <leader>n :if &relativenumber == 1 \| setlocal number \| else \| setlocal relativenumber \| endif<CR>
+ nnoremap <silent> <leader>tl :if &relativenumber == 1 \| setlocal norelativenumber \| else \| setlocal relativenumber \| endif<CR>
