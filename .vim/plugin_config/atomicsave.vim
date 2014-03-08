@@ -1,1 +1,1 @@
-autocmd BufWriteCmd *.sass, *.scss call AtomicSave()
+autocmd BufWriteCmd *.sass,*.scss call AtomicSave()
