@@ -8,4 +8,4 @@ alias nano="vim"
 alias term="gnome-terminal"
 alias open="xdg-open"
 alias emacs='emacs -nw'
-alias ack='ack-grep'
+# alias ack='ack-grep'
