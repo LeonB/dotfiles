@@ -46,6 +46,7 @@ set list                  "Show special keys
 set clipboard=unnamedplus "Sync vim clipboard with system clipboard
 set listchars=tab:›\ ,trail:·,extends:>,precedes:< "what special keys should look like
 set nopaste               "disable indenting when pasting
+set grepprg=ag\ --nogroup\ --nocolor "Use ag over grep
 " set ttyfast               "u got a fast terminal
 " set ttyscroll=3           "redraw instead of scrolling (may cause flickering)
 " set lazyredraw            "do not redraw as many
