@@ -7,3 +7,6 @@
 [submodule ".rbenv-plugins/bundler"]
 	path = .rbenv-plugins/bundler
 	url = https://github.com/carsomyr/rbenv-bundler.git
+[submodule ".vim/bundle/neobundle.vim"]
+	path = .vim/bundle/neobundle.vim
+	url = git@github.com:Shougo/neobundle.vim.git

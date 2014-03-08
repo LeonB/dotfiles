@@ -1,4 +1,4 @@
-runtime vundle.vim
+runtime neobundle.vim
 
 "set syntax highlighting on
 syntax on

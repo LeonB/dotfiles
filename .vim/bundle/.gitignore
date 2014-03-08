@@ -3,5 +3,6 @@
 # Except this file
 !.gitignore
 
-# and vundle
+# and vundle & neobundle
 !/vundle
+!/neobundle.vim
