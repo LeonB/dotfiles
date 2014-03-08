@@ -89,7 +89,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'scrooloose/nerdtree'
 
     "easily switch between buffers
-    NeoBundle 'jlanzarotta/bufexplorer'
+    " NeoBundle 'jlanzarotta/bufexplorer'
 
     "recently opened/edited files
     " NeoBundle 'mru.vim'

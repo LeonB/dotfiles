@@ -42,3 +42,5 @@ command! MRU Unite file_mru
 nnoremap <C-g> :Unite -no-split grep:.<cr>
 command! -nargs=* Ag Unite grep:.:-s:<args>
 command! -nargs=* Ack Unite grep:.:-s:<args>
+" Buf Explorer
+nmap <leader>be :Unite buffer<CR>
