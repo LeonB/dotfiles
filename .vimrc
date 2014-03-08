@@ -36,7 +36,9 @@ set textwidth=80          "force text width off (prev at 80 chars/line)
 execute "set colorcolumn=" . "+" . join(range(1,150), ',+')
 set formatoptions=tcqnlr  "include numbered lists when formatting with gq
 set modelines=1           "prevent some security exploits
-let mapleader = ","       "Change \ to , (nercommenter, fuzzyfinder (t))
+nnoremap <SPACE> <Nop>
+" let mapleader = <space>   "Change \ to , (nercommenter, fuzzyfinder (t))
+let mapleader = "\<space>"
 set noshowmode            "Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set tabstop=4             "Show a tab as four spaces
 set shiftwidth=4          "Insert four spaces when using indent
