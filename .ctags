@@ -1,9 +1,8 @@
-# Basic options
+-f ctags
 --exclude=.svn
 --exclude=.git
 --tag-relative=yes
 
-# PHP
 --regex-PHP=/abstract\s+class\s+([^ ]+)/\1/c/
 --regex-PHP=/interface\s+([^ ]+)/\1/c/
 --regex-PHP=/(public\s+|static\s+|protected\s+|private\s+)\$([^ 	=]+)/\2/p/
