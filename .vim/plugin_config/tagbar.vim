@@ -9,4 +9,4 @@ let g:tagbar_type_php  = { 'kinds' : [
         \ 'f:functions',
         \ 'j:javascript functions:1'
 \ ] }
-nnoremap <silent> <Leader>b :TagbarToggle<CR>
+nnoremap <silent> <Leader>tb :TagbarToggle<CR>
