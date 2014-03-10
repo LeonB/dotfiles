@@ -31,6 +31,8 @@
 "Ctrl+/ toggle nerdcomment per line
 ":map <C-c> ,ci
 
+nmap <leader>bn :b#<CR>
+
 runtime macros/smarthome_end.vim
 runtime macros/linenumber_toggle.vim
 runtime macros/move_lines.vim
