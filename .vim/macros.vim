@@ -26,7 +26,6 @@
 
 "Ctrl-x no selection: remove line
 :nmap <C-x> dd
-:imap <C-x> <esc>ddi
 
 "Ctrl+/ toggle nerdcomment per line
 ":map <C-c> ,ci
