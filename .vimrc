@@ -79,8 +79,6 @@ runtime theme.vim
 "runtime plugins/autonum.vim "Deze zou ik zelf overnieuw moeten maken
 "au FileType html,xhtml,xml,php so ~/.vim/bundle/HTML-AutoCloseTag/ftplugin/html_autoclosetag.vim
 
-let g:autotagTagsFile="ctags"
-
 "Search for ctag files up every directory
 "VERY IMPORTANT!! FOR FUZZYFINDER, COMPLETION ET CETERA
 set tags=./ctags;/
