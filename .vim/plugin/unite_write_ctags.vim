@@ -14,6 +14,11 @@
 " As little configuration as possile
 " Fast, fast, fast!
 
+" all ctags configuration is pushed as much to .ctags as possible
+" these options are recommended:
+" --append=yes
+" --tag-relative=yes
+
 let g:ctags_filename = 'ctags'
 function! unite_write_ctags#save()
     " Store projectroot variable per buffer so it doesn't have to get fetched
