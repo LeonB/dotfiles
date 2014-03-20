@@ -1,4 +1,5 @@
 -f ctags
+--append=yes
 --exclude=.svn
 --exclude=.git
 --tag-relative=yes
