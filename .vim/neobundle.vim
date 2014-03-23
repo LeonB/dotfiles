@@ -29,6 +29,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     "Automatic folding of PHP functions, classes,.. (also folds related PhpDoc)
     "NeoBundle 'phpfolding.vim'
 
+    " Cutting-edge vim css syntax file
+    NeoBundle 'JulesWang/css.vim'
+
     "Vim syntax file for scss (Sassy CSS)
     NeoBundle 'cakebaker/scss-syntax.vim'
 
@@ -91,11 +94,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     "easily switch between buffers
     " NeoBundle 'jlanzarotta/bufexplorer'
 
-    "recently opened/edited files
-    " NeoBundle 'mru.vim'
+    " Unite and create user interfaces
+    NeoBundle 'Shougo/unite.vim'
 
-    "Fuzzy file, buffer, mru, tag, etc finder.
-    " NeoBundle 'kien/ctrlp.vim'
+    " MRU plugin includes unite.vim MRU sources
+    NeoBundle 'Shougo/neomru.vim'
 
     "extended % matching for HTML
     NeoBundle 'matchit.zip'
@@ -187,6 +190,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     "quoting/parenthesizing made simple
     NeoBundle 'tpope/vim-surround'
 
+    "Vim plugin that provides additional text objects (pair, quote, separator)
+    NeoBundle 'wellle/targets.vim'
+
     " Vim plugin: Text objects for functions
     " NeoBundle 'kana/vim-textobj-function'
     " NeoBundle 'kana/vim-textobj-user'
@@ -205,6 +211,19 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     "enable repeating supported plugin maps with \".\"
     NeoBundle 'tpope/vim-repeat'
 
+    " Find out which project a file belongs to, easy to use in scripts/mappings
+    NeoBundle 'dbakker/vim-projectroot'
+
+    " Interactive command execution in Vim.
+    NeoBundle 'Shougo/vimproc', {
+                \ 'build' : {
+                \     'windows' : 'make -f make_mingw32.mak',
+                \     'cygwin' : 'make -f make_cygwin.mak',
+                \     'mac' : 'make -f make_mac.mak',
+                \     'unix' : 'make -f make_unix.mak',
+                \    },
+                \ }
+
 " }}}1
 
 " Config {{{1
@@ -217,15 +236,3 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'tpope/vim-sensible'
 
 " }}}
-
-NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'dbakker/vim-projectroot'
-NeoBundle 'Shougo/neomru.vim'
