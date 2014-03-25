@@ -1,0 +1,4 @@
+#!/bin/bash
+
+HISTFILE="$HOME/.bash_history"
+awk '{print $1}' $HISTFILE | sort | uniq -c | sort -rn | head -20
