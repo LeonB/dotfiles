@@ -91,23 +91,10 @@ set shortmess=aOItT     " To avoid the 'Hit ENTER to continue' prompt
 "Standaard treelisting:
 let g:netrw_liststyle=3
 
-"""BEHAVIOUR???"""
-"deliMate mappings
-"inoremap <Space> <C-R>=delimitMate#ExpandSpace()<CR>
-"inoremap <expr> <CR> pumvisible() ? "\<c-y>" : "\<C-R>=delimitMate#ExpandReturn()\<CR>"
-"let delimitMate_autoclose = 0
-let delimitMate_expand_cr = 1
-
-" This beauty remembers where you were the last time you edited the file, and returns to the same position.
-au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
-
 " If something is selected in the completion popup
 " or ctrl-e is used: close the preview buffer
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() ==0|pclose|endif
-
-"let MRU_Use_Current_Window = 1
-"autocmd VIMEnter * MRU
+" autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+" autocmd InsertLeave * if pumvisible() ==0|pclose|endif
 
 " Disable syntax highlighting on huge files
 autocmd BufWinEnter * if line2byte(line("$") + 1) > 1000000 | syntax clear | endif
