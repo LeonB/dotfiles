@@ -15,6 +15,9 @@ charset = utf-8
 trim_trailing_whitespace = false
 max_line_length = 80
 
+[*.{css,sass,scss}]
+indent_size = 2
+
 [*.md]
 indent_size = 2
 
