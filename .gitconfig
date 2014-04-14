@@ -14,3 +14,5 @@
     ; tree2 = log --oneline --decorate --all --graph
 [merge]
     ff = only
+[core]
+    excludesfile = /home/leon/.gitignore_global

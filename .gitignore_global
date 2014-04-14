@@ -1,10 +1,12 @@
 # Compiled source #
 ###################
-*.com
 *.class
+*.com
 *.dll
+*.elc
 *.exe
 *.o
+*.pyc
 *.so
 
 # Packages #
@@ -35,6 +37,13 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Editor temporary files #
+######################
+*.swo
+*.swp
+*~
+[#]*[#]
 
 # Custom #
 ######################
