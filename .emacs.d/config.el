@@ -1,6 +1,9 @@
 ; ordered
 (load "config/package")
+(load "config/term")
+(load "config/progmodes")
 (load "config/general")
+(load "config/evil")
 ; (load "config/keybindings")
 ; (load "config/custom")
 
