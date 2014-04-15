@@ -230,7 +230,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
     " EditorConfig plugin for Vim http://editorconfig.org
     " #slow-on-sshfs
-    NeoBundle 'editorconfig/editorconfig-vim'
+    if has("python")
+        NeoBundle 'editorconfig/editorconfig-vim'
+    endif
 
     " sensible.vim: Defaults everyone can agree on
     NeoBundle 'tpope/vim-sensible'

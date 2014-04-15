@@ -2,6 +2,10 @@
 "Author : Jonathan Lambrechts <jonathanlambrechts@gmail.com>
 "Installation : drop this file in a vim plugin folder ($HOME/.vim/plugin,/usr/share/vim/vim72/plugin, ...). Vim should be compiled with python enabled.
 
+if !has("python")
+  finish
+endif
+
 function! ZeitgeistLog(filename, vim_use_id)
 python << endpython
 use_id = vim.eval("a:vim_use_id")
