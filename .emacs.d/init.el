@@ -7,6 +7,8 @@
 ; https://github.com/handyman5/dotfiles-emacs
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/plugins"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/plugins/emacs-neotree"))
 ; (add-to-list 'load-path (expand-file-name "~/.emacs.d/local"))
 ; (add-to-list 'load-path (expand-file-name "~/.emacs.d/local/planner-el"))
 
