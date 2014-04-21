@@ -47,6 +47,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " jinja plugins for vim (syntax and indent)
     NeoBundle 'lepture/vim-jinja'
 
+    " Github mirror of Go vimscripts, synced with main repository
+    " http://golang.org
+    NeoBundle 'jnwhiteh/vim-golang'
+
 " }}}1
 
 " Color schemes {{{1
