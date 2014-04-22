@@ -12,3 +12,4 @@ alias emacs='emacsclient -c -t'
 # alias emacsclient='emacsclient -t'
 # alias ack='ack-grep'
 alias realpath="readlink -f"
+alias sup="RBENV_VERSION=2.0.0-p451 sup"
