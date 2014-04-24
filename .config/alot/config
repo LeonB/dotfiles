@@ -1,0 +1,8 @@
+[accounts]
+    [[work]]
+        realname = Leon Bogaert
+        address = leon@tim-online.nl
+        # gpg_key = D7D6C5AA
+        sendmail_command = sendmail -t
+        sent_box = maildir:///home/leon/Maildir/Sent
+        draft_box = maildir:///home/leon/Maildir/Drafts
