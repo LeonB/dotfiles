@@ -1,3 +1,7 @@
+if !exists(":NERDTree")
+    finish
+endif
+
 "NERDtree
 let g:NERDTreeWinSize = 50
 

@@ -1,3 +1,7 @@
+if !exists(":Unite")
+    finish
+endif
+
 " Set unite prefix key
 " nnoremap [unite] <Nop>
 " nmap <space> [unite]
@@ -25,7 +29,7 @@ endif
 autocmd FileType unite call s:unite_settings()
 function! s:unite_settings()
     nmap <buffer> Q <plug>(unite_exit)
-    " nmap <buffer> <esc> <plug>(unite_exit)
+    nmap <buffer> <esc> <plug>(unite_exit)
     " imap <buffer> <esc> <plug>(unite_exit)
     imap <buffer> <C-j>   <Plug>(unite_select_next_line)
     imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
