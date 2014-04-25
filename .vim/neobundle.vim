@@ -187,6 +187,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " This is an atomic save function for vim
     NeoBundle 'vim-scripts/Atomic-Save'
 
+    " Delete buffers and close files in Vim without closing your windows or
+    " messing up your layout
+    NeoBundle 'moll/vim-bbye'
+
 " }}}1
 
 " Text objects {{{1
