@@ -30,7 +30,8 @@
 "Ctrl+/ toggle nerdcomment per line
 ":map <C-c> ,ci
 
-nmap <leader>bn :b#<CR>
+" nmap <leader>bn :b#<CR>
+nmap <leader>bn :PreviousBuffer<CR>
 
 runtime macros/smarthome_end.vim
 runtime macros/linenumber_toggle.vim
