@@ -56,11 +56,6 @@ set grepprg=ag\ --nogroup\ --nocolor "Use ag over grep
 " disable fileencoding, fileformat (ffs), (no)expandtab, shiftwidth,
 " softtabstop, tabstop & textwidth when using editorconfig-vim
 
-" Disable netrw
-":let loaded_netrw = 1
-":let loaded_netrwPlugin = 1
-let g:netrw_keepdir=0 "keep the current directory the same as the browsing directory
-
 " Directories for swp files
 " // uses the whole path for tmp files to avoid collisions
 set backupdir=~/.vim/backup//
@@ -84,12 +79,12 @@ set tags=./ctags;/ "Search for ctag files up every directory
 "voor php indent: http://www.2072productions.com/to/phpindent.txt
 
 "Gebruik passive ftp (http://alecthegeek.wordpress.com/2007/02/06/handy-hack-how-to-use-vim-netrw-in-ftp-passive-mode/):
-let g:netrw_ftp_cmd="ftp -p -i"
-let g:netrw_silent=1
+" let g:netrw_ftp_cmd="ftp -p -i"
+" let g:netrw_silent=1
 set shortmess+=T
 set shortmess=aOItT     " To avoid the 'Hit ENTER to continue' prompt
 "Standaard treelisting:
-let g:netrw_liststyle=3
+" let g:netrw_liststyle=3
 
 " If something is selected in the completion popup
 " or ctrl-e is used: close the preview buffer
