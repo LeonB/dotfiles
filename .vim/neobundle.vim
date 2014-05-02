@@ -51,6 +51,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " http://golang.org
     NeoBundle 'jnwhiteh/vim-golang'
 
+    " Add additional support for Ansible in VIM
+    NeoBundle 'chase/vim-ansible-yaml'
+
 " }}}1
 
 " Color schemes {{{1
