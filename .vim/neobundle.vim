@@ -93,7 +93,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Navigation {{{1
 
     " A tree explorer plugin for vim
-    NeoBundle 'scrooloose/nerdtree'
+    " NeoBundle 'scrooloose/nerdtree'
+
+    "
+    NeoBundle 'Shougo/vimfiler.vim'
 
     "easily switch between buffers
     " NeoBundle 'jlanzarotta/bufexplorer'
