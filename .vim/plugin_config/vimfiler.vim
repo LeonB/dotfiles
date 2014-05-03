@@ -62,9 +62,11 @@ endfunction
 " put unique window identifier into w:id variable
 autocmd VimEnter,WinEnter * if !exists('w:id') | let w:id=s:getUniqueID() | endif
 
-nmap <leader>vf :call VimFilerUnique()<cr>
+nmap <silent> <Plug>VimFilerUnique :call VimFilerUnique()<cr>
+nmap - <Plug>VimFilerUnique
+nmap <leader>vf <Plug>VimFilerUnique
 
 if !exists(":NERDTree")
-    nmap <leader>nt :call VimFilerUnique()<cr>
+    nmap <leader>nt <Plug>VimFilerUnique
 endif
 
