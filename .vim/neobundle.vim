@@ -98,7 +98,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " A tree explorer plugin for vim
     " NeoBundle 'scrooloose/nerdtree'
 
-    "
+    " Powerful file explorer implemented by Vim script
     NeoBundle 'Shougo/vimfiler.vim'
 
     "easily switch between buffers
