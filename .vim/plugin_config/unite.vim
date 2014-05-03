@@ -1,7 +1,3 @@
-if !exists(":Unite")
-    finish
-endif
-
 " Set unite prefix key
 " nnoremap [unite] <Nop>
 " nmap <space> [unite]
