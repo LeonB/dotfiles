@@ -124,6 +124,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " Vim plugin that displays tags in a window, ordered by class etc.
     NeoBundle 'majutsushi/tagbar'
 
+    " A 'jump to previous buffer' command that behaves as you would expect
+    NeoBundle 'LeonB/vim-previous-buffer'
+
 " }}}1
 
 " GUI {{{1
