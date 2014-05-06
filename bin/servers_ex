@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd $HOME/Workspaces/werk/losse\ projecten/ansible
+
+HOSTS="$(ansible all --list-hosts)"
+parallel-ssh --print -p$(echo $HOSTS | wc -w) -t0 -H "$HOSTS" $@
