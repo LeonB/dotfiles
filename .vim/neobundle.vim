@@ -228,6 +228,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " Find out which project a file belongs to, easy to use in scripts/mappings
     NeoBundle 'dbakker/vim-projectroot'
 
+    " Vim plugin: Testing framework for Vim script
+    NeoBundle 'kana/vim-vspec'
+
     " Interactive command execution in Vim.
     NeoBundle 'Shougo/vimproc', {
                 \ 'build' : {
