@@ -16,9 +16,9 @@ let g:vimfiler_marked_file_icon = '*'
 let g:vimfiler_expand_jump_to_first_child = 0
 
 " call custom vimfiler settings when creating buffer
-autocmd! FileType vimfiler call g:my_vimfiler_settings()
+autocmd! FileType vimfiler call s:my_vimfiler_settings()
 
-function! g:my_vimfiler_settings()
+function! s:my_vimfiler_settings()
     set nobuflisted
     " setlocal bufhidden=delete
     " Only works the first open :(
