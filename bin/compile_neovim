@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd ~/src/neovim
+git pull
+make cmake
+make
