@@ -91,6 +91,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " A GUI & 256 color port of the Railscasts Textmate theme to Vim
     NeoBundle 'dhruvasagar/vim-railscasts-theme'
 
+    " Sexier version of Railscasts vim color scheme / theme
+    NeoBundle 'oguzbilgic/sexy-railscasts-theme'
+
 " }}}1
 
 " Navigation {{{1
