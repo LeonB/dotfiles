@@ -12,4 +12,5 @@ alias emacs='emacsclient -c -t'
 # alias emacsclient='emacsclient -t'
 # alias ack='ack-grep'
 alias realpath="readlink -f"
+alias nvim="VIM=/usr/share/vim $HOME/src/neovim/build/bin/nvim"
 alias sup="RBENV_VERSION=2.0.0-p451 sup"
