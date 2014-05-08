@@ -26,9 +26,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     "PHP-Correct-Indenting VIM script
     NeoBundle '2072/PHP-Indenting-for-VIm'
 
-    "Automatic folding of PHP functions, classes,.. (also folds related PhpDoc)
-    "NeoBundle 'phpfolding.vim'
-
     " Cutting-edge vim css syntax file
     NeoBundle 'JulesWang/css.vim'
 
@@ -58,14 +55,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Color schemes {{{1
 
-    " Moloikai color scheme
-    NeoBundle 'vim-scripts/molokai'
-
     " Monokai colorschem
     NeoBundle 'sickill/vim-monokai'
 
     " Molokai color scheme for Vim
-    "NeoBundle 'tomasr/molokai'
+    NeoBundle 'tomasr/molokai'
 
     "Color theme Hemisu
     NeoBundle 'noahfrederick/Hemisu'
@@ -98,14 +92,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Navigation {{{1
 
-    " A tree explorer plugin for vim
-    " NeoBundle 'scrooloose/nerdtree'
-
     " Powerful file explorer implemented by Vim script
     NeoBundle 'Shougo/vimfiler.vim'
-
-    "easily switch between buffers
-    " NeoBundle 'jlanzarotta/bufexplorer'
 
     " Unite and create user interfaces
     NeoBundle 'Shougo/unite.vim'
@@ -135,42 +123,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " GUI {{{1
 
     " Highlight colors in css files
-    "NeoBundle 'skammer/vim-css-color'
     NeoBundle 'ap/vim-css-color'
 
     "Highlights whitespace at the end of lines
     " NeoBundle 'bitc/vim-bad-whitespace'
 
-    "MatchParen for HTML tags
-    "NeoBundle 'gregsexton/MatchTag'
-
-    "The ultimate statusline/prompt utility
-    " NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-
-    " super simple vim plugin to show the list of buffers in the command bar
-    " NeoBundle 'bling/vim-bufferline'
-
-    " lean & mean statusline for vim that's light as air
-    " NeoBundle 'bling/vim-airline'
-
-    "A modern side panel for Vim
-    "NeoBundle 'mihaifm/vimpanel'
-
-    " A vim plugin to display the indention levels with thin vertical lines
-    " NeoBundle 'Yggdroot/indentLine'
-
-    " Display your undo history in a graph.
-    " NeoBundle 'mbbill/undotree'
 " }}}1
 
 " Commands {{{1
-
-    " Perl/Ruby style regexp notation for Vim
-    " Doesn't work with hlsearch
-    " NeoBundle 'othree/eregex.vim'
-
-    " Vim plugin for intensely orgasmic commenting
-    " NeoBundle 'scrooloose/nerdcommenter'
 
     " commentary.vim: comment stuff out
     NeoBundle 'tpope/vim-commentary'
@@ -186,15 +146,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
     "Vim script for text filtering and alignment
     NeoBundle 'godlygeek/tabular'
-
-    "Vim plugin for the_silver_searcher, 'ag', a replacement for 'ack'
-    " NeoBundle 'rking/ag.vim'
-
-    " A vim plugin that simplifies the transition between multiline and single-line code
-    " NeoBundle 'AndrewRadev/splitjoin.vim'
-
-    " pairs of handy bracket mappings
-    " NeoBundle 'tpope/vim-unimpaired'
 
     " This is an atomic save function for vim
     NeoBundle 'vim-scripts/Atomic-Save'
