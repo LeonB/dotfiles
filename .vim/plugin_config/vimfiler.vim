@@ -47,22 +47,13 @@ function! s:my_vimfiler_settings()
     "             \ "\<Plug>(vimfiler_edit_file)")
 endfunction
 
-" Return a unique id each time.
-let s:cntr = 0
-function! s:getUniqueID()
-    let s:cntr = s:cntr + 1
-    return s:cntr
-endfunction
-
 " Create a new VimFiler instance based on the current window
 function! VimFilerUnique()
-    exec 'VimFiler -simple -buffer-name=window-' . w:id
+    exec 'VimFiler -simple -buffer-name=window-' . winnr()
 endfunction
 
-" put unique window identifier into w:id variable
-autocmd VimEnter,WinEnter * if !exists('w:id') | let w:id=s:getUniqueID() | endif
-
 nmap <silent> <Plug>VimFilerUnique :call VimFilerUnique()<cr>
+" Vinegar-like keybinding
 nmap - <Plug>VimFilerUnique
 nmap <leader>vf <Plug>VimFilerUnique
 
