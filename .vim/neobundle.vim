@@ -88,6 +88,21 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " Sexier version of Railscasts vim color scheme / theme
     NeoBundle 'oguzbilgic/sexy-railscasts-theme'
 
+    " The original IR_Black color scheme for vim
+    NeoBundle 'twerth/ir_black'
+
+    " A colorful, dark color scheme for Vim
+    NeoBundle 'nanotech/jellybeans.vim'
+
+    " Gary Bernhardt's grb256 vim theme packaged to work with Pathogen/Vundle
+    NeoBundle 'quanganhdo/grb256'
+
+    " codeschool vim theme
+    NeoBundle '29decibel/codeschool-vim-theme'
+
+    " Zenburn is a low-contrast color scheme for Vim
+    NeoBundle 'jnurmine/Zenburn'
+
 " }}}1
 
 " Navigation {{{1
