@@ -7,5 +7,8 @@ for i in $(find ./* -maxdepth 0 -type d); do
     name=${i:2}
 	cd "$BASEPATH/$name/"
 	echo "Updating $name"
-	git pull
+
+    git fetch
+    git reset --hard FETCH_HEAD
+    git clean -df
 done
