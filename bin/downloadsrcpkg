@@ -1,0 +1,132 @@
+#!/usr/bin/python
+
+import optparse
+import sys
+
+import lsb_release
+
+from ubuntutools.archive import (SourcePackage, DebianSourcePackage,
+                                 UbuntuSourcePackage, DownloadError)
+from ubuntutools.config import UDTConfig, ubu_email
+from ubuntutools.lp.lpapicache import (Launchpad, Distribution,
+                                       SeriesNotFoundException,
+                                       PackageNotFoundException)
+from ubuntutools.misc import (system_distribution, vendor_to_distroinfo,
+                              codename_to_distribution)
+
+def parse(args):
+    usage = 'Usage: %prog [options] <source package name or .dsc URL/file>'
+    parser = optparse.OptionParser(usage)
+    parser.add_option('-s', '--source',
+                      metavar='SOURCE',
+                      dest='source_release',
+                      help='Backport from SOURCE release '
+                           '(default: devel release)')
+    parser.add_option('-v', '--version',
+                      metavar='VERSION',
+                      help='Package version to backport (or verify)')
+    parser.add_option('-m', '--mirror',
+                      metavar='URL',
+                      help='Preferred mirror (default: Launchpad)')
+    parser.add_option('-l', '--lpinstance',
+                      metavar='INSTANCE',
+                      help='Launchpad instance to connect to '
+                           '(default: production)')
+
+    opts, args = parser.parse_args(args)
+    if len(args) != 1:
+        parser.error('You must specify a single source package or a .dsc '
+                     'URL/path.')
+    config = UDTConfig()
+    if opts.lpinstance is None:
+        opts.lpinstance = config.get_value('LPINSTANCE')
+
+    return opts, args, config
+
+def main(args):
+    ubu_email()
+
+    opts, (package_or_dsc,), config = parse(args[1:])
+
+    Launchpad.login_anonymously(service=opts.lpinstance)
+
+    try:
+        pkg = find_package(opts.mirror,
+                           package_or_dsc,
+                           opts.version,
+                           opts.source_release,
+                           config)
+        pkg.pull()
+
+        # for release in opts.dest_releases:
+        #     do_backport(workdir,
+        #                 pkg,
+        #                 opts.suffix,
+        #                 opts.close,
+        #                 release,
+        #                 opts.release_pocket,
+        #                 opts.build,
+        #                 opts.builder,
+        #                 opts.update,
+        #                 opts.upload,
+        #                 opts.keyid,
+        #                 opts.prompt)
+    except DownloadError, e:
+        error(str(e))
+    finally:
+        pass
+
+def find_release_package(mirror, package, version, source_release, config):
+    srcpkg = None
+
+    if source_release:
+        distribution = codename_to_distribution(source_release)
+        if not distribution:
+            error('Unknown release codename %s' % source_release)
+        info = vendor_to_distroinfo(distribution)()
+        source_release = info.codename(source_release, default=source_release)
+    else:
+        distribution = system_distribution()
+    mirrors = [mirror] if mirror else []
+
+    mirrors.append(config.get_value('%s_MIRROR' % distribution.upper()))
+
+    if not version:
+        archive = Distribution(distribution.lower()).getArchive()
+        try:
+            spph = archive.getSourcePackage(package, source_release)
+        except (SeriesNotFoundException, PackageNotFoundException), e:
+            error(str(e))
+        version = spph.getVersion()
+
+    if distribution == 'Debian':
+        srcpkg = DebianSourcePackage(package,
+                                     version,
+                                     mirrors=mirrors)
+    elif distribution == 'Ubuntu':
+        srcpkg = UbuntuSourcePackage(package,
+                                     version,
+                                     mirrors=mirrors)
+
+    return srcpkg
+
+def find_package(mirror, package, version, source_release, config):
+    "Returns the SourcePackage"
+    if package.endswith('.dsc'):
+        return SourcePackage(version=version, dscfile=package,
+                             mirrors=(mirror,))
+
+    if not source_release and not version:
+        info = vendor_to_distroinfo(system_distribution())
+        source_release = info().devel()
+
+    srcpkg = find_release_package(mirror, package, version,
+                                  source_release, config)
+    if version and srcpkg.version != version:
+        error('Requested backport of version %s but version of %s in %s is %s'
+              % (version, package, source_release, srcpkg.version))
+
+    return srcpkg
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv))
