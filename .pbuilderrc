@@ -61,7 +61,7 @@ DEBOOTSTRAPOPTS="--variant=buildd"
 PBUILDERSATISFYDEPENDSCMD="/usr/lib/pbuilder/pbuilder-satisfydepends-experimental"
 
 # Install extra packages
-
+EXTRAPACKAGES=""
 
 NAME="$DIST"
 if [ -n "${ARCH}" ]; then
@@ -77,6 +77,7 @@ BUILDRESULT="/var/cache/pbuilder/$NAME/result/"
 APTCACHE="/var/cache/pbuilder/$NAME/aptcache/"
 BUILDPLACE="/var/cache/pbuilder/build"
 AUTO_DEBSIGN="yes"
+DEBBUILDOPTS=""
 
 # If $APTCACHE doesn't exist: create it
 if [ ! -d "$APTCACHE" ]; then
