@@ -1,20 +1,23 @@
 # Codenames for Debian suites according to their alias. Update these when
 # needed.
-UNSTABLE_CODENAME="sid"
-TESTING_CODENAME="jessie"
-STABLE_CODENAME="wheezy"
+UNSTABLE_CODENAME="$(debian-distro-info --devel)"
+TESTING_CODENAME="$(debian-distro-info --testing)"
+STABLE_CODENAME="$(debian-distro-info --stable)"
 STABLE_BACKPORTS_SUITE="$STABLE_CODENAME-backports"
 
 # List of Debian suites.
-DEBIAN_SUITES=($UNSTABLE_CODENAME $TESTING_CODENAME $STABLE_CODENAME
-    "unstable" "testing" "stable")
+DEBIAN_SUITES="$(debian-distro-info --supported) \
+    stable testing unstable \
+    $(debian-distro-info --stable)-backports"
 
 # List of Ubuntu suites. Update these when needed.
-UBUNTU_SUITES=("trusty" "saucy" "raring" "precise")
+UBUNTU_SUITES="$(ubuntu-distro-info --supported)"
 
 # Mirrors to use. Update these to your preferred mirror.
-DEBIAN_MIRROR="ftp.us.debian.org"
-UBUNTU_MIRROR="mirrors.kernel.org"
+DEBIAN_MIRROR="ftp.nl.debian.org"
+# http://mirrors.ubuntu.com/mirrors.txt
+UBUNTU_MIRROR="nl.archive.ubuntu.com"
+UBUNTU_MIRROR="mirrors.nl.eu.kernel.org"
 
 # Optionally use the changelog of a package to determine the suite to use if
 # none set.
@@ -26,7 +29,7 @@ if [ -z "${DIST}" ] && [ -r "debian/changelog" ]; then
     fi
     # Use the stable suite for stable-backports.
     if $(echo "$STABLE_BACKPORTS_SUITE" | grep -q $DIST); then
-        DIST="$STABLE"
+        DIST="$STABLE_CODENAME"
     fi
 fi
 
@@ -50,7 +53,6 @@ esac
 # Optionally set the architecture to the host architecture if none set. Note
 # that you can set your own default (i.e. ${ARCH:="i386"}).
 : ${ARCH:="$(dpkg --print-architecture)"}
-ARCH=i386
 
 # install build-essential packages on create/update
 DEBOOTSTRAPOPTS="--variant=buildd"
@@ -73,11 +75,16 @@ BASETGZ="/var/cache/pbuilder/$NAME-base.tgz"
 DISTRIBUTION="$DIST"
 BUILDRESULT="/var/cache/pbuilder/$NAME/result/"
 APTCACHE="/var/cache/pbuilder/$NAME/aptcache/"
-BUILDPLACE="/var/cache/pbuilder/build/"
+BUILDPLACE="/var/cache/pbuilder/build"
+
+# If $APTCACHE doesn't exist: create it
+if [ ! -d "$APTCACHE" ]; then
+    mkdir -p "$APTCACHE"
+fi
 
 # BINDMOUNTS is a space separated list of things to mount
 # inside the chroot.
-# BINDMOUNTS="/var/cache/archive"
+BINDMOUNTS="/var/cache/archive"
 
 if $(echo ${DEBIAN_SUITES[@]} | grep -q $DIST); then
     # Debian configuration
@@ -95,4 +102,9 @@ elif $(echo ${UBUNTU_SUITES[@]} | grep -q $DIST); then
 else
     echo "Unknown distribution: $DIST"
     exit 1
+fi
+
+# Check if the local mirror exists, if not: unset it
+if [ ! -f "/var/cache/archive/${DIST}/Packages.gz" ]; then
+    OTHERMIRROR=""
 fi
