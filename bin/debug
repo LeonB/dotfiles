@@ -39,5 +39,6 @@ exec gdb -batch-silent \
     -ex 'x/16i $pc' \
     -ex 'thread apply all backtrace' \
     -ex 'quit' \
-    --args ${*} \
-    < /dev/null
+    --args ${*}
+    # --args ${*} \
+    # < /dev/null
