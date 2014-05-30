@@ -9,6 +9,7 @@ git clean -df
 
 # Clean up previous compiles
 make clean
+make distclean
 
 # Compile neovim
 make cmake
