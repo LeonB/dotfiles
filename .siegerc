@@ -90,13 +90,13 @@ gmethod = HEAD
 # You can turn this message off with this directive.
 # ex: show-logfile = false
 #
-show-logfile = true
+show-logfile = false
 
 #
 # Default logging status, true turns logging on.
 # ex: logging = true|false
 #
-logging = true
+logging = false
 
 #
 # Logfile, the default siege logfile is /var/log/siege.log
