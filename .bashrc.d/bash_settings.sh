@@ -1,5 +1,5 @@
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
+HISTSIZE=100000
 HISTFILESIZE=20000
 TERM=xterm-256color
 
