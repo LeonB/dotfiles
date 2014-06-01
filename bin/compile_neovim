@@ -12,5 +12,5 @@ make clean
 make distclean
 
 # Compile neovim
-make cmake
+make cmake CMAKE_EXTRA_FLAGS="-DCMAKE_BUILD_TYPE=Release -Wno-error -D_FORTIFY_SOURCE=1" CFLAGS="-D_FORTIFY_SOURCE=1"
 make
