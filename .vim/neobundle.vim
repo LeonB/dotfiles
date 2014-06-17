@@ -103,6 +103,22 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " Zenburn is a low-contrast color scheme for Vim
     NeoBundle 'jnurmine/Zenburn'
 
+    " A fork of desert256.vim aims to make it a bit warm and more friendly for
+    " my eyes.
+    NeoBundle 'rainux/vim-desert-warm-256'
+
+    " A slightly-modified desert theme, for 88- and 256-color xterms
+    NeoBundle 'vim-scripts/desert256.vim'
+
+    " summerfruit color scheme in 256 colors
+    NeoBundle 'vim-scripts/summerfruit256.vim'
+
+    " light color scheme
+    NeoBundle 'therubymug/vim-pyte'
+
+    " Color scheme for the Gnome2 "nuvola" theme
+    NeoBundle 'vim-scripts/nuvola.vim'
+
 " }}}1
 
 " Navigation {{{1
