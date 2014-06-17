@@ -1,3 +1,3 @@
 #!/bin/bash
 
-openssl rsa -in $1 -out $1.out
+openssl rsa -in $1 -out $1.nopass
