@@ -5,3 +5,4 @@
 !redshift.conf
 !/alot/
 !/alot/config
+!/lxc/default.conf
