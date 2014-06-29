@@ -53,7 +53,7 @@ do
 			retval=$?
 			;;
 
-		"key" | "key.unencrypted" )
+		"key" | "key.unencrypted" | "nopass" )
 			md5=$(md5_key "$parameter")
 			retval=$?
 			;;
