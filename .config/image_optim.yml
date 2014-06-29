@@ -1,2 +1,4 @@
 nice: 20
 threads: 1
+jpegoptim:
+  max_quality: 90
