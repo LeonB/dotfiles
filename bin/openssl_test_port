@@ -1,0 +1,10 @@
+#!/bin/bash
+
+URI="$1"
+
+if [ "$1" = "" ]
+then
+	exit 255
+fi
+
+openssl s_client -connect $URI -showcerts -CApath /etc/ssl/certs
