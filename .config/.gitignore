@@ -1,8 +1,9 @@
 /*
 !.gitignore
-!/autostart/
-!image_optim.yml
-!redshift.conf
 !/alot/
 !/alot/config
+!/autostart/
+!/lxc/
 !/lxc/default.conf
+!image_optim.yml
+!redshift.conf
