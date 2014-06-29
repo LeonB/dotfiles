@@ -239,7 +239,4 @@ NeoBundleFetch 'Shougo/neobundle.vim'
         NeoBundle 'editorconfig/editorconfig-vim'
     endif
 
-    " sensible.vim: Defaults everyone can agree on
-    NeoBundle 'tpope/vim-sensible'
-
 " }}}
