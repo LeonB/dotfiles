@@ -1,3 +1,5 @@
+# /usr/share/pbuilder/pbuilderrc
+
 # Codenames for Debian suites according to their alias. Update these when
 # needed.
 UNSTABLE_CODENAME="$(debian-distro-info --devel)"
@@ -54,6 +56,12 @@ esac
 # that you can set your own default (i.e. ${ARCH:="i386"}).
 : ${ARCH:="$(dpkg --print-architecture)"}
 
+# ccache
+# sudo mkdir -p /var/cache/pbuilder/ccache
+# sudo chmod a+w /var/cache/pbuilder/ccache
+export CCACHE_DIR="/var/cache/pbuilder/ccache"
+export PATH="/usr/lib/ccache:${PATH}"
+
 # install build-essential packages on create/update
 DEBOOTSTRAPOPTS="--variant=buildd"
 
@@ -61,12 +69,13 @@ DEBOOTSTRAPOPTS="--variant=buildd"
 PBUILDERSATISFYDEPENDSCMD="/usr/lib/pbuilder/pbuilder-satisfydepends-experimental"
 
 # Install extra packages
-EXTRAPACKAGES=""
+# SET EXTRAPACKAGES TO " " to disable it
+: ${EXTRAPACKAGES:="ccache"}
 
 NAME="$DIST"
 if [ -n "${ARCH}" ]; then
     NAME="$NAME-$ARCH"
-    DEBOOTSTRAPOPTS=("--arch" "$ARCH" "${DEBOOTSTRAPOPTS[@]}")
+    DEBOOTSTRAPOPTS="--arch \"${ARCH}\" \"${DEBOOTSTRAPOPTS[@]}\""
 fi
 
 BASETGZ="/var/cache/pbuilder/$NAME-base.tgz"
@@ -76,8 +85,14 @@ DISTRIBUTION="$DIST"
 BUILDRESULT="/var/cache/pbuilder/$NAME/result/"
 APTCACHE="/var/cache/pbuilder/$NAME/aptcache/"
 BUILDPLACE="/var/cache/pbuilder/build"
-AUTO_DEBSIGN="yes"
-DEBBUILDOPTS=""
+AUTO_DEBSIGN="no"
+
+# set DEBBUILDOPTS
+: ${DEBBUILDOPTS:="$DEBBUILDOPTS"}
+DEBBUILDOPTS="$DEBBUILDOPTS $DEBBUILDOPTS_EXTRA"
+
+# See /usr/share/doc/pbuilder/examples
+HOOKDIR="$HOME/.pbuilder-hooks"
 
 # If $APTCACHE doesn't exist: create it
 if [ ! -d "$APTCACHE" ]; then
@@ -87,6 +102,7 @@ fi
 # BINDMOUNTS is a space separated list of things to mount
 # inside the chroot.
 BINDMOUNTS="/var/cache/archive"
+BINDMOUNTS="${BINDMOUNTS} ${CCACHE_DIR}"
 
 if $(echo ${DEBIAN_SUITES[@]} | grep -q $DIST); then
     # Debian configuration
@@ -101,6 +117,8 @@ elif $(echo ${UBUNTU_SUITES[@]} | grep -q $DIST); then
     COMPONENTS="main restricted universe multiverse"
     DEBOOTSTRAPOPTS=("${DEBOOTSTRAPOPTS[@]}" "--keyring=/usr/share/keyrings/ubuntu-archive-keyring.gpg")
     OTHERMIRROR="deb file:///var/cache/archive $DIST/"
+    OTHERMIRROR="${OTHERMIRROR}|http://ppa.launchpad.net/leonbo/servers/ubuntu trusty main"
+
 else
     echo "Unknown distribution: $DIST"
     exit 1

@@ -4,3 +4,10 @@ method = ftp
 incoming = ~leonbo/linux-malware-detect/ubuntu
 login = anonymous
 allow_unsigned_uploads = 0
+
+[servers]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~leonbo/servers/ubuntu
+login = anonymous
+allow_unsigned_uploads = 0

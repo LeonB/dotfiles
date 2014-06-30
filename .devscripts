@@ -1,0 +1,4 @@
+DSCVERIFY_KEYRINGS="/etc/apt/trusted.gpg:~/.gnupg/pubring.gpg"
+DEBRELEASE_UPLOADER=dput
+
+# vim: set ft=shell
