@@ -41,6 +41,7 @@ gsettings set net.launchpad.Diodon.clipboard instant-paste false
 
 # Gnome Terminal (still uses gconf?)
 gconftool-2 --type string --set /schemas/apps/gnome-terminal/keybindings/help disabled
+gconftool-2 --set "/apps/gnome-terminal/profiles/Default/scrollback_lines" --type int 5120
 
 # Unity GUI
 # Disable Unity dash online results
