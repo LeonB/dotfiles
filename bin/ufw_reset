@@ -52,7 +52,7 @@ for protocol in smtps submission; do
     for ip in $outlook_com_ips; do
         ufw allow out to $ip port $protocol; # outlook.com
     done;
-    for ip in $gmail_com_ips; do
+    for ip in $gmail_ips; do
         ufw allow out to $ip port $protocol; # gmail.com
     done;
     ufw deny out to any port $protocol
