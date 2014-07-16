@@ -159,6 +159,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     "Highlights whitespace at the end of lines
     " NeoBundle 'bitc/vim-bad-whitespace'
 
+    " improve movement of f/t with glow shift.
+    NeoBundle 'saihoooooooo/glowshi-ft.vim'
+
 " }}}1
 
 " Commands {{{1
