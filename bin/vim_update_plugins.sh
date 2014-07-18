@@ -1,3 +1,3 @@
 #!/bin/bash
 
-vim -c "NeoBundleUpdate | q"
+vim -c "NeoBundleUpdate | NeoBundleSaveVersions | q"

@@ -232,6 +232,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
                 \    },
                 \ }
 
+    " Vim interface to Web API
+    NeoBundle 'mattn/webapi-vim'
+
 " }}}1
 
 " Config {{{1

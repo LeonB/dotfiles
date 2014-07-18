@@ -3,6 +3,9 @@
 # Except this file
 !.gitignore
 
+# And the neobundle version file
+!versions.json
+
 # and vundle & neobundle
 !/vundle
 !/neobundle.vim
