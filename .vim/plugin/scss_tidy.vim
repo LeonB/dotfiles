@@ -11,6 +11,7 @@ endfunction
 
 function s:TidyCss(line1, line2)
     let cmd = 'csstidy - --silent=true --sort_properties=true --template=low'
+    " let cmd = 'cssbeautify-cli -f /dev/stdin --indent=' . &shiftwidth
     let stdin = join(getline(a:line1, a:line2), "\n")
     execute a:line1 . ',' . a:line2 . '!' . cmd
     :retab
