@@ -125,7 +125,7 @@
     },
     {
         "name": "vim-ansible-yaml",
-        "revision": "a38c4af2ba6eb039d7026b2d64f887e6f23312b9"
+        "revision": "b608d4cbdd2a3866fe03c1a583a77a6e08aca05d"
     },
     {
         "name": "vim-bbye",
