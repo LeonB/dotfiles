@@ -9,6 +9,7 @@
     diff = auto
 [alias]
     s = status
+    d = diff
     unstage = reset HEAD --
     tree = log --graph --decorate --pretty=oneline --abbrev-commit
     ; tree2 = log --oneline --decorate --all --graph
