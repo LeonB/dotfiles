@@ -8,6 +8,8 @@ endif
 
 call neobundle#rc(expand('~/.vim/bundle/'))
 
+" To be fair, caching saves 0.02 seconds (ssd?)
+" Not really worth it
 if neobundle#has_cache()
     NeoBundleLoadCache
 else
