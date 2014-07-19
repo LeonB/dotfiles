@@ -11,3 +11,10 @@ method = ftp
 incoming = ~leonbo/servers/ubuntu
 login = anonymous
 allow_unsigned_uploads = 0
+
+[avconv]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~leonbo/avconv/ubuntu
+login = anonymous
+allow_unsigned_uploads = 0
