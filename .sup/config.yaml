@@ -1,5 +1,5 @@
---- 
-:editor: /usr/bin/vim -f -c 'set ft=mail spell'
+---
+:editor: "/usr/bin/vim -f -c 'set ft=mail spell'"
 :thread_by_subject: false
 :edit_signature: false
 :ask_for_from: false
@@ -13,7 +13,7 @@
 :jump_to_open_message: true
 :discard_snippets_from_encrypted_messages: false
 :load_more_threads_when_scrolling: true
-:default_attachment_save_dir: ""
+:default_attachment_save_dir: ''
 :sent_source: maildir:/home/leon/Maildir/.Sent
 :archive_sent: true
 :poll_interval: 60
@@ -22,13 +22,14 @@
 :col_jump: 2
 :stem_language: dutch
 :sync_back_to_maildir: true
+:continuous_scroll: false
+:always_edit_async: false
 :accounts:
   :default:
     :name: Leon Bogaert
     :email: leon@tim-online.nl
-    :alternates: []
-
-    # :sendmail: /usr/sbin/sendmail -oem -ti
-    :sendmail: msmtp -t --read-envelope-from
-    :signature: /home/leon/.signature
-    :gpgkey: ""
+    :alternates:
+    - leonbogaert@gmail.com
+    :sendmail: /usr/sbin/sendmail -oem -ti
+    :signature: "/home/leon/.signature"
+    :gpgkey: '32BF6E41'
