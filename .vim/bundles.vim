@@ -157,6 +157,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " Highlight colors in css files
     NeoBundle 'ap/vim-css-color'
 
+    " A light and configurable statusline/tabline for Vim
+    NeoBundle 'itchyny/lightline.vim'
+
     "Highlights whitespace at the end of lines
     " NeoBundle 'bitc/vim-bad-whitespace'
 
