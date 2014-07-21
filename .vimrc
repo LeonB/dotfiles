@@ -52,6 +52,7 @@ set grepprg=ag\ --nogroup\ --nocolor "Use ag over grep
 " set ttyfast               "u got a fast terminal
 " set ttyscroll=3           "redraw instead of scrolling (may cause flickering)
 " set lazyredraw            "do not redraw as many
+set laststatus=2            " give every window a statusline
 
 " disable fileencoding, fileformat (ffs), (no)expandtab, shiftwidth,
 " softtabstop, tabstop & textwidth when using editorconfig-vim
