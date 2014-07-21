@@ -7,12 +7,13 @@ if has ('vim_starting')
 endif
 
 call neobundle#rc(expand('~/.vim/bundle/'))
+runtime bundles.vim
 
 " To be fair, caching saves 0.02 seconds (ssd?)
 " Not really worth it
-if neobundle#has_cache()
-    NeoBundleLoadCache
-else
-    runtime bundles.vim
-    NeoBundleSaveCache
-endif
+" if neobundle#has_cache()
+"     NeoBundleLoadCache
+" else
+"     runtime bundles.vim
+"     NeoBundleSaveCache
+" endif
