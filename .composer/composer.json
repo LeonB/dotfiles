@@ -1,0 +1,6 @@
+{
+    "require": {
+        "phpmd/phpmd": "*",
+        "squizlabs/php_codesniffer": "*"
+    }
+}
