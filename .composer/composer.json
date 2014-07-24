@@ -2,6 +2,7 @@
     "require": {
         "phpmd/phpmd": "@stable",
         "squizlabs/php_codesniffer": "@stable",
-        "fabpot/php-cs-fixer": "@stable"
+        "fabpot/php-cs-fixer": "@stable",
+        "phpunit/phpunit": "*"
     }
 }
