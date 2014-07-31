@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# sudo apt-get install i3lock scrot
+# xautolock -time 10 -locker lock
+
+tmpfile=$(mktemp --suffix=.png)
+scrot "$tmpfile"
+mogrify -blur 0x5 $tmpfile
+i3lock -i $tmpfile --dpms
+rm $tmpfile
