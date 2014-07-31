@@ -1,0 +1,10 @@
+#!/bin/bash
+
+url=$1
+
+if [ "$url" == ""]; then
+    echo "Provide an url"
+    exit 1
+fi
+
+wget -O- "$url" | xmllint --format
