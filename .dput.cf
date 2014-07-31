@@ -18,3 +18,10 @@ method = ftp
 incoming = ~leonbo/avconv/ubuntu
 login = anonymous
 allow_unsigned_uploads = 0
+
+[fail2ban]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~leonbo/fail2ban/ubuntu
+login = anonymous
+allow_unsigned_uploads = 0
