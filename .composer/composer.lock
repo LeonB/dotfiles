@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "fabpot/php-cs-fixer",
-            "version": "v0.5.4",
+            "version": "v0.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/PHP-CS-Fixer.git",
-                "reference": "5f23c9a4559218446fe15c6e3e01bd6f92104f10"
+                "reference": "85d8f69bee216a30397c84b9f42c7328d1276d42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/PHP-CS-Fixer/zipball/5f23c9a4559218446fe15c6e3e01bd6f92104f10",
-                "reference": "5f23c9a4559218446fe15c6e3e01bd6f92104f10",
+                "url": "https://api.github.com/repos/fabpot/PHP-CS-Fixer/zipball/85d8f69bee216a30397c84b9f42c7328d1276d42",
+                "reference": "85d8f69bee216a30397c84b9f42c7328d1276d42",
                 "shasum": ""
             },
             "require": {
@@ -48,13 +48,11 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "A script to automatically fix Symfony Coding Standard",
-            "time": "2014-07-10 15:50:48"
+            "time": "2014-07-29 18:07:04"
         },
         {
             "name": "pdepend/pdepend",
