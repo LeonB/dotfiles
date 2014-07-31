@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# check out:
+# - bar
+# - pv
+
+# if [ -t 0 ]; then
+#     echo running interactivelly
+# else
+#     while read -r line ; do
+#         echo $line
+#     done
+# fi
+
+file=$1
+
+if [ "$file" == "" ]; then
+    echo "Provide a file to check"
+    exit 1
+fi
+
+urls=$(extract_urls "$file")
+
+for url in $urls; do
+    echo -e ".\c"
+    wget -q --spider "$url"
+
+    if [ $? -ne 0 ]; then
+        echo "\n${url} gave a 404\n"
+    fi
+done
+
+echo "\n"
