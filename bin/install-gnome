@@ -54,3 +54,6 @@ gsettings reset org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unitysh
 gsettings set com.canonical.indicator.keyboard visible false
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2
+
+# Disable screensaver?
+# org.gnome.desktop.screensaver lock-enabled false
