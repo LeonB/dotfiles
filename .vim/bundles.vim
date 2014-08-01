@@ -44,6 +44,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " nginx vim syntax
     NeoBundle 'evanmiller/nginx-vim-syntax'
 
+    " Vim syntax highlighting for Blade templates.
+    NeoBundle 'xsbeats/vim-blade.git'
+
 " }}}1
 
 " Color schemes {{{1
