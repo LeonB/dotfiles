@@ -7,4 +7,4 @@ if [ "$url" == ""]; then
     exit 1
 fi
 
-wget -O- "$url" | xmllint --format
+wget -O- "$url" | xmllint --format -
