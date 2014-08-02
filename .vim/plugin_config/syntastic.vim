@@ -17,6 +17,7 @@ let g:syntastic_warning_symbol = '!'
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 let g:syntastic_phpcs_conf="--standard=Zend"
 let g:syntastic_phpcs_conf="--standard=CakePHP"
+let g:syntastic_phpcs_conf="--standard=PSR2"
 
 " Python
 " flake8, pyflakes, pylin, python
