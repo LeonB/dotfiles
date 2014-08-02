@@ -3,14 +3,20 @@
 " nmap <space> [unite]
 
 " let g:unite_enable_start_insert = 1
-let g:unite_prompt = '>>> '
-let g:unite_winheight = 15
 let g:unite_update_time = 200
 let g:unite_split_rule = 'botright'
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
-call unite#set_profile('files', 'smartcase', 1)
+" call unite#set_profile('files', 'smartcase', 1)
 call unite#custom_filters('buffer', ['matcher_fuzzy', 'matcher_project_files'])
+
+" Set default context variables
+call unite#custom#profile('default', 'context', {
+            \ 'prompt': '>>> ',
+            \ 'prompt_direction': 'top',
+            \ 'smartcase': 1,
+            \ 'winheight': 15
+            \ })
 
 if executable('ag')
     let g:unite_source_grep_command='ag'
