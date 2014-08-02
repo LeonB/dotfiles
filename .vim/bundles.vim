@@ -45,7 +45,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'evanmiller/nginx-vim-syntax'
 
     " Vim syntax highlighting for Blade templates.
-    NeoBundle 'xsbeats/vim-blade.git'
+    NeoBundle 'xsbeats/vim-blade'
 
 " }}}1
 
@@ -128,16 +128,25 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Navigation {{{1
 
     " Powerful file explorer implemented by Vim script
-    NeoBundle 'Shougo/vimfiler.vim'
+    NeoBundleLazy 'Shougo/vimfiler', {
+                \ 'depends' : ['Shougo/unite.vim'],
+                \ 'autoload': { 'commands': ['VimFilerTab', 'VimFiler', 'VimFilerExplorer']}
+                \ }
 
     " Unite and create user interfaces
-    NeoBundle 'Shougo/unite.vim'
+    NeoBundleLazy 'Shougo/unite.vim', {
+                \ 'autoload': {'commands': ['Unite', 'UniteResume']}
+                \ }
 
     " MRU plugin includes unite.vim MRU sources
-    NeoBundle 'Shougo/neomru.vim'
+    NeoBundleLazy 'Shougo/neomru.vim', {
+                \ 'autoload': {'unite_sources': ['file_mru']}
+                \ }
 
     "extended % matching for HTML
-    NeoBundle 'matchit.zip'
+    NeoBundleLazy 'matchit.zip', {
+                \ 'autoload': {'filetypes': ['html', 'xml']}
+                \ }
 
     "Updates entries in a tags file automatically when saving
     " NeoBundle 'craigemery/vim-autotag'
@@ -148,48 +157,48 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " NeoBundle 'xolox/vim-misc'
 
     " Vim plugin that displays tags in a window, ordered by class etc.
-    NeoBundle 'majutsushi/tagbar'
+    NeoBundleLazy 'majutsushi/tagbar', {
+                \ 'autoload': {'commands': ['TagbarToggle']}
+                \ }
 
     " A 'jump to previous buffer' command that behaves as you would expect
-    NeoBundle 'LeonB/vim-previous-buffer'
+    NeoBundle 'LeonB/vim-previous-buffer', {
+                \ 'autoload': {'commands': ['PreviousBuffer']}
+                \ }
 
 " }}}1
 
 " GUI {{{1
 
     " Highlight colors in css files
-    NeoBundle 'ap/vim-css-color'
+    NeoBundleLazy 'ap/vim-css-color', {
+                \ 'autoload': {'filetypes': ['css', 'html', 'sass', 'scss']}
+                \ }
 
     " A light and configurable statusline/tabline for Vim
     NeoBundle 'itchyny/lightline.vim'
-
-    "Highlights whitespace at the end of lines
-    " NeoBundle 'bitc/vim-bad-whitespace'
-
-    " improve movement of f/t with glow shift.
-    " NeoBundle 'saihoooooooo/glowshi-ft.vim'
 
 " }}}1
 
 " Commands {{{1
 
     " commentary.vim: comment stuff out
-    NeoBundle 'tpope/vim-commentary'
+    NeoBundleLazy 'tpope/vim-commentary', {
+                \ 'autoload': {'mappings': ['cgc', 'gc']}}
 
     "Syntax checking hacks for Vim"
-    " NeoBundle 'scrooloose/syntastic'
+    NeoBundle 'scrooloose/syntastic'
 
     "Provides insert mode auto-completion for quotes, parens, brackets, etc
     NeoBundle 'Raimondi/delimitMate'
 
-    " https://github.com/Townk/vim-autoclose
-    " https://github.com/jiangmiao/auto-pairs
-
     "Vim script for text filtering and alignment
-    NeoBundle 'godlygeek/tabular'
+    NeoBundleLazy 'godlygeek/tabular', {
+                \ 'autoload': { 'commands': ['Tabularze']}}
 
     " This is an atomic save function for vim
-    NeoBundle 'vim-scripts/Atomic-Save'
+    NeoBundleLazy 'vim-scripts/Atomic-Save', {
+                \ 'autoload': { 'commands': ['AtomicSave']}}
 
     " Delete buffers and close files in Vim without closing your windows or
     " messing up your layout
@@ -200,7 +209,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Text objects {{{1
 
     "quoting/parenthesizing made simple
-    NeoBundle 'tpope/vim-surround'
+    " NeoBundle 'tpope/vim-surround'
+    NeoBundleLazy 'tpope/vim-surround', {
+                \ 'autoload': {
+                \   'mappings': ['ds', 'cs', 'ys', 'yS', 'S', 'gS'],
+                \ }}
 
     "Vim plugin that provides additional text objects (pair, quote, separator)
     NeoBundle 'wellle/targets.vim'
@@ -222,13 +235,26 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Libs {{{1
 
     "enable repeating supported plugin maps with \".\"
-    NeoBundle 'tpope/vim-repeat'
+    NeoBundleLazy 'tpope/vim-repeat', {'autoload': {'mappings': '.'}}
 
     " Find out which project a file belongs to, easy to use in scripts/mappings
-    NeoBundle 'dbakker/vim-projectroot'
+    NeoBundleLazy 'dbakker/vim-projectroot', {
+                \ 'autoload': {
+                \  'commands': [
+                \  'ProjectBufArgs',
+                \  'ProjectBufDo',
+                \  'ProjectBufFirst',
+                \  'ProjectBufLast',
+                \  'ProjectBufNext',
+                \  'ProjectBufPrev',
+                \  'ProjectRootCD',
+                \  'ProjectRootExe',
+                \  'ProjectRootLCD',
+                \ ],
+                \ 'functions': 'ProjectRootGet'}}
 
     " Vim plugin: Testing framework for Vim script
-    NeoBundle 'kana/vim-vspec'
+    NeoBundleLazy 'kana/vim-vspec'
 
     " Interactive command execution in Vim.
     NeoBundle 'Shougo/vimproc', {
@@ -261,3 +287,4 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     endif
 
 " }}}
+"
