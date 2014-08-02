@@ -57,7 +57,11 @@
     },
     {
         "name": "landscape.vim",
-        "revision": "e1bf8e3694f2f2a00f46f7e3c2cb4dd6fef10f90"
+        "revision": "efc940dbb8b314c0b52124a8eba06cd19c887060"
+    },
+    {
+        "name": "lightline.vim",
+        "revision": "72a413e60c101e71f26ef2e3cf42d662fe730aae"
     },
     {
         "name": "matchit.zip",
@@ -69,7 +73,7 @@
     },
     {
         "name": "neobundle.vim",
-        "revision": "d444d5e5efc0f872f2b1d43d58fe2c0e9816f6bd"
+        "revision": "6906d95134e857b55b394d79b62b36706df1f6a1"
     },
     {
         "name": "neomru.vim",
@@ -85,7 +89,7 @@
     },
     {
         "name": "PHP-Indenting-for-VIm",
-        "revision": "690f6485c043681b1f1624be6a0a87fef70bbc61"
+        "revision": "a563afc219641017656c1063fdd93b9b19573f65"
     },
     {
         "name": "scss-syntax.vim",
@@ -93,7 +97,7 @@
     },
     {
         "name": "seoul256.vim",
-        "revision": "20cd95cf9a0f25ed04427c8952d7f35b07663762"
+        "revision": "03a235067557eb802e5d5cd7632e2de4fd892baa"
     },
     {
         "name": "sexy-railscasts-theme",
@@ -105,7 +109,7 @@
     },
     {
         "name": "syntastic",
-        "revision": "e34f421b391219302b4edb7a5e0fa1a7b376463a"
+        "revision": "c2e7bf29c9096610951a3da21b17ca2fe9b4dc4e"
     },
     {
         "name": "tabular",
@@ -121,15 +125,19 @@
     },
     {
         "name": "unite.vim",
-        "revision": "714413fdc2790dbf9c3647aa6687f31c65a2e8ee"
+        "revision": "e9d6ea54c7d5112e672de4ccec5b75a7818b7464"
     },
     {
         "name": "vim-ansible-yaml",
-        "revision": "b608d4cbdd2a3866fe03c1a583a77a6e08aca05d"
+        "revision": "4634e5432c5230dbb2653ffc38413771ec1ccfd9"
     },
     {
         "name": "vim-bbye",
         "revision": "a018cbc1ba63b1a8b86b7c468645e7642637ec4a"
+    },
+    {
+        "name": "vim-blade",
+        "revision": "e172e92564bfcc5d90930ed35a03bb3c388a7f7e"
     },
     {
         "name": "vim-coffee-script",
@@ -185,7 +193,7 @@
     },
     {
         "name": "vim-puppet",
-        "revision": "27d2af11223349088f5c7fb3187bb3184364ea12"
+        "revision": "0154b08afd916eff4a57415c9b6a5e0332d1cf01"
     },
     {
         "name": "vim-pyte",
@@ -205,7 +213,7 @@
     },
     {
         "name": "vim-surround",
-        "revision": "f85cb4e788356f664d033e8519abdd8e1bc26762"
+        "revision": "fa433e0b7330753688f715f3be5d10dc480f20e5"
     },
     {
         "name": "vim-textobj-function",
@@ -228,12 +236,12 @@
         "revision": "9cffa857b5dced11c037b7113d188827af5a10ed"
     },
     {
-        "name": "vimfiler.vim",
-        "revision": "537dbb1789bc2b53e40097d14ceabe48d5b570d4"
+        "name": "vimfiler",
+        "revision": "8b8c6912919e28fc4cda88f5df6c4287dfc7bdb9"
     },
     {
         "name": "vimproc",
-        "revision": "c1bdfe05f6aee5a2b67bd8e223d70fcb9bd2812e"
+        "revision": "ca032f8541e8d7b45a56c6ebca7c390cdc402e17"
     },
     {
         "name": "webapi-vim",
