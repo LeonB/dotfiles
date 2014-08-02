@@ -6,4 +6,4 @@ let delimitMate_balance_matchpairs = 1
 "inoremap <Space> <C-R>=delimitMate#ExpandSpace()<CR>
 "inoremap <expr> <CR> pumvisible() ? "\<c-y>" : "\<C-R>=delimitMate#ExpandReturn()\<CR>"
 "let delimitMate_autoclose = 0
-let delimitMate_expand_cr = 1
+" let delimitMate_expand_cr = 1
