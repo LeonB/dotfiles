@@ -30,6 +30,11 @@ endif
 
 autocmd FileType unite call s:unite_settings()
 function! s:unite_settings()
+    " Not showing the trailing space as red if has vim-trailing-color installed
+    autocmd InsertLeave <buffer> match ExtraWhitespace //
+    autocmd InsertEnter <buffer> match ExtraWhitespace //
+    autocmd BufWinEnter <buffer> match ExtraWhitespace //
+
     nmap <buffer> Q <plug>(unite_exit)
     nmap <buffer> <esc> <plug>(unite_exit)
     " imap <buffer> <esc> <plug>(unite_exit)
