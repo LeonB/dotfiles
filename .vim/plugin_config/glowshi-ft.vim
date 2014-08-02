@@ -1,7 +1,10 @@
 " request current colors for visual mode:
 " :hi VISUALS
 
-autocmd ColorScheme * call s:set_glowshift_colors()
+augroup glowshift_colors
+    autocmd!
+    autocmd ColorScheme * call s:set_glowshift_colors()
+augroup END
 
 function! s:set_glowshift_colors()
     " wombat256
