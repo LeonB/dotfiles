@@ -4,6 +4,7 @@
 " go get -u code.google.com/p/go.tools/cmd/goimports
 " go get -u code.google.com/p/go.tools/oracle
 " go get -u github.com/kisielk/errcheck
+" go get -u code.google.com/p/go.tools/cmd/vet
 
 " Use autocomplete: <C-x><C-o>
 
