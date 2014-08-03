@@ -36,7 +36,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
     " Github mirror of Go vimscripts, synced with main repository
     " http://golang.org
-    NeoBundle 'jnwhiteh/vim-golang'
+    " NeoBundle 'jnwhiteh/vim-golang'
 
     " Add additional support for Ansible in VIM
     NeoBundle 'chase/vim-ansible-yaml'
@@ -47,6 +47,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " Vim syntax highlighting for Blade templates.
     NeoBundle 'xsbeats/vim-blade'
 
+    " Go development plugin for Vim
+    NeoBundle 'fatih/vim-go'
+
 " }}}1
 
 " Color schemes {{{1
@@ -55,7 +58,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'sickill/vim-monokai'
 
     " Molokai color scheme for Vim
-    NeoBundle 'tomasr/molokai'
+    " NeoBundle 'tomasr/molokai'
+
+    " Molokai color scheme for Vim (modified)
+    NeoBundle 'fatih/molokai'
 
     "Color theme Hemisu
     NeoBundle 'noahfrederick/Hemisu'
@@ -219,9 +225,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'wellle/targets.vim'
 
     " Vim plugin: Text objects for functions
-    NeoBundle 'kana/vim-textobj-function'
     NeoBundle 'kana/vim-textobj-user'
-    NeoBundle 'kentaro/vim-textobj-function-php'
+
+    " Vim plugin: Text objects for functions
+    NeoBundle 'kana/vim-textobj-function', {'depends': 'kana/vim-textobj-user'}
+
+    " Text object for php functions
+    NeoBundle 'kentaro/vim-textobj-function-php', {'depends': 'kana/vim-textobj-user'}
 
     " Vim plugin that defines a new text object representing lines of code at
     " the same indent level. Useful for python/vim scripts, etc
@@ -290,4 +300,3 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     endif
 
 " }}}
-"
