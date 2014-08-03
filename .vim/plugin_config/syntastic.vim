@@ -26,8 +26,7 @@ let g:syntastic_python_checkers = ['flake8']
 " Go
 " go get code.google.com/p/go.tools/cmd/vet
 " go get github.com/golang/lint/golint
-let g:syntastic_go_checkers = ['go', 'gofmt', 'golint', 'gotye', 'govet']
-" let g:syntastic_go_checkers = ['gofmt', 'golint', 'gotype', 'govet']
+let g:syntastic_go_checkers = ['go', 'gofmt', 'golint', 'gotype', 'govet']
 
 " scss
 let g:syntastic_scss_checkers = ['sass', 'scss_lint']
