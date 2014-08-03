@@ -2,7 +2,6 @@
 set t_Co=256
 
 colorscheme wombat256
-"colorscheme Monokai
 
 " One little adjustment for Monokai
 if g:colors_name == "Monokai"
