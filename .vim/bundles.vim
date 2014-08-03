@@ -230,6 +230,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     "Vim text objects for search matches
     NeoBundle 'Raimondi/vim_search_objects'
 
+    " Vim plugin that adds a new url text object
+    NeoBundle 'LeonB/vim-textobj-url', {'depends': 'kana/vim-textobj-user'}
+
 " }}}1
 
 " Libs {{{1
