@@ -1,5 +1,10 @@
 " Allow escape to close the (autocomplete) popup menu
-inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
+imap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
+
+" In popup menu: use enter to select highlight
+" In normal insert mode: break undo sequence
+" http://vim.wikia.com/wiki/Modified_undo_behavior
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u<CR>"
 
 " map <Ctrl-o> to omnicomplete
 imap <c-o> <c-x><c-o>
