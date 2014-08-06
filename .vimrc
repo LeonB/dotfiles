@@ -63,7 +63,8 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/backup//
 
 "Some gui options:
-:set completeopt=longest,preview,menuone
+" :set completeopt=longest,preview,menuone
+:set completeopt=longest,menuone
 
 let g:Tb_MoreThanOne=99999999 "Always open the tabbar.vim
 :let g:buftabs_only_basename=1 "Only show the basename, not the full path

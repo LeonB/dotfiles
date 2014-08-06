@@ -1,10 +1,9 @@
-"bind ctrl+space to completion
-"inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
-"\ "\<lt>C-n>" :
-"\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
-"\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
-"\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
-"imap <C-@> <C-Space>
+" Allow escape to close the (autocomplete) popup menu
+inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
+
+" map <Ctrl-o> to omnicomplete
+imap <c-o> <c-x><c-o>
+nmap <c-o> a<c-x><c-o>
 
 "map indent/unindent to tab
 :map <Tab> >>
