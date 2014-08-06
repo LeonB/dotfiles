@@ -66,9 +66,6 @@ set directory=~/.vim/backup//
 " :set completeopt=longest,preview,menuone
 :set completeopt=longest,menuone
 
-let g:Tb_MoreThanOne=99999999 "Always open the tabbar.vim
-:let g:buftabs_only_basename=1 "Only show the basename, not the full path
-
 runtime! plugin_config/*.vim
 
 runtime macros.vim
