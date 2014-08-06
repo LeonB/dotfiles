@@ -24,9 +24,6 @@
 "go to normal mode, mark position(z), yank, pate, move to(z), down, appendmode 
 :imap <C-d> <esc>mzyyp`zja
 
-"Ctrl-x no selection: remove line
-:nmap <C-x> dd
-
 "Ctrl+/ toggle nerdcomment per line
 ":map <C-c> ,ci
 
