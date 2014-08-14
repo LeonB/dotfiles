@@ -34,6 +34,15 @@ nmap <c-o> a<c-x><c-o>
 " nmap <leader>bn :b#<CR>
 nmap <leader>bn :PreviousBuffer<CR>
 
+" delete without yanking
+" nnoremap <leader>d "_d
+" vnoremap <leader>d "_d
+
+" replace currently selected text with default register
+" without yanking it
+" vnoremap <leader>p "_dP
+vnoremap p "_dP
+
 runtime macros/smarthome_end.vim
 runtime macros/linenumber_toggle.vim
 runtime macros/move_lines.vim
