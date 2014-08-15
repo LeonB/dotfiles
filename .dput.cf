@@ -25,3 +25,17 @@ method = ftp
 incoming = ~leonbo/fail2ban/ubuntu
 login = anonymous
 allow_unsigned_uploads = 0
+
+[golang]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~leonbo/golang/ubuntu
+login = anonymous
+allow_unsigned_uploads = 0
+
+[nss]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~leonbo/nss/ubuntu
+login = anonymous
+allow_unsigned_uploads = 0
