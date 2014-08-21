@@ -32,7 +32,7 @@ function! s:my_vimfiler_settings()
                 \ "\<Plug>(vimfiler_edit_file)")
 
     " Only close buffer, not whole window
-    nmap q <buffer> <Plug>(vimfiler_close)
+    nmap <buffer> q <Plug>(vimfiler_close)
 endfunction
 
 " Create a new VimFiler instance based on the current window
