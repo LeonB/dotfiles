@@ -1,0 +1,18 @@
+#!/bin/bash
+
+cd ~/src/the_silver_searcher
+
+# update to latest version
+git fetch
+git reset --hard FETCH_HEAD
+git clean -df
+tag=$(git tag | sort -V | tail -1)
+git checkout $tag
+
+# Clean up previous compiles
+# make clean
+# make distclean
+
+# Compile neovim
+./build.sh --prefix=$HOME/.local
+make install
