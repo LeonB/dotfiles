@@ -15,7 +15,7 @@ for path in *; do
     dirname="$(basename "${path}")"
 
     cd $dirname
-    log=`git --no-pager log --all --since=${DAYS}.days --pretty=format:"%h%x09%an%x09%ad%x09%s" --date=iso`
+    log=`git --no-pager log --all --since=${DAYS}.days --pretty=format:"\"%h\"%x09%an%x09%ad%x09%s" --date=iso`
 
     while read -r line; do
         if [ "$line" != "" ]; then
