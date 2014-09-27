@@ -17,3 +17,4 @@ alias sup="RBENV_VERSION=2.0.0-p451 sup"
 alias ap="ansible-playbook"
 alias art="php artisan"
 alias phpstorm="$HOME/bin/phpstorm/bin/phpstorm.sh"
+alias git-root='cd $(git rev-parse --show-toplevel)'
