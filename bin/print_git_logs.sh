@@ -19,10 +19,20 @@ for path in *; do
 
     while read -r line; do
         if [ "$line" != "" ]; then
-            item="$dirname	$line"
+            sha=`echo $line | awk '{print $1}' | sed -e 's/^"//'  -e 's/"$//'`
+
+            if [ "$sha" != "" ]; then
+                stat=`git log $sha^..$sha --shortstat | tail -n1 | awk '{gsub(/^ +| +$/,"")}1'`
+            else
+                stat=""
+            fi
+
+            item="$dirname	$line	$stat"
             logs+=("$item")
+
         fi
     done <<< "$log"
+
     cd ..
 done
 
