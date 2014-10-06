@@ -38,7 +38,7 @@ filetype=$(get_filetype "$FILE")
 md5=""
 
 case "$filetype" in
-	"cer" | "cert" | "crt" )
+	"ca" | "cer" | "cert" | "crt" )
 		echo "$(md5_cert $FILE)"
 		;;
 
