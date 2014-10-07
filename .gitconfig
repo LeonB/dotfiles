@@ -12,6 +12,7 @@
     d = diff
     unstage = reset HEAD --
     tree = log --graph --decorate --pretty=oneline --abbrev-commit
+    export-files = "!sh -c \"git diff-tree -r --no-commit-id --name-only --diff-filter=ACMRT $1 | xargs tar -rf ${2:-export.tar}\""
     ; tree2 = log --oneline --decorate --all --graph
 [merge]
     ff = only
