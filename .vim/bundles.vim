@@ -50,6 +50,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " Go development plugin for Vim
     NeoBundle 'fatih/vim-go'
 
+    " Retro groove color scheme for Vim
+    NeoBundle 'morhetz/gruvbox'
+
     " mustache and handlebars mode for vim
     NeoBundle 'mustache/vim-mustache-handlebars'
 
@@ -75,7 +78,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'sickill/vim-monokai'
 
     " Molokai color scheme for Vim
-    " NeoBundle 'tomasr/molokai'
+    NeoBundle 'tomasr/molokai'
 
     "Color theme Hemisu
     NeoBundle 'noahfrederick/Hemisu'
@@ -141,7 +144,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " A dark theme for Atom, Alfred, Chrome DevTools, iTerm, Sublime Text,
     " Textmate, Terminal.app, Vim, Xcode, Zsh
     " look into on_source
-    NeoBundle 'zenorocha/dracula-theme', { 'rtp' : 'vim' }
+    NeoBundle 'zenorocha/dracula-theme', {'rtp' : 'vim'}
+
+    NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
 
 " }}}1
 
