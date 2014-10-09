@@ -50,6 +50,23 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " Go development plugin for Vim
     NeoBundle 'fatih/vim-go'
 
+    " mustache and handlebars mode for vim
+    NeoBundle 'mustache/vim-mustache-handlebars'
+
+" }}}1
+
+" (Omni)completion {{{1
+
+    " Improved PHP omnicompletion
+    NeoBundle 'shawncplus/phpcomplete.vim'
+
+    " php manual doc
+    NeoBundle 'drwX/php-manual.vim'
+
+    NeoBundle 'tobyS/pdv', {'depends' :
+                \ [ 'tobyS/vmustache',
+                \ ]}
+
 " }}}1
 
 " Color schemes {{{1
