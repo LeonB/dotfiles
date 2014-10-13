@@ -233,6 +233,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " Text object for php functions
     NeoBundle 'kentaro/vim-textobj-function-php', {'depends': 'kana/vim-textobj-user'}
 
+    " Vim plugin: Text objects for the current line
+    NeoBundle 'kana/vim-textobj-line'
+
     " Vim plugin that defines a new text object representing lines of code at
     " the same indent level. Useful for python/vim scripts, etc
     NeoBundle 'michaeljsmith/vim-indent-object'
