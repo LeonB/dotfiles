@@ -22,3 +22,5 @@ let g:go_fmt_autosave = 0
 nmap <leader>gb :GoBuild<CR>
 nmap <leader>gf :GoFmt<CR>
 nmap <leader>gi :GoInstall<CR>
+nmap <leader>gr :GoRun<CR>
+nmap <leader>gm :make<CR>
