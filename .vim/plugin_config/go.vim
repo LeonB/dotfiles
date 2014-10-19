@@ -18,9 +18,13 @@ let g:go_disable_autoinstall = 1
 " Disable auto fmt on save:
 let g:go_fmt_autosave = 0
 
+" Automatically run :GoInfo on every keyword
+" let g:go_auto_type_info = 1
+
 " Set up mappings
 nmap <leader>gb :GoBuild<CR>
 nmap <leader>gf :GoFmt<CR>
-nmap <leader>gi :GoInstall<CR>
+" nmap <leader>gi :GoInstall<CR>
+nmap <leader>gi :GoInfo<CR>
 nmap <leader>gr :GoRun<CR>
 nmap <leader>gm :make<CR>
