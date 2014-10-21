@@ -1,0 +1,10 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use Regexp::Common qw/URI/;
+
+while (<>) {
+    if (m/$RE{URI}{HTTP}{-keep}/) {
+        print "$1\n";
+    }
+}
