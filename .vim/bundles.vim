@@ -168,6 +168,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " Dark gray color scheme sharing some similarities with Desert
     NeoBundle 'vim-scripts/Wombat'
 
+    " Lucius color scheme for vim
+    NeoBundle 'jonathanfilip/vim-lucius'
+
+    " Vim color scheme
+    NeoBundle 'zeis/vim-kolor'
+
 " }}}1
 
 " Navigation {{{1
