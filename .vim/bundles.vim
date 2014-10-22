@@ -144,6 +144,30 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
     NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
 
+    " A vim colorscheme based on Github's syntax highlighting.
+    NeoBundle 'endel/vim-github-colorscheme'
+
+    " Dark-background GUI color scheme
+    NeoBundle 'vim-scripts/Liquid-Carbon'
+
+    " A slightly modified version of the original mustang-colorscheme for vim by hcalves.
+    NeoBundle 'croaker/mustang-vim'
+
+    " Spiritual successor to Skittles Dark
+    NeoBundle 'shawncplus/skittles_berry'
+
+    " Port of the Sunburst TextMate theme to Vim
+    NeoBundle 'gigamo/sunburst.vim'
+
+    " A(nother) port of TextMate's Twilight theme to Vim.
+    NeoBundle 'matthewtodd/vim-twilight'
+
+    " Wombat for 256 color xterms
+    NeoBundle 'vim-scripts/wombat256.vim'
+
+    " Dark gray color scheme sharing some similarities with Desert
+    NeoBundle 'vim-scripts/Wombat'
+
 " }}}1
 
 " Navigation {{{1

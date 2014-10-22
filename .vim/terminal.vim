@@ -1,7 +1,7 @@
 "always use 256 colors on the term
 set t_Co=256
 
-colorscheme wombat256
+colorscheme wombat256mod
 " let g:molokai_original = 1
 " colorscheme molokai
 
