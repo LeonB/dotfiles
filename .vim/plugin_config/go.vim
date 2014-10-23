@@ -22,9 +22,10 @@ let g:go_fmt_autosave = 0
 " let g:go_auto_type_info = 1
 
 " Set up mappings
-nmap <leader>gb :GoBuild<CR>
-nmap <leader>gf :GoFmt<CR>
-" nmap <leader>gi :GoInstall<CR>
-nmap <leader>gi :GoInfo<CR>
-nmap <leader>gr :GoRun<CR>
-nmap <leader>gm :make<CR>
+autocmd FileType go nmap <leader>gb :GoBuild<CR>
+autocmd FileType go nmap <leader>gf :GoFmt<CR>
+" autocmd FileType go nmap <leader>gi :GoInstall<CR>
+autocmd FileType go nmap <leader>gi :GoInfo<CR>
+autocmd FileType go nmap <leader>gr :GoRun<CR>
+autocmd FileType go nmap <leader>gm :make<CR>
+autocmd FileType go nmap <c-]> :GoDef<cr>
