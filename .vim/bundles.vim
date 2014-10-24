@@ -242,6 +242,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " messing up your layout
     NeoBundle 'moll/vim-bbye'
 
+    " Yet Another Posting Script reborn
+    NeoBundle 'guyzmo/vim-yaposting'
+
 " }}}1
 
 " Text objects {{{1
