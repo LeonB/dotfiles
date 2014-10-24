@@ -174,6 +174,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " Vim color scheme
     NeoBundle 'zeis/vim-kolor'
 
+    " Let's keep Vim warm
+    NeoBundle 'nice/sweater'
+
 " }}}1
 
 " Navigation {{{1
