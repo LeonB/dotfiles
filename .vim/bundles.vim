@@ -198,8 +198,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
     " Automated tag file generation and syntax highlighting of tags in Vim
     " #slow-on-sshfs
-    " NeoBundle 'xolox/vim-easytags'
-    " NeoBundle 'xolox/vim-misc'
+    NeoBundle 'xolox/vim-easytags'
+    NeoBundle 'xolox/vim-misc'
+
+    " Ctags generator for Vim (written in Vimscript)
+    " NeoBundle 'szw/vim-tags'
 
     " Vim plugin that displays tags in a window, ordered by class etc.
     NeoBundle 'majutsushi/tagbar'
