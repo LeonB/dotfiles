@@ -52,6 +52,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " mustache and handlebars mode for vim
     NeoBundle 'mustache/vim-mustache-handlebars'
 
+    " A better JSON for Vim
+    NeoBundle 'elzr/vim-json'
+
 " }}}1
 
 " (Omni)completion {{{1
