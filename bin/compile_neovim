@@ -1,6 +1,10 @@
 #!/bin/bash
 
+brew upgrade neovim --HEAD --ignore-dependencies
+exit $?
+
 sudo apt-get install libncurses5-dev
+# brew install ncurses
 
 cd ~/src/neovim
 

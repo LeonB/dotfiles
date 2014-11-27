@@ -76,6 +76,11 @@ runtime theme.vim
 
 set tags=./ctags;/ "Search for ctag files up every directory
 
+" Neovim specific stuff??
+if has('nvim')
+    set unnamedclip
+endif
+
 "voor php indent: http://www.2072productions.com/to/phpindent.txt
 
 "Gebruik passive ftp (http://alecthegeek.wordpress.com/2007/02/06/handy-hack-how-to-use-vim-netrw-in-ftp-passive-mode/):
