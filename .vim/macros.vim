@@ -41,7 +41,15 @@ nmap <leader>bn :PreviousBuffer<CR>
 " replace currently selected text with default register
 " without yanking it
 " vnoremap <leader>p "_dP
-vnoremap p "_dP
+vnoremap p "_d
+vnoremap P "_dP
+
+" Don't jump over wrapped lines
+" nnoremap <expr> k (v:count ? 'k' : 'gk')
+" nnoremap <expr> j (v:count ? 'j' : 'gj')
+
+" Make yaking lines consistent with D and C
+nnoremap Y y$
 
 runtime macros/smarthome_end.vim
 runtime macros/linenumber_toggle.vim
