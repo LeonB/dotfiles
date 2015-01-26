@@ -6,6 +6,17 @@ else
     DAYS=7
 fi
 
+today=`date +%a`
+
+if [ "$today" == "Thu" ] 
+then
+    thursday=`date -dthursday +%Y-%m-%d`
+else
+    thursday=`date -dlast-thursday +%Y-%m-%d`
+fi
+
+previous_thursday=`date -d "$thursday - 1 week" +%Y-%m-%d`
+
 logs=()
 logs+=("project	sha	author	commitdate	message")
 
@@ -15,7 +26,8 @@ for path in *; do
     dirname="$(basename "${path}")"
 
     cd $dirname
-    log=`git --no-pager log --all --since=${DAYS}.days --pretty=format:"\"%h\"%x09%an%x09%ad%x09%s" --date=iso`
+    # log=`git --no-pager log --all --since=${DAYS}.days --pretty=format:"\"%h\"%x09%an%x09%ad%x09%s" --date=iso`
+    log=`git --no-pager log --all --since="$previous_thursday" --until="$thursday" --pretty=format:"\"%h\"%x09%an%x09%ad%x09%s" --date=iso`
 
     while read -r line; do
         if [ "$line" != "" ]; then
