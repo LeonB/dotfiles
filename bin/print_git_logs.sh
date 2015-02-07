@@ -6,9 +6,9 @@ else
     DAYS=7
 fi
 
-today=`date +%a`
+today=`date +%u`
 
-if [ "$today" == "Thu" ] 
+if [ "$today" == "4" ]
 then
     thursday=`date -dthursday +%Y-%m-%d`
 else
