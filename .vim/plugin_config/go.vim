@@ -25,7 +25,8 @@ let g:go_fmt_autosave = 0
 autocmd FileType go nmap <leader>gb :GoBuild<CR>
 autocmd FileType go nmap <leader>gf :GoFmt<CR>
 " autocmd FileType go nmap <leader>gi :GoInstall<CR>
-autocmd FileType go nmap <leader>gi :GoInfo<CR>
+autocmd FileType go nmap <leader>g? :GoInfo<CR>
+autocmd FileType go nmap <leader>gi :GoImports<CR>
 autocmd FileType go nmap <leader>gr :GoRun<CR>
 autocmd FileType go nmap <leader>gm :make<CR>
 autocmd FileType go nmap <c-]> :GoDef<cr>
