@@ -55,6 +55,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " A better JSON for Vim
     NeoBundle 'elzr/vim-json'
 
+    " Twig syntax highlighting, snipMate, etc.
+    NeoBundle 'evidens/vim-twig'
+
 " }}}1
 
 " (Omni)completion {{{1
