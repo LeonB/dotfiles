@@ -4,7 +4,12 @@
     <sdlname>G27 Racing Wheel</sdlname>
     <!--The GUID for a joystick is included for informational purposes only.-->
     <guid>030000006d0400009bc2000011010000</guid>
-    <names/>
+    <names>
+        <buttonname index="2">Previous black box</buttonname>
+        <buttonname index="3">Next black box</buttonname>
+        <buttonname index="7">Look right</buttonname>
+        <buttonname index="8">Look left</buttonname>
+    </names>
     <sets>
         <set index="1">
             <dpad index="1">
@@ -41,6 +46,30 @@
                     </slots>
                 </dpadbutton>
             </dpad>
+            <button index="2">
+                <slots>
+                    <slot>
+                        <code>0x1000021</code>
+                        <mode>keyboard</mode>
+                    </slot>
+                    <slot>
+                        <code>0x1000012</code>
+                        <mode>keyboard</mode>
+                    </slot>
+                </slots>
+            </button>
+            <button index="3">
+                <slots>
+                    <slot>
+                        <code>0x1000021</code>
+                        <mode>keyboard</mode>
+                    </slot>
+                    <slot>
+                        <code>0x1000014</code>
+                        <mode>keyboard</mode>
+                    </slot>
+                </slots>
+            </button>
             <button index="7">
                 <slots>
                     <slot>
