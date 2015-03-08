@@ -1,0 +1,3 @@
+#!/bin/bash
+
+dpkg -l | grep '^i' | awk '{print $2}'

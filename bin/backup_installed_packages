@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# list_installed_packages > $HOME/^Ckg-l_$(date +%Y%m%d).conf
+list_installed_packages
