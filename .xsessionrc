@@ -5,6 +5,7 @@ isavailable() {
     which "$1" >/dev/null
 }
 
+# We don't use this anymore: see bin/install-gnome
 # read ~/.Xmodmap if it exists
 # if test -f "${HOME}/.Xmodmap"
 # then
