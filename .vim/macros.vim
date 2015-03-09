@@ -41,7 +41,7 @@ nmap <leader>bn :PreviousBuffer<CR>
 " replace currently selected text with default register
 " without yanking it
 " vnoremap <leader>p "_dP
-vnoremap p "_d
+vnoremap p "_dp
 vnoremap P "_dP
 
 " Don't jump over wrapped lines
