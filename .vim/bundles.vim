@@ -46,9 +46,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " Go development plugin for Vim
     NeoBundle 'fatih/vim-go'
 
-    " Retro groove color scheme for Vim
-    NeoBundle 'morhetz/gruvbox'
-
     " mustache and handlebars mode for vim
     NeoBundle 'mustache/vim-mustache-handlebars'
 
@@ -68,9 +65,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " php manual doc
     NeoBundle 'drwX/php-manual.vim'
 
-    NeoBundle 'tobyS/pdv', {'depends' :
-                \ [ 'tobyS/vmustache',
-                \ ]}
+    " NeoBundle 'tobyS/pdv', {'depends' :
+    "             \ [
+    "             \   'tobyS/vmustache',
+    "             \   'SirVer/ultisnips',
+    "             \ ]}
 
 " }}}1
 
@@ -183,6 +182,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " Let's keep Vim warm
     NeoBundle 'nice/sweater'
 
+    " Retro groove color scheme for Vim
+    NeoBundle 'morhetz/gruvbox'
+
+    " The colorscheme with neovim in mind
+    NeoBundle 'freeo/vim-kalisi'
+
 " }}}1
 
 " Navigation {{{1
@@ -251,8 +256,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " messing up your layout
     NeoBundle 'moll/vim-bbye'
 
-    " Yet Another Posting Script reborn
-    NeoBundle 'guyzmo/vim-yaposting'
+    if has('python')
+        " Yet Another Posting Script reborn
+        NeoBundle 'guyzmo/vim-yaposting'
+    endif
 
 " }}}1
 
@@ -319,6 +326,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
     " Syntax checking hacks for vim
     NeoBundle 'scrooloose/syntastic'
+
+    " Vim plugin for Livedown
+    NeoBundle 'shime/vim-livedown'
+
+    " Make Vim handle line and column numbers in file names with a minimum of fuss
+    NeoBundle 'kopischke/vim-fetch'
 
 " }}}1
 

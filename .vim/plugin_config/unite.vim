@@ -5,10 +5,18 @@
 " let g:unite_enable_start_insert = 1
 let g:unite_update_time = 200
 let g:unite_split_rule = 'botright'
+
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#filters#sorter_default#use(['sorter_rank'])
+
+" call unite#filters#sorter_default#use(['sorter_rank'])
+" call unite#filters#sorter_default#use(['sorter_length'])
+
 " call unite#set_profile('files', 'smartcase', 1)
+
+" call unite#custom#profile('files', 'filters', ['sorter_rank'])
 call unite#custom_filters('buffer', ['matcher_fuzzy', 'matcher_project_files'])
+
+call unite#custom#source('file_rec/async', 'ignore_pattern', 'node_modules/\|bower_components/\|vendor/')
 
 " Set default context variables
 call unite#custom#profile('default', 'context', {
@@ -22,10 +30,17 @@ if executable('ag')
     let g:unite_source_grep_command='ag'
     let g:unite_source_grep_default_opts='--nocolor --nogroup --hidden'
     let g:unite_source_grep_recursive_opt=''
+
+    " Requires at least ag 0.22
+    " Find is faster but is dumber ignoring certain files
+    " let g:unite_source_rec_async_command = 'ag --follow --nocolor --nogroup --hidden --ignore ".hg" --ignore ".svn" --ignore ".git" --ignore ".bzr" -g ""'
+    let g:unite_source_rec_async_command = 'ag --follow --nocolor --nogroup -g ""'
+    " let g:unite_source_rec_async_command = 'git ls-files'
 elseif executable('ack')
     let g:unite_source_grep_command='ack'
     let g:unite_source_grep_default_opts='--no-heading --no-color -a'
     let g:unite_source_grep_recursive_opt=''
+    " let g:unite_source_rec_async_command = 'ack -f --nofilter'
 endif
 
 autocmd FileType unite call s:unite_settings()
@@ -46,7 +61,7 @@ function! s:unite_settings()
 endfunction
 
 " Ctrl-p
-nnoremap <C-p> :Unite -start-insert file_rec/async<CR>
+nnoremap <C-p> :Unite -start-insert file_rec/async:!<CR>
 " :MRU
 command! MRU Unite file_mru
 " Ag & Ack

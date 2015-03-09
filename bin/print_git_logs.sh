@@ -6,6 +6,8 @@ else
     DAYS=7
 fi
 
+NUM_WEEKS=1
+
 today=`date +%u`
 
 if [ "$today" == "4" ]
@@ -15,7 +17,7 @@ else
     thursday=`date -dlast-thursday +%Y-%m-%d`
 fi
 
-previous_thursday=`date -d "$thursday - 1 week" +%Y-%m-%d`
+previous_thursday=`date -d "$thursday - $NUM_WEEKS week" +%Y-%m-%d`
 
 logs=()
 logs+=("project	sha	author	commitdate	message")

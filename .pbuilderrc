@@ -70,12 +70,12 @@ PBUILDERSATISFYDEPENDSCMD="/usr/lib/pbuilder/pbuilder-satisfydepends-experimenta
 
 # Install extra packages
 # SET EXTRAPACKAGES TO " " to disable it
-: ${EXTRAPACKAGES:="ccache"}
+# : ${EXTRAPACKAGES:="ccache"}
 
 NAME="$DIST"
 if [ -n "${ARCH}" ]; then
     NAME="$NAME-$ARCH"
-    DEBOOTSTRAPOPTS="--arch \"${ARCH}\" \"${DEBOOTSTRAPOPTS[@]}\""
+    # DEBOOTSTRAPOPTS="--arch \"${ARCH}\" \"${DEBOOTSTRAPOPTS[@]}\""
 fi
 
 BASETGZ="/var/cache/pbuilder/$NAME-base.tgz"
@@ -118,6 +118,7 @@ elif $(echo ${UBUNTU_SUITES[@]} | grep -q $DIST); then
     DEBOOTSTRAPOPTS=("${DEBOOTSTRAPOPTS[@]}" "--keyring=/usr/share/keyrings/ubuntu-archive-keyring.gpg")
     OTHERMIRROR="deb file:///var/cache/archive $DIST/"
     OTHERMIRROR="${OTHERMIRROR}|http://ppa.launchpad.net/leonbo/servers/ubuntu trusty main"
+    OTHERMIRROR="${OTHERMIRROR}|http://ppa.launchpad.net/leonbo/golang/ubuntu trusty main"
 
 else
     echo "Unknown distribution: $DIST"

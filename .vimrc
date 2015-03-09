@@ -78,7 +78,8 @@ set tags=./ctags;/ "Search for ctag files up every directory
 
 " Neovim specific stuff??
 if has('nvim')
-    set unnamedclip
+    " set unnamedclip
+    set backspace=indent,eol,start " backspace through lines
 endif
 
 "voor php indent: http://www.2072productions.com/to/phpindent.txt

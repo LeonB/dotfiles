@@ -9,3 +9,4 @@ export PYTHONPATH=""
 export VIRTUALENV_USE_DISTRIBUTE=1
 export PIP_RESPECT_VIRTUALENV=true
 #source $HOME/.local/bin/virtualenvwrapper.sh
+export PYTHONPATH="${PYTHONPATH}:$HOME/src/moppy-python"
