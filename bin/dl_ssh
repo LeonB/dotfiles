@@ -7,5 +7,5 @@ shopt -s expand_aliases # for aliases to work
 
 # VBoxManage startvm "Ubuntu 12.04: Zend Server" --type headless
 
-cd "$HOME/Workspaces/werk/losse projecten/dotlocal/"
+cd "$HOME/Workspaces/werk/losse_projecten/dotlocal/"
 vagrant ssh $@

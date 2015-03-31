@@ -9,5 +9,5 @@ shopt -s expand_aliases # for aliases to work
 # sleep 10
 # VBoxManage list runningvms
 
-cd "$HOME/Workspaces/werk/losse projecten/dotlocal/"
+cd "$HOME/Workspaces/werk/losse_projecten/dotlocal/"
 vagrant halt $@
