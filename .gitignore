@@ -2,3 +2,6 @@
 /.pip/pip.log
 /ctags
 /.sup/lock
+/.composer
+!/.composer/composer.json
+!/.composer/composer.lock
