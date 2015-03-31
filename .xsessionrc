@@ -28,6 +28,9 @@ then
     # Make Caps lock behave like escape
     # Control_L would match Ctrl AND Caps lock
     run-one xcape -e '#66=Escape'
+elif isavailable xcape
+then
+    xcape -e '#66=Escape'
 fi
 
 # vim: ft=sh
