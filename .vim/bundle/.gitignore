@@ -3,8 +3,8 @@
 # Except this file
 !.gitignore
 
-# And the neobundle version file
-!versions.json
+# And the neobundle lock file
+!NeoBundle.lock
 
 # and vundle & neobundle
 !/vundle
