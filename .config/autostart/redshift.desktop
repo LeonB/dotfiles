@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=/usr/bin/redshift
+Exec=/usr/bin/redshift-gtk
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
