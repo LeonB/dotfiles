@@ -3,9 +3,13 @@
 brew upgrade neovim --HEAD --ignore-dependencies
 exit $?
 
+# Compile dependencies
 sudo apt-get install libncurses5-dev build-essential curl python-pip cmake \
     libtool-bin zlib1g-dev libcurl4-openssl-dev libbz2-dev m4 python-dev
 # brew install ncurses
+
+# Runtime dependencies
+sudo apt-get install xsel
 
 cd ~/src/neovim
 
