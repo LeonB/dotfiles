@@ -1,5 +1,6 @@
 #!/bin/bash
 
+brew tap neovim/homebrew-neovim
 brew reinstall neovim --HEAD --ignore-dependencies
 pip install neovim
 exit $?
