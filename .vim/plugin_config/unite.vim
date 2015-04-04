@@ -6,16 +6,7 @@
 let g:unite_update_time = 200
 let g:unite_split_rule = 'botright'
 
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-
-" call unite#filters#sorter_default#use(['sorter_rank'])
-" call unite#filters#sorter_default#use(['sorter_length'])
-
-" call unite#set_profile('files', 'smartcase', 1)
-
-" call unite#custom#profile('files', 'filters', ['sorter_rank'])
-" call unite#custom_filters('buffer', ['matcher_fuzzy', 'matcher_project_files'])
-
+call unite#filters#matcher_default#use(['matcher_fuzzy', 'matcher_project_files'])
 call unite#custom#source('file_rec/async', 'ignore_pattern', 'node_modules/\|bower_components/\|vendor/')
 
 " Set default context variables

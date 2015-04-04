@@ -37,7 +37,7 @@ endfunction
 
 " Create a new VimFiler instance based on the current window
 function! VimFilerUnique()
-    exec 'VimFiler -simple -buffer-name=window-' . winnr()
+    exec 'VimFiler -simple -winheight=0 -buffer-name=window-' . winnr()
 endfunction
 
 nmap <silent> <Plug>VimFilerUnique :call VimFilerUnique()<cr>
