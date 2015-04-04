@@ -4,7 +4,7 @@
 " go get -u golang.org/x/tools/cmd/goimports
 " go get -u golang.org/x/tools/oracle
 " go get -u github.com/kisielk/errcheck
-" go get -u code.google.com/p/go.tools/cmd/vet
+" go get -u golang.org/x/tools/cmd/vet
 " go get -u github.com/axw/gocov/gocov
 " go get -u github.com/jstemmer/gotags
 
