@@ -1,6 +1,7 @@
 #!/bin/bash
 
-brew upgrade neovim --HEAD --ignore-dependencies
+brew reinstall neovim --HEAD --ignore-dependencies
+pip install neovim
 exit $?
 
 # Compile dependencies

@@ -13,7 +13,6 @@ alias emacs='emacsclient -c -t'
 # alias ack='ack-grep'
 alias realpath="readlink -f"
 alias nvim="NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
-alias vim="nvim"
 alias sup="RBENV_VERSION=2.0.0-p451 sup"
 alias ap="ansible-playbook"
 alias art="php artisan"
