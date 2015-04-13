@@ -7,6 +7,7 @@
 " go get -u golang.org/x/tools/cmd/vet
 " go get -u github.com/axw/gocov/gocov
 " go get -u github.com/jstemmer/gotags
+" go get -u golang.org/x/tools/cmd/gorename
 
 " Use autocomplete: <C-x><C-o>
 
