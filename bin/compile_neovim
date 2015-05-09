@@ -1,5 +1,5 @@
-#!/bin/bash
 
+#!/bin/bash
 brew tap neovim/homebrew-neovim
 brew reinstall neovim --HEAD --ignore-dependencies
 pip install neovim
@@ -7,7 +7,8 @@ exit $?
 
 # Compile dependencies
 sudo apt-get install libncurses5-dev build-essential curl python-pip cmake \
-    libtool-bin zlib1g-dev libcurl4-openssl-dev libbz2-dev m4 python-dev
+    libtool-bin zlib1g-dev libcurl4-openssl-dev libbz2-dev m4 python-dev \
+    autoconf xsel exuberant-ctags
 # brew install ncurses
 
 # Runtime dependencies
