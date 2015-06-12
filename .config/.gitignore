@@ -3,6 +3,7 @@
 !/alot/
 !/alot/config
 !/autostart/
+!/livestreamer/
 !/lxc/
 !/lxc/default.conf
 !image_optim.yml

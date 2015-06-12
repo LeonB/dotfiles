@@ -1,0 +1,7 @@
+# Player options
+player=totem
+player-continuous-http
+player-passthrough=hls
+default-stream=best
+
+# vim: set ft=ini:
