@@ -8,7 +8,7 @@ exit $?
 # Compile dependencies
 sudo apt-get install libncurses5-dev build-essential curl python-pip cmake \
     libtool-bin zlib1g-dev libcurl4-openssl-dev libbz2-dev m4 python-dev \
-    autoconf xsel exuberant-ctags
+    autoconf xsel exuberant-ctags automake
 # brew install ncurses
 
 # Runtime dependencies
