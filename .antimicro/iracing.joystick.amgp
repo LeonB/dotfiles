@@ -97,6 +97,14 @@
                     </slot>
                 </slots>
             </button>
+            <button index="11">
+                <slots>
+                    <slot>
+                        <code>0x41</code>
+                        <mode>keyboard</mode>
+                    </slot>
+                </slots>
+            </button>
         </set>
         <set index="2">
             <axis index="1">
