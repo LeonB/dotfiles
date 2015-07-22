@@ -1,6 +1,3 @@
-"Highlight current line
-:set cursorline
-
 if has('gui_running')
   runtime gvim.vim
 else

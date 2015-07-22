@@ -10,9 +10,6 @@ set smartcase " ... unless they contain at least one capital letter
 set gdefault "replace globally by default
 "set foldcolumn=1 "display sidebar with folds
 
-"highlight search results
-set hlsearch
-
 "no line wrapping
 :set nowrap
 
@@ -54,6 +51,14 @@ set grepprg=ag\ --nogroup\ --nocolor "Use ag over grep
 " set lazyredraw            "do not redraw as many
 set laststatus=2            " give every window a statusline
 set scrolloff=10
+set hlsearch              "highlight search results
+set noincsearch           "no incremental searching
+
+" Fix slow syntax highlighting
+set synmaxcol=350           " stop highlighting wide columns
+set nocursorcolumn          " Dont't highlight current column
+set nocursorline            " Don't highlight current line
+syntax sync minlines=256   " ??
 
 " disable fileencoding, fileformat (ffs), (no)expandtab, shiftwidth,
 " softtabstop, tabstop & textwidth when using editorconfig-vim
