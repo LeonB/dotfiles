@@ -1,0 +1,15 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Encoding=UTF-8
+Version=3.0
+Name=Teamspeak 3 Client
+GenericName=Teamspeak
+Exec=/home/leon/.dotfiles/bin/TeamSpeak3-Client-linux_amd64/ts3client_runscript.sh
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/leon/.icons/hicolor/scalable/teamspeak.svg
+StartupWMClass=Teamspeak
+StartupNotify=true
+StartupWMClass=ts3client_linux_amd64
+Categories=Network
