@@ -1,15 +1,3 @@
-[submodule ".rbenv"]
-	path = .rbenv
-	url = https://github.com/sstephenson/rbenv.git
-[submodule ".rbenv-plugins/ruby-build"]
-	path = .rbenv-plugins/ruby-build
-	url = https://github.com/sstephenson/ruby-build.git
-[submodule ".rbenv-plugins/bundler"]
-	path = .rbenv-plugins/bundler
-	url = https://github.com/carsomyr/rbenv-bundler.git
-[submodule ".vim/bundle/neobundle.vim"]
-	path = .vim/bundle/neobundle.vim
-	url = https://github.com/Shougo/neobundle.vim.git
 [submodule ".linuxbrew"]
 	path = .linuxbrew
 	url = git@github.com:Homebrew/linuxbrew.git

@@ -1,7 +1,8 @@
 .ropeproject
-/.pip/pip.log
-/ctags
-/.sup/lock
 /.composer
+/.pip/pip.log
+/.rbenv
+/.sup/lock
+/ctags
 !/.composer/composer.json
 !/.composer/composer.lock
