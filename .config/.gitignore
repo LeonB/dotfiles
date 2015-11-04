@@ -8,4 +8,5 @@
 !/lxc/default.conf
 !image_optim.yml
 !redshift.conf
+!/retroarch/
 !/keepassx/
