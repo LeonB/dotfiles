@@ -3,10 +3,10 @@
 
 filetype off "see: https://github.com/spf13/spf13-vim/pull/128
 if has ('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.config/nvim/bundle/'))
 runtime bundles.vim
 call neobundle#end()
 

@@ -24,7 +24,7 @@ filetype plugin indent on
 
 set fileencoding=utf-8
 set spelllang=nl,en
-set spellfile=~/.vim/spell/custom.add
+set spellfile=~/.config/nvim/spell/custom.add
 
 set nocompatible          "Use VIM not vi (affects other options?)
 set re=1                  "Use the old regex engine for the time (is faster)
@@ -65,8 +65,8 @@ syntax sync minlines=256   " ??
 
 " Directories for swp files
 " // uses the whole path for tmp files to avoid collisions
-set backupdir=~/.vim/backup//
-set directory=~/.vim/backup//
+set backupdir=~/.config/nvim/backup//
+set directory=~/.config/nvim/backup//
 
 "Some gui options:
 " :set completeopt=longest,preview,menuone
@@ -77,7 +77,7 @@ runtime! plugin_config/*.vim
 runtime macros.vim
 runtime theme.vim
 "runtime plugins/autonum.vim "Deze zou ik zelf overnieuw moeten maken
-"au FileType html,xhtml,xml,php so ~/.vim/bundle/HTML-AutoCloseTag/ftplugin/html_autoclosetag.vim
+"au FileType html,xhtml,xml,php so ~/.config/nvim/bundle/HTML-AutoCloseTag/ftplugin/html_autoclosetag.vim
 
 set tags=./ctags;/ "Search for ctag files up every directory
 
