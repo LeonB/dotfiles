@@ -6,6 +6,7 @@
 !/livestreamer/
 !/lxc/
 !/lxc/default.conf
+!/nvim/
 !image_optim.yml
 !redshift.conf
 !/retroarch/
