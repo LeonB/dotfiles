@@ -1,0 +1,7 @@
+/*
+!.gitignore
+!iRacing/app.ini
+!iRacing/camera.ini
+!iRacing/core.ini
+!iRacing/joyCalib.yaml
+!iRacing/renderer.ini
