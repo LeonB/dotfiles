@@ -1,3 +1,6 @@
 [submodule ".linuxbrew"]
 	path = .linuxbrew
 	url = git@github.com:Homebrew/linuxbrew.git
+[submodule ".config/nvim/bundle/neobundle.vim"]
+	path = .config/nvim/bundle/neobundle.vim
+	url = https://github.com/Shougo/neobundle.vim.git
