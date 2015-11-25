@@ -1,0 +1,40 @@
+# https://github.com/sampsyo/beets/blob/master/beets/config_default.yaml
+
+directory: ~/Music
+pluginpath:
+  - /usr/shared/pyshared
+  - /usr/share/beets/beetsplug
+plugins:
+  - chroma
+  - fetchart
+  - fromfilename
+  - the
+  - zero
+asciify_paths: yes
+threaded: no
+import:
+  copy: yes
+  write: yes
+  quiet_fallback: skip
+match:
+  strong_rec_thresh: 0.10
+  rec_gap_thresh: 0.20
+  max_rec:
+    country: low
+    missing_tracks: medium
+    unmatched_tracks: medium
+    year: medium
+  preferred:
+    countries: ['NL', 'US', 'GB|UK']
+    media: ['CD', 'Digital Media|File']
+    original_year: yes
+the:
+  patterns:
+    - ^de
+# https://github.com/sampsyo/beets/blob/master/docs/reference/pathformat.rst
+paths:
+  default: albums/%upper{%left{%the{$albumartist}, 1}}/%the{$albumartist}/$album/$track $title
+  singleton: singles/$artist/$title
+  comp: verzamel/%the{$albumartist}/$album/$track $title
+zero:
+    fields: comments lyrics encoder
