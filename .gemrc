@@ -1,3 +1,5 @@
 ---
+# Not needed anymore because of rbenv?
+# gem: --user-install
 install: --no-ri --no-rdoc
 update: --no-ri --no-rdoc
