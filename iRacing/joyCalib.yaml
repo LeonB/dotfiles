@@ -1,0 +1,27 @@
+---
+CalibrationInfo:
+ DeviceList:
+ - DeviceName: 'G27 Racing Wheel (event)'
+   InstanceGUID: '{9E573EDA-7734-11D6-8D4A-23903FB6BDF7}'
+   AxisList:
+   - Axis: 0
+     AxisName: 'Axis 0'
+     CalibMin: 2
+     CalibCenter: 32791
+     CalibMax: 65535
+   - Axis: 1
+     AxisName: 'Axis 1'
+     CalibMin: 128
+     CalibCenter: 65535
+     CalibMax: 65535
+   - Axis: 2
+     AxisName: 'Axis 2'
+     CalibMin: 128
+     CalibCenter: 65535
+     CalibMax: 65535
+   - Axis: 3
+     AxisName: 'Axis 5'
+     CalibMin: 128
+     CalibCenter: 65535
+     CalibMax: 65535
+...
