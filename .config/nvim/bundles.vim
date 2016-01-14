@@ -60,7 +60,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " (Omni)completion {{{1
 
     " Improved PHP omnicompletion
-    NeoBundle 'shawncplus/phpcomplete.vim'
+    " NeoBundle 'shawncplus/phpcomplete.vim'
 
     " php manual doc
     NeoBundle 'drwX/php-manual.vim'
@@ -77,6 +77,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
     " Monokai colorschem
     NeoBundle 'sickill/vim-monokai'
+
+    " Wombat for 256 color xterms
+    NeoBundle 'vim-scripts/wombat256.vim'
 
     " Molokai color scheme for Vim
     NeoBundle 'tomasr/molokai'
@@ -167,8 +170,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " A(nother) port of TextMate's Twilight theme to Vim.
     NeoBundle 'matthewtodd/vim-twilight'
 
-    " Wombat for 256 color xterms
-    NeoBundle 'vim-scripts/wombat256.vim'
 
     " Dark gray color scheme sharing some similarities with Desert
     NeoBundle 'vim-scripts/Wombat'
@@ -187,6 +188,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
     " The colorscheme with neovim in mind
     NeoBundle 'freeo/vim-kalisi'
+
+    NeoBundle 'geoffharcourt/one-dark.vim'
 
 " }}}1
 
@@ -209,14 +212,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
     " Automated tag file generation and syntax highlighting of tags in Vim
     " #slow-on-sshfs
-    NeoBundle 'xolox/vim-easytags'
-    NeoBundle 'xolox/vim-misc'
+    " NeoBundle 'xolox/vim-easytags'
+    " NeoBundle 'xolox/vim-misc'
 
     " Ctags generator for Vim (written in Vimscript)
     " NeoBundle 'szw/vim-tags'
 
     " Vim plugin that displays tags in a window, ordered by class etc.
-    NeoBundle 'majutsushi/tagbar'
+    " NeoBundle 'majutsushi/tagbar'
 
     " A 'jump to previous buffer' command that behaves as you would expect
     NeoBundle 'LeonB/vim-previous-buffer', {
@@ -256,17 +259,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " messing up your layout
     NeoBundle 'moll/vim-bbye'
 
-    if has('python')
-        " Yet Another Posting Script reborn
-        NeoBundle 'guyzmo/vim-yaposting'
-    endif
-
 " }}}1
 
 " Text objects {{{1
 
     "quoting/parenthesizing made simple
-    " NeoBundle 'tpope/vim-surround'
     NeoBundle 'tpope/vim-surround'
 
     "Vim plugin that provides additional text objects (pair, quote, separator)
@@ -339,8 +336,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
     " EditorConfig plugin for Vim http://editorconfig.org
     " #slow-on-sshfs
-    if has("python")
-        NeoBundle 'editorconfig/editorconfig-vim'
-    endif
+    NeoBundle 'editorconfig/editorconfig-vim'
 
 " }}}
