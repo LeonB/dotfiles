@@ -1,7 +1,7 @@
 export GOPATH=$HOME/.go
 export PATH="$GOPATH/bin:$PATH"
 # export GOROOT="/usr/local/go"
-# export GOROOT="$HOME/.linuxbrew/Cellar/go/1.4.1/libexec"
+export GOROOT="$HOME/.linuxbrew/Cellar/go/1.5.1/libexec"
 
 # program_exists () {
 #     type "$1" &> /dev/null ;
