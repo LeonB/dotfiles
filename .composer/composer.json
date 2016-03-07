@@ -1,9 +1,10 @@
 {
     "require": {
         "phpmd/phpmd": "@stable",
-        "squizlabs/php_codesniffer": "@stable",
+        "squizlabs/php_codesniffer": "^2.5",
         "fabpot/php-cs-fixer": "@stable",
         "phpunit/phpunit": "*",
-        "laravel/installer": "~1.2"
+        "laravel/installer": "~1.2",
+        "halleck45/phpmetrics": "^1.8"
     }
 }

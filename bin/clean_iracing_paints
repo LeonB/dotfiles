@@ -1,0 +1,2 @@
+#!/bin/bash
+find $HOME/Dropbox/Persoonlijk/iRacing/paint/ -name '*.tga' -not -name '*_185715.tga' -exec rm '{}' \;
