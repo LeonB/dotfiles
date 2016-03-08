@@ -1,4 +1,5 @@
 #!/bin/bash
 
-cd ~/Workspaces/prive/wdid
+# cd ~/Workspaces/prive/wdid
+cd ~/Dropbox/Persoonlijk/projects/wdid
 bin/wdid $@
