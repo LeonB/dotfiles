@@ -14,3 +14,6 @@ function smart_prepend {
     echo ${new_path}${old_path:+:$old_path}
 }
 
+program_exists () {
+    type "$1" &> /dev/null;
+}
