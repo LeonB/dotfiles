@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# for device in $(ls /sys/bus/usb/devices/*/product); do echo $device;cat $device;done
+echo '3-6' | sudo tee /sys/bus/usb/drivers/usb/bind
