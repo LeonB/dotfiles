@@ -12,6 +12,4 @@ if [ -d $HOME/.linuxbrew/ ];then
     export INFOPATH="$LINUXBREW/share/info:$INFOPATH"
 
     export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$LINUXBREW/opt/openssl"
-
-    source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 fi
