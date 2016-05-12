@@ -1,0 +1,22 @@
+#!/bin/bash
+
+file=$1
+
+if [ "$file" == "" ]; then
+    echo "Provide a file"
+    exit 1
+fi
+
+if [ ! -f $file ]; then
+    echo "Can't find file"
+    exit 1
+fi
+
+while read line; do
+    # exitstatus 8 == 404 or 301/302 redirect
+    http_status=$(curl -s -o /dev/null -I -w "%{http_code}" $line)
+
+    if [ "$http_status" != "404" ]; then
+        echo "${line} as http status ${http_status}"
+    fi
+done < $file
