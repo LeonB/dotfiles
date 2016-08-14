@@ -2,6 +2,7 @@
 !.gitignore
 !/alot/
 !/alot/config
+!/antimicro/
 !/autostart/
 !/beets/
 !/livestreamer/
