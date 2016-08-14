@@ -16,6 +16,7 @@ isavailable() {
 # https://wiki.archlinux.org/index.php/Xmodmap
 # setxkbmap -option ctrl:nocaps # Make Caps Lock a Control key
 # setxkbmap -option ctrl:none   # Disable Left Control
+setxkbmap -option caps:none   # Disable caps lock
 # golden tip: grep cap /usr/share/X11/xkb/rules/xorg.lst
 
 # If the xcape program is available, use it.
