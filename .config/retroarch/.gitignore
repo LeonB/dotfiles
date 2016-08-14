@@ -1,3 +1,4 @@
 content_history.lpl
 /shaders/
-/autoconf/*/
+/autoconf/*/*.cfg
+!/autoconf/udev/Xbox_360_Wireless_Receiver_Chinese01.cfg
