@@ -2,3 +2,7 @@ nice: 20
 threads: 1
 jpegoptim:
   max_quality: 90
+  allow_lossy: false
+jpegrecompress:
+  allow_lossy: true
+  quality: 2
