@@ -1,5 +1,4 @@
-# export JAVA_HOME=$HOME/bin/tuxjdk
-export JAVA_HOME=$HOME/bin/jre1.8.0_72/
+export JAVA_HOME=$HOME/bin/jre1.8.0_101/
 export PATH=`smart_prepend PATH $JAVA_HOME/bin`
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on \
                       -Dswing.aatext=true \
