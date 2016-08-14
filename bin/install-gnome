@@ -56,8 +56,12 @@ gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshel
 # gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ alt-tab-forward "<Alt>Tab"
 gsettings reset org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ alt-tab-forward
 gsettings set com.canonical.indicator.keyboard visible false
+
+# Setup layout workspaces
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ hsize 2
 gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2
 
-# Disable screensaver?
-# org.gnome.desktop.screensaver lock-enabled false
+# Lock screen after 10 minutes
+gsettings set org.gnome.desktop.screensaver lock-delay 600
+# Turn screen of after 1 hour
+gsettings set org.gnome.desktop.session idle-delay 3600
