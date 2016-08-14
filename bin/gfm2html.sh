@@ -37,7 +37,8 @@ text=${text//
 /\\\n}
 
 # convert markdown to html using Github API v3
-result=$(curl --silent https://api.github.com/markdown -d "{\"text\": \"$text\", \"mode\": \"gfm\", \"context\": \"\"}")
+# result=$(curl --silent https://api.github.com/markdown -d "{\"text\": \"$text\", \"mode\": \"gfm\", \"context\": \"\"}")
+result=$(curl --silent https://api.github.com/markdown -d "{\"text\": \"$text\", \"mode\": \"markdown\", \"context\": \"\"}")
 
 # output html
 printf '<!DOCTYPE HTML>
