@@ -12,6 +12,11 @@ for repo in bb.user('Tim_online').repositories():
     print repo['slug']
 EOF`
 
+if [ "$BITBUCKET_USERNAME" == "" ] || [ "$BITBUCKET_PASSWORD" == "" ]; then
+    echo set BITBUCKET_USERNAME and BITBUCKET_PASSWORD env variables
+    exit
+fi
+
 # Sort based on repo name
 repos=`echo "${repos}" | sort`
 
