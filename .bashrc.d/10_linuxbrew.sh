@@ -3,6 +3,7 @@ if [ -d $HOME/.linuxbrew/ ];then
     export HOMEBREW_LOGS="$LINUXBREW/Logs"
 
     export PATH="$LINUXBREW/bin:$PATH"
+    export PATH="$LINUXBREW/sbin:$PATH"
     # Break rbenv install / ruby-build?
     export C_INCLUDE_PATH=`smart_prepend C_INCLUDE_PATH $LINUXBREW/include`
     export C_INCLUDE_PATH=`smart_prepend C_INCLUDE_PATH $LINUXBREW/include/libxml2`
