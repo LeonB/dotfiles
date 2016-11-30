@@ -1,6 +1,5 @@
 #!/bin/bash
 brew tap neovim/homebrew-neovim
-# brew reinstall neovim --HEAD --ignore-dependencies $*
 brew reinstall neovim --ignore-dependencies $*
 pip install neovim --upgrade
 exit $?
@@ -8,11 +7,12 @@ exit $?
 # Compile dependencies
 sudo apt-get install libncurses5-dev build-essential curl python-pip cmake \
     libtool-bin zlib1g-dev libcurl4-openssl-dev libbz2-dev m4 python-dev \
-    autoconf xsel exuberant-ctags automake python-setuptools python-dbus
-# brew install ncurses
+    autoconf xsel exuberant-ctags automake python-setuptools python-dbus \
+    gperf
 
 # Runtime dependencies
 sudo apt-get install xsel
+sudo apt-get install xclip
 
 cd ~/src/neovim
 
@@ -25,6 +25,6 @@ git clean -df
 make clean
 make distclean
 
-# Compile neovim
 make cmake CMAKE_EXTRA_FLAGS="-DCMAKE_BUILD_TYPE=Release -Wno-error -D_FORTIFY_SOURCE=1" CFLAGS="-D_FORTIFY_SOURCE=1"
+# Compile neovim
 make
