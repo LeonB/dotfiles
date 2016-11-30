@@ -52,7 +52,8 @@ set grepprg=ag\ --nogroup\ --nocolor "Use ag over grep
 set laststatus=2            " give every window a statusline
 set scrolloff=10
 set hlsearch              "highlight search results
-set noincsearch           "no incremental searching
+set incsearch             "incremental searching
+set inccommand=nosplit    "incremental search & replace
 
 " Fix slow syntax highlighting
 set synmaxcol=350           " stop highlighting wide columns
