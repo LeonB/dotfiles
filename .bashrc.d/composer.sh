@@ -1,1 +1,1 @@
-export PATH=~/.composer/vendor/bin:$PATH
+export PATH=~/.config/composer/vendor/bin:$PATH
