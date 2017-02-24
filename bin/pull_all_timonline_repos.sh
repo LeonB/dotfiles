@@ -17,6 +17,8 @@ if [ "$BITBUCKET_USERNAME" == "" ] || [ "$BITBUCKET_PASSWORD" == "" ]; then
     exit
 fi
 
+export GIT_SSH_COMMAND="ssh -o ControlPath=none"
+
 # Sort based on repo name
 repos=`echo "${repos}" | sort`
 
