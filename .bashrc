@@ -118,7 +118,7 @@ if ! shopt -oq posix; then
 fi
 
 # custom bashrc stuff
-for file in ~/.bashrc.d/*
+for file in ~/.bashrc.d/*.sh
 do
     if [ -f "$file" ]
     then
