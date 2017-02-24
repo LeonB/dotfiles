@@ -1,5 +1,11 @@
 #!/bin/bash
 
+  # gopkgs
+  # go-outline
+  # go-symbols
+  # goreturns
+  # gotests
+
 echo "Installing godef"
 go get -u github.com/rogpeppe/godef
 
