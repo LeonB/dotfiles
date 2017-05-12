@@ -8,10 +8,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Syntax / File types  / Indenting {{{1
 
     "Puppet niceties for your Vim setup
-    NeoBundle 'rodjek/vim-puppet'
+    " NeoBundle 'rodjek/vim-puppet'
 
     " Vim/Ruby Configuration File
-    NeoBundle 'vim-ruby/vim-ruby'
+    " NeoBundle 'vim-ruby/vim-ruby'
 
     "PHP-Correct-Indenting VIM script
     NeoBundle '2072/PHP-Indenting-for-VIm'
@@ -26,7 +26,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle "pangloss/vim-javascript"
 
     " CoffeeScript support for vim
-    NeoBundle 'kchmck/vim-coffee-script'
+    " NeoBundle 'kchmck/vim-coffee-script'
 
     "Vim Markdown runtime files
     NeoBundle 'tpope/vim-markdown'
@@ -50,7 +50,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'mustache/vim-mustache-handlebars'
 
     " A better JSON for Vim
-    NeoBundle 'elzr/vim-json'
+    " NeoBundle 'elzr/vim-json'
 
     " Twig syntax highlighting, snipMate, etc.
     NeoBundle 'evidens/vim-twig'
@@ -253,7 +253,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'godlygeek/tabular'
 
     " This is an atomic save function for vim
-    NeoBundle 'vim-scripts/Atomic-Save'
+    " NeoBundle 'vim-scripts/Atomic-Save'
 
     " Delete buffers and close files in Vim without closing your windows or
     " messing up your layout
@@ -264,7 +264,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Text objects {{{1
 
     "quoting/parenthesizing made simple
-    NeoBundle 'tpope/vim-surround'
+    " NeoBundle 'tpope/vim-surround'
 
     "Vim plugin that provides additional text objects (pair, quote, separator)
     NeoBundle 'wellle/targets.vim'
@@ -302,7 +302,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'dbakker/vim-projectroot'
 
     " Vim plugin: Testing framework for Vim script
-    NeoBundle 'kana/vim-vspec'
+    " NeoBundle 'kana/vim-vspec'
 
     " Interactive command execution in Vim.
     NeoBundle 'Shougo/vimproc', {
@@ -315,17 +315,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
                 \ }
 
     " Vim interface to Web API
-    NeoBundle 'mattn/webapi-vim'
+    " NeoBundle 'mattn/webapi-vim'
 
 " }}}1
 
 " Utilities {{{1
 
-    " Syntax checking hacks for vim
-    NeoBundle 'scrooloose/syntastic'
-
     " Vim plugin for Livedown
-    NeoBundle 'shime/vim-livedown'
+    " NeoBundle 'shime/vim-livedown'
 
     " Make Vim handle line and column numbers in file names with a minimum of fuss
     NeoBundle 'kopischke/vim-fetch'
