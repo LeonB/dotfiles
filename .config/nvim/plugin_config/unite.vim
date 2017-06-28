@@ -55,6 +55,8 @@ endfunction
 nnoremap <C-p> :Unite -start-insert file_rec/async:!<CR>
 " :MRU
 command! MRU Unite file_mru
+let g:neomru#do_validate = 0
+
 " Ag & Ack
 nnoremap <C-g> :Unite -no-split grep:.<cr>
 command! -nargs=* Ag Unite grep:.:-s:<args>
