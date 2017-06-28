@@ -20,6 +20,9 @@ let g:vimfiler_expand_jump_to_first_child = 0
 " Restore file when opening vimfiler
 let g:vimfiler_restore_alternate_file = 1
 
+" Always show some specific hidden files
+let g:vimfiler_ignore_pattern = ['^\.\(gitignore\|htaccess\|env\)\@!']
+
 " call custom vimfiler settings when creating buffer
 autocmd! FileType vimfiler call s:my_vimfiler_settings()
 
