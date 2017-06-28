@@ -1,0 +1,93 @@
+// Place your settings in this file to overwrite the default settings
+{
+
+	//-------- Editor configuration --------
+
+	// Controls the font family.
+	"editor.fontFamily": "Ubuntu Mono",
+	
+	// Controls the font size.
+	"editor.fontSize": 16,
+	
+	// Controls if selections have rounded corners
+	"editor.roundedSelection": false,
+
+  // Controls if the minimap is shown
+  "editor.minimap.enabled": false,
+
+// File Explorer
+
+	// Number of editors shown in the Open Editors pane. Set it to 0 to hide the pane.
+	"explorer.openEditors.visible": 0,
+
+// Vim Configuration
+
+	// What key should <leader> map to in remappings?
+	"vim.leader": "<space>",
+
+    // Enable some vim ctrl key commands that override otherwise common operations, like ctrl+c
+    "vim.useCtrlKeys": true,
+
+    // Use system clipboard for unnamed register.
+	// install xclip
+	"vim.useSystemClipboard": true,
+	"workbench.colorTheme": "Monokai Dimmed",
+
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<C-s>"],
+			"commands": [
+				{
+					"command": "workbench.action.files.save",
+					"args": []
+				},
+				{
+					"command": "extension.vim_esc",
+					"args": []
+				}
+			],
+            "after": []
+        }
+    ],
+
+	// Remapped keys in normal mode. Allows mapping to vim commands or vscode actions. See README for more.
+	"vim.otherModesKeyBindings": [],
+	"vim.otherModesKeyBindingsNonRecursive": [
+		{
+			"before": ["<leader>", "o"],
+			"after": ["<Esc>"],
+			"commands": [
+				{
+					"command": "workbench.action.quickOpen",
+					"args": []
+				}
+			]
+		},
+		{
+			"before": ["<leader>", "b", "e"],
+			"after": ["<Esc>"],
+			"commands": [
+				{
+					"command": "workbench.action.toggleSidebarVisibility",
+					"args": []
+				}
+			]
+        },
+        {
+            "before": ["<C-]>"],
+			"commands": [
+				{
+					"command": "editor.action.goToDeclaration",
+					"args": []
+				}
+			]
+		}
+	],
+
+	// Show all matches of the most recent search pattern
+	"vim.hlsearch": true,
+
+	"vim.disableAnnoyingNeovimMessage": true,
+	"vim.disableAnnoyingGcMessage": true,
+	"window.zoomLevel": 0
+}

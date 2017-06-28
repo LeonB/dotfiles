@@ -1,0 +1,22 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    // },
+    // {
+    //     "key": "ctrl+w o",
+    //     "command": "workbench.action.closeEditorsInOtherGroups"
+    },
+    {
+        "key": "ctrl+]",
+        "command": "editor.action.goToDeclaration",
+        "when": "vim.active && editorTextFocus && !editorReadonly"
+    }
+]
