@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/hamster-indicator
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Hamster Indicator
+Name=Hamster Indicator
+Comment[en_US]=Track your time
+Comment=Track your time
+Icon=hamster-indicator
