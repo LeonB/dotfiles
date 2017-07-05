@@ -65,3 +65,6 @@ gsettings set org.compiz.core:/org/compiz/profiles/unity/plugins/core/ vsize 2
 gsettings set org.gnome.desktop.screensaver lock-delay 600
 # Turn screen of after 1 hour
 gsettings set org.gnome.desktop.session idle-delay 3600
+
+# Make hamster icon glow
+gconftool-2 --set "/apps/hamster-indicator/icon_glow" --type bool "true"
