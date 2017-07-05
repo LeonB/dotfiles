@@ -16,3 +16,5 @@ alias artisan="php artisan"
 alias phpstorm="$HOME/bin/phpstorm/bin/phpstorm.sh"
 alias git-root='cd $(git rev-parse --show-toplevel)'
 alias pwgen='/usr/bin/pwgen --capitalize --secure --symbols 22'
+alias bean='sudo $HOME/.local/bin/bean'
+alias vim='nvim'
