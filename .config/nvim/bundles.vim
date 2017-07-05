@@ -259,6 +259,15 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " messing up your layout
     NeoBundle 'moll/vim-bbye'
 
+    " abolish.vim: easily search for, substitute, and abbreviate multiple variants of a word
+    " convert cases
+    "crc to convert to fooBar
+    " crm to convert to FooBar
+    " cr_ or crs to convert to foo_bar
+    " cru to convert to FOO_BAR
+    " cr- to convert to foo-bar
+    NeoBundle 'tpope/vim-abolish'
+
 " }}}1
 
 " Text objects {{{1
