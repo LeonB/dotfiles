@@ -8,6 +8,7 @@
 " go get -u github.com/axw/gocov/gocov
 " go get -u github.com/jstemmer/gotags
 " go get -u golang.org/x/tools/cmd/gorename
+" go get -u github.com/zmb3/gogetdoc
 
 " Use autocomplete: <C-x><C-o>
 
@@ -18,7 +19,7 @@ let g:go_bin_path = expand("~/.go/bin")
 let g:go_disable_autoinstall = 1
 
 " Disable auto fmt on save:
-let g:go_fmt_autosave = 0
+let g:go_fmt_autosave = 1
 
 " Automatically run :GoInfo on every keyword
 " let g:go_auto_type_info = 1
