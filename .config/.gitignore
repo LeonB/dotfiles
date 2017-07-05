@@ -6,11 +6,11 @@
 !/antimicro/
 !/autostart/
 !/beets/
-!/streamlink/
+!/keepassx/
 !/lxc/
 !/lxc/default.conf
 !/nvim/
+!/retroarch/
+!/streamlink/
 !image_optim.yml
 !redshift.conf
-!/retroarch/
-!/keepassx/
