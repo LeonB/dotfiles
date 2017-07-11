@@ -1,0 +1,4 @@
+# Player options
+player-passthrough=http
+
+# vim: set ft=ini:
