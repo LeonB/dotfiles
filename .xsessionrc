@@ -34,4 +34,11 @@ then
     xcape -e '#66=Escape'
 fi
 
+# Set touchpad options
+# Disable right click zone
+synclient RightButtonAreaLeft=0
+synclient RightButtonAreaTop=0
+# Disable coasting after scrolling
+# synclient CoastingSpeed=0
+
 # vim: ft=sh
