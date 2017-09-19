@@ -13,6 +13,7 @@ if [ $BREW_HOME ]; then
     export C_INCLUDE_PATH=`smart_prepend C_INCLUDE_PATH $BREW_HOME/include`
     export C_INCLUDE_PATH=`smart_prepend C_INCLUDE_PATH $BREW_HOME/include/libxml2`
     export LIBRARY_PATH=`smart_prepend LIBRARY_PATH $BREW_HOME/lib`
+    export LD_LIBRARY_PATH=`smart_prepend LD_LIBRARY_PATH $BREW_HOME/lib`
 
     export MANPATH="$BREW_HOME/share/man:$MANPATH"
     export INFOPATH="$BREW_HOME/share/info:$INFOPATH"
