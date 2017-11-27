@@ -9,6 +9,9 @@
 " go get -u github.com/jstemmer/gotags
 " go get -u golang.org/x/tools/cmd/gorename
 " go get -u github.com/zmb3/gogetdoc
+" go get -u github.com/klauspost/asmfmt/cmd/asmfmt
+" go get -u github.com/fatih/motion
+" go get -u github.com/dominikh/go-tools/cmd/keyify
 
 " Use autocomplete: <C-x><C-o>
 
