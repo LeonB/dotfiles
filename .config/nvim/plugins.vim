@@ -1,71 +1,64 @@
-" Let NeoNeoBundle manage NeoNeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-" NeoNeoBundleCheck
-
 " Syntax / File types  / Indenting {{{1
 
     "Puppet niceties for your Vim setup
-    " NeoBundle 'rodjek/vim-puppet'
+    " call dein#add('rodjek/vim-puppet')
 
     " Vim/Ruby Configuration File
-    " NeoBundle 'vim-ruby/vim-ruby'
+    " call dein#add('vim-ruby/vim-ruby')
 
     "PHP-Correct-Indenting VIM script
-    NeoBundle '2072/PHP-Indenting-for-VIm'
+    call dein#add('2072/PHP-Indenting-for-VIm')
 
     " Cutting-edge vim css syntax file
-    NeoBundle 'JulesWang/css.vim'
+    call dein#add('JulesWang/css.vim')
 
     "Vim syntax file for scss (Sassy CSS)
-    NeoBundle 'cakebaker/scss-syntax.vim'
+    call dein#add('cakebaker/scss-syntax.vim')
 
     " Vastly improved Javascript indentation and syntax support in Vim.
-    NeoBundle "pangloss/vim-javascript"
+    call dein#add("pangloss/vim-javascript")
 
     " CoffeeScript support for vim
-    " NeoBundle 'kchmck/vim-coffee-script'
+    " call dein#add('kchmck/vim-coffee-script')
 
     "Vim Markdown runtime files
-    NeoBundle 'tpope/vim-markdown'
+    call dein#add('tpope/vim-markdown')
 
     " jinja plugins for vim (syntax and indent)
-    NeoBundle 'lepture/vim-jinja'
+    call dein#add('lepture/vim-jinja')
 
     " Add additional support for Ansible in VIM
-    NeoBundle 'chase/vim-ansible-yaml'
+    call dein#add('chase/vim-ansible-yaml')
 
     " nginx vim syntax
-    NeoBundle 'evanmiller/nginx-vim-syntax'
+    call dein#add('chr4/nginx.vim')
 
     " Vim syntax highlighting for Blade templates.
-    NeoBundle 'xsbeats/vim-blade'
+    call dein#add('xsbeats/vim-blade')
 
     " Go development plugin for Vim
-    NeoBundle 'fatih/vim-go'
+    call dein#add('fatih/vim-go')
 
     " mustache and handlebars mode for vim
-    NeoBundle 'mustache/vim-mustache-handlebars'
+    " call dein#add('mustache/vim-mustache-handlebars')
 
     " A better JSON for Vim
-    " NeoBundle 'elzr/vim-json'
+    " call dein#add('elzr/vim-json')
 
     " Twig syntax highlighting, snipMate, etc.
-    NeoBundle 'evidens/vim-twig'
+    call dein#add('qbbr/vim-twig')
 
 " }}}1
 
 " (Omni)completion {{{1
 
     " Improved PHP omnicompletion
-    " NeoBundle 'shawncplus/phpcomplete.vim'
+    " call dein#add('shawncplus/phpcomplete.vim')
 
     " php manual doc
-    NeoBundle 'drwX/php-manual.vim'
+    call dein#add('drwX/php-manual.vim')
 
-    " NeoBundle 'tobyS/pdv', {'depends' :
+    " call dein#add('tobyS/pdv', {'depends' :)
     "             \ [
     "             \   'tobyS/vmustache',
     "             \   'SirVer/ultisnips',
@@ -76,188 +69,186 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Color schemes {{{1
 
     " Monokai colorschem
-    NeoBundle 'sickill/vim-monokai'
+    call dein#add('sickill/vim-monokai')
 
     " Wombat for 256 color xterms
-    NeoBundle 'vim-scripts/wombat256.vim'
+    call dein#add('vim-scripts/wombat256.vim')
 
     " Molokai color scheme for Vim
-    NeoBundle 'tomasr/molokai'
+    call dein#add('tomasr/molokai')
 
     "Color theme Hemisu
-    NeoBundle 'noahfrederick/Hemisu'
+    call dein#add('noahfrederick/Hemisu')
 
     "Color theme Bad Wolf
-    NeoBundle 'sjl/badwolf'
+    call dein#add('sjl/badwolf')
 
     "precision colorscheme for the vim text editor
-    NeoBundle 'altercation/vim-colors-solarized'
+    call dein#add('altercation/vim-colors-solarized')
 
     " Dark, high contrast vim colorscheme
-    NeoBundle 'MaxSt/FlatColor'
+    call dein#add('MaxSt/FlatColor')
 
     " Dark, high contrast gvim colorscheme inspired by molokai and bad wolf.
-    NeoBundle 'nielsmadan/harlequin'
+    call dein#add('nielsmadan/harlequin')
 
     " precision colorscheme for the vim text editor
-    NeoBundle 'altercation/vim-colors-solarized'
+    call dein#add('altercation/vim-colors-solarized')
 
     " a low-contrast Vim color scheme based on Seoul Colors
-    NeoBundle 'junegunn/seoul256.vim'
+    call dein#add('junegunn/seoul256.vim')
 
     " A GUI & 256 color port of the Railscasts Textmate theme to Vim
-    NeoBundle 'dhruvasagar/vim-railscasts-theme'
+    call dein#add('dhruvasagar/vim-railscasts-theme')
 
     " Sexier version of Railscasts vim color scheme / theme
-    NeoBundle 'oguzbilgic/sexy-railscasts-theme'
+    call dein#add('oguzbilgic/sexy-railscasts-theme')
 
     " The original IR_Black color scheme for vim
-    NeoBundle 'twerth/ir_black'
+    call dein#add('twerth/ir_black')
 
     " A colorful, dark color scheme for Vim
-    NeoBundle 'nanotech/jellybeans.vim'
+    call dein#add('nanotech/jellybeans.vim')
 
     " Gary Bernhardt's grb256 vim theme packaged to work with Pathogen/Vundle
-    NeoBundle 'quanganhdo/grb256'
+    call dein#add('quanganhdo/grb256')
 
     " codeschool vim theme
-    NeoBundle '29decibel/codeschool-vim-theme'
+    call dein#add('29decibel/codeschool-vim-theme')
 
     " Zenburn is a low-contrast color scheme for Vim
-    NeoBundle 'jnurmine/Zenburn'
+    call dein#add('jnurmine/Zenburn')
 
     " A fork of desert256.vim aims to make it a bit warm and more friendly for
     " my eyes.
-    NeoBundle 'rainux/vim-desert-warm-256'
+    call dein#add('rainux/vim-desert-warm-256')
 
     " A slightly-modified desert theme, for 88- and 256-color xterms
-    NeoBundle 'vim-scripts/desert256.vim'
+    call dein#add('vim-scripts/desert256.vim')
 
     " summerfruit color scheme in 256 colors
-    NeoBundle 'vim-scripts/summerfruit256.vim'
+    call dein#add('vim-scripts/summerfruit256.vim')
 
     " light color scheme
-    NeoBundle 'therubymug/vim-pyte'
+    call dein#add('therubymug/vim-pyte')
 
     " Color scheme for the Gnome2 "nuvola" theme
-    NeoBundle 'vim-scripts/nuvola.vim'
+    call dein#add('vim-scripts/nuvola.vim')
 
     " A colorscheme and syntax for Vim
-    NeoBundle 'itchyny/landscape.vim'
+    call dein#add('itchyny/landscape.vim')
 
     " A dark theme for Atom, Alfred, Chrome DevTools, iTerm, Sublime Text,
     " Textmate, Terminal.app, Vim, Xcode, Zsh
     " look into on_source
-    NeoBundle 'zenorocha/dracula-theme', {'rtp' : 'vim'}
+    call dein#add('zenorocha/dracula-theme', {'rtp' : 'vim'})
 
-    NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim'}
+    call dein#add('chriskempson/tomorrow-theme', {'rtp': 'vim'})
 
     " A vim colorscheme based on Github's syntax highlighting.
-    NeoBundle 'endel/vim-github-colorscheme'
+    call dein#add('endel/vim-github-colorscheme')
 
     " Dark-background GUI color scheme
-    NeoBundle 'vim-scripts/Liquid-Carbon'
+    call dein#add('vim-scripts/Liquid-Carbon')
 
     " A slightly modified version of the original mustang-colorscheme for vim by hcalves.
-    NeoBundle 'croaker/mustang-vim'
+    call dein#add('croaker/mustang-vim')
 
     " Spiritual successor to Skittles Dark
-    NeoBundle 'shawncplus/skittles_berry'
+    call dein#add('shawncplus/skittles_berry')
 
     " Port of the Sunburst TextMate theme to Vim
-    NeoBundle 'gigamo/sunburst.vim'
+    call dein#add('gigamo/sunburst.vim')
 
     " A(nother) port of TextMate's Twilight theme to Vim.
-    NeoBundle 'matthewtodd/vim-twilight'
+    call dein#add('matthewtodd/vim-twilight')
 
 
     " Dark gray color scheme sharing some similarities with Desert
-    NeoBundle 'vim-scripts/Wombat'
+    call dein#add('vim-scripts/Wombat')
 
     " Lucius color scheme for vim
-    NeoBundle 'jonathanfilip/vim-lucius'
+    call dein#add('jonathanfilip/vim-lucius')
 
     " Vim color scheme
-    NeoBundle 'zeis/vim-kolor'
+    call dein#add('zeis/vim-kolor')
 
     " Let's keep Vim warm
-    NeoBundle 'nice/sweater'
+    call dein#add('nice/sweater')
 
     " Retro groove color scheme for Vim
-    NeoBundle 'morhetz/gruvbox'
+    call dein#add('morhetz/gruvbox')
 
     " The colorscheme with neovim in mind
-    NeoBundle 'freeo/vim-kalisi'
+    call dein#add('freeo/vim-kalisi')
 
-    NeoBundle 'geoffharcourt/one-dark.vim'
+    call dein#add('geoffharcourt/one-dark.vim')
 
 " }}}1
 
 " Navigation {{{1
 
     " Powerful file explorer implemented by Vim script
-    NeoBundle 'Shougo/vimfiler'
+    call dein#add('Shougo/vimfiler')
 
     " Unite and create user interfaces
-    NeoBundle 'Shougo/unite.vim'
+    call dein#add('Shougo/unite.vim')
 
     " MRU plugin includes unite.vim MRU sources
-    NeoBundle 'Shougo/neomru.vim'
+    call dein#add('Shougo/neomru.vim')
 
     "extended % matching for HTML
-    NeoBundle 'matchit.zip'
+    call dein#add('vim-scripts/matchit.zip')
 
     "Updates entries in a tags file automatically when saving
-    " NeoBundle 'craigemery/vim-autotag'
+    " call dein#add('craigemery/vim-autotag')
 
     " Automated tag file generation and syntax highlighting of tags in Vim
     " #slow-on-sshfs
-    " NeoBundle 'xolox/vim-easytags'
-    " NeoBundle 'xolox/vim-misc'
+    " call dein#add('xolox/vim-easytags')
+    " call dein#add('xolox/vim-misc')
 
     " Ctags generator for Vim (written in Vimscript)
-    " NeoBundle 'szw/vim-tags'
+    " call dein#add('szw/vim-tags')
 
     " Vim plugin that displays tags in a window, ordered by class etc.
-    " NeoBundle 'majutsushi/tagbar'
+    call dein#add('majutsushi/tagbar')
 
     " A 'jump to previous buffer' command that behaves as you would expect
-    NeoBundle 'LeonB/vim-previous-buffer', {
-                \ 'autoload': {'commands': ['PreviousBuffer']}
-                \ }
+    call dein#add('LeonB/vim-previous-buffer')
 
 " }}}1
 
 " GUI {{{1
 
     " Highlight colors in css files
-    NeoBundle 'ap/vim-css-color'
+    call dein#add('ap/vim-css-color')
 
     " A light and configurable statusline/tabline for Vim
-    NeoBundle 'itchyny/lightline.vim'
+    call dein#add('itchyny/lightline.vim')
 
 " }}}1
 
 " Commands {{{1
 
     " commentary.vim: comment stuff out
-    NeoBundle 'tpope/vim-commentary'
+    call dein#add('tpope/vim-commentary')
 
     "Syntax checking hacks for Vim"
-    NeoBundle 'scrooloose/syntastic'
+    call dein#add('scrooloose/syntastic')
 
     "Provides insert mode auto-completion for quotes, parens, brackets, etc
-    NeoBundle 'Raimondi/delimitMate'
+    call dein#add('Raimondi/delimitMate')
 
     "Vim script for text filtering and alignment
-    NeoBundle 'godlygeek/tabular'
+    call dein#add('godlygeek/tabular')
 
     " This is an atomic save function for vim
-    " NeoBundle 'vim-scripts/Atomic-Save'
+    " call dein#add('vim-scripts/Atomic-Save')
 
     " Delete buffers and close files in Vim without closing your windows or
     " messing up your layout
-    NeoBundle 'moll/vim-bbye'
+    call dein#add('moll/vim-bbye')
 
     " abolish.vim: easily search for, substitute, and abbreviate multiple variants of a word
     " convert cases
@@ -266,75 +257,68 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " cr_ or crs to convert to foo_bar
     " cru to convert to FOO_BAR
     " cr- to convert to foo-bar
-    NeoBundle 'tpope/vim-abolish'
+    call dein#add('tpope/vim-abolish')
 
 " }}}1
 
 " Text objects {{{1
 
     "quoting/parenthesizing made simple
-    " NeoBundle 'tpope/vim-surround'
+    call dein#add('tpope/vim-surround')
 
     "Vim plugin that provides additional text objects (pair, quote, separator)
-    NeoBundle 'wellle/targets.vim'
+    call dein#add('wellle/targets.vim')
 
     " Vim plugin: Text objects for functions
-    NeoBundle 'kana/vim-textobj-user'
+    call dein#add('kana/vim-textobj-user')
 
     " Vim plugin: Text objects for functions
-    NeoBundle 'kana/vim-textobj-function', {'depends': 'kana/vim-textobj-user'}
+    call dein#add('kana/vim-textobj-function', {'depends': 'kana/vim-textobj-user'})
 
     " Text object for php functions
-    NeoBundle 'kentaro/vim-textobj-function-php', {'depends': 'kana/vim-textobj-user'}
+    call dein#add('kentaro/vim-textobj-function-php', {'depends': 'kana/vim-textobj-user'})
 
     " Vim plugin: Text objects for the current line
-    NeoBundle 'kana/vim-textobj-line'
+    call dein#add('kana/vim-textobj-line')
 
     " Vim plugin that defines a new text object representing lines of code at
     " the same indent level. Useful for python/vim scripts, etc
-    NeoBundle 'michaeljsmith/vim-indent-object'
+    call dein#add('michaeljsmith/vim-indent-object')
 
     "Vim text objects for search matches
-    NeoBundle 'Raimondi/vim_search_objects'
+    call dein#add('Raimondi/vim_search_objects')
 
     " Vim plugin that adds a new url text object
-    NeoBundle 'LeonB/vim-textobj-url', {'depends': 'kana/vim-textobj-user'}
+    call dein#add('LeonB/vim-textobj-url', {'depends': 'kana/vim-textobj-user'})
 
 " }}}1
 
 " Libs {{{1
 
     "enable repeating supported plugin maps with \".\"
-    NeoBundle 'tpope/vim-repeat'
+    call dein#add('tpope/vim-repeat')
 
     " Find out which project a file belongs to, easy to use in scripts/mappings
-    NeoBundle 'dbakker/vim-projectroot'
+    call dein#add('dbakker/vim-projectroot')
 
     " Vim plugin: Testing framework for Vim script
-    " NeoBundle 'kana/vim-vspec'
+    " call dein#add('kana/vim-vspec')
 
     " Interactive command execution in Vim.
-    NeoBundle 'Shougo/vimproc', {
-                \ 'build' : {
-                \     'windows' : 'make -f make_mingw32.mak',
-                \     'cygwin' : 'make -f make_cygwin.mak',
-                \     'mac' : 'make -f make_mac.mak',
-                \     'unix' : 'make -f make_unix.mak',
-                \    },
-                \ }
+    call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 
     " Vim interface to Web API
-    " NeoBundle 'mattn/webapi-vim'
+    " call dein#add('mattn/webapi-vim')
 
 " }}}1
 
 " Utilities {{{1
 
     " Vim plugin for Livedown
-    " NeoBundle 'shime/vim-livedown'
+    " call dein#add('shime/vim-livedown')
 
     " Make Vim handle line and column numbers in file names with a minimum of fuss
-    NeoBundle 'kopischke/vim-fetch'
+    call dein#add('kopischke/vim-fetch')
 
 " }}}1
 
@@ -342,6 +326,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
     " EditorConfig plugin for Vim http://editorconfig.org
     " #slow-on-sshfs
-    NeoBundle 'editorconfig/editorconfig-vim'
+    call dein#add('editorconfig/editorconfig-vim')
 
 " }}}
+

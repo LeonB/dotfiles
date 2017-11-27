@@ -1,4 +1,5 @@
-runtime neobundle.vim
+" runtime neobundle.vim
+runtime dein.vim
 
 "set syntax highlighting on
 syntax on
