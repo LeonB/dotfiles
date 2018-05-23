@@ -19,4 +19,4 @@
 [core]
     excludesfile = /home/leon/.gitignore_global
 [url "git@bitbucket.org:"]
-	insteadOf = https://bitbucket.org/
+    insteadOf = https://bitbucket.org/
