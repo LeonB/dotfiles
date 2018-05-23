@@ -298,6 +298,9 @@
     "enable repeating supported plugin maps with \".\"
     call dein#add('tpope/vim-repeat')
 
+    " Repeat motions [for which a count was given]
+    call dein#add('github.com/Houl/repmo-vim')
+
     " Find out which project a file belongs to, easy to use in scripts/mappings
     call dein#add('dbakker/vim-projectroot')
 
