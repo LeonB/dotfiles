@@ -48,6 +48,9 @@
     " Twig syntax highlighting, snipMate, etc.
     call dein#add('qbbr/vim-twig')
 
+    " Arduino syntax files for Vim http://hardwarefun.com/projects/
+    call dein#add('sudar/vim-arduino-syntax')
+
 " }}}1
 
 " (Omni)completion {{{1
@@ -332,4 +335,3 @@
     call dein#add('editorconfig/editorconfig-vim')
 
 " }}}
-
