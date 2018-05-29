@@ -1,9 +1,6 @@
 [submodule ".linuxbrew"]
 	path = .linuxbrew
 	url = git@github.com:Homebrew/linuxbrew.git
-[submodule ".homebrew"]
-	path = .homebrew
-	url = https://github.com/Homebrew/brew.git
 [submodule ".config/nvim/bundles/repos/github.com/Shougo/dein.vim"]
 	path = .config/nvim/bundles/repos/github.com/Shougo/dein.vim
 	url = https://github.com/Shougo/dein.vim.git
