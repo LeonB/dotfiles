@@ -1,7 +1,7 @@
 export GOPATH=$HOME/Workspaces/go
 export PATH="$GOPATH/bin:$PATH"
 
-export GOROOT="$HOME/bin/go1.9/"
+export GOROOT="$HOME/bin/go1.10.2/"
 export PATH="$GOROOT/bin:$PATH"
 
 if program_exists go; then
