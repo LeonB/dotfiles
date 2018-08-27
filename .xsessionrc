@@ -23,15 +23,16 @@ setxkbmap -option caps:none   # Disable caps lock
 # Check if we have run-one available to us
 if isavailable xcape && isavailable run-one
 then
-    # Make Caps lock behave like Ctrl AND escape
-    # xcape -e 'Control_L=Escape'
-
     # Make Caps lock behave like escape
     # Control_L would match Ctrl AND Caps lock
-    run-one xcape -e '#66=Escape'
+    # If pressed longer then 100ms, ctrl is generated
+    run-one xcape -t 100 -e '#66=Escape'
 elif isavailable xcape
 then
-    xcape -e '#66=Escape'
+    # Make Caps lock behave like escape
+    # Control_L would match Ctrl AND Caps lock
+    # If pressed longer then 100ms, ctrl is generated
+    xcape -t 100 -e '#66=Escape'
 fi
 
 # Set touchpad options
