@@ -16,7 +16,7 @@
 " Use autocomplete: <C-x><C-o>
 
 " Set import path
-let g:go_bin_path = expand("~/.go/bin")
+" let g:go_bin_path = expand("~/.go/bin")
 
 " Disable auto installation of binaries
 let g:go_disable_autoinstall = 1
