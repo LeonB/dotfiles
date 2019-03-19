@@ -1,4 +1,4 @@
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
 
 if [ -x "$(command -v rbenv)" ]; then
     eval "$(rbenv init --no-rehash -)"

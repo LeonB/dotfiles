@@ -18,6 +18,9 @@
 " Set import path
 " let g:go_bin_path = expand("~/.go/bin")
 
+" ignore neovim version warnings
+let g:go_version_warning = 0
+
 " Disable auto installation of binaries
 let g:go_disable_autoinstall = 1
 

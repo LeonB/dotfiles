@@ -37,6 +37,7 @@
     call dein#add('xsbeats/vim-blade')
 
     " Go development plugin for Vim
+    " call dein#add('fatih/vim-go', { 'rev': '*' })
     call dein#add('fatih/vim-go')
 
     " mustache and handlebars mode for vim
@@ -51,6 +52,12 @@
     " Arduino syntax files for Vim http://hardwarefun.com/projects/
     call dein#add('sudar/vim-arduino-syntax')
 
+    " Syntax highlighting for jq files in vim/neovim
+    call dein#add('vito-c/jq.vim')
+
+    " A Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation.
+    call dein#add('jparise/vim-graphql')
+
 " }}}1
 
 " (Omni)completion {{{1
@@ -60,6 +67,11 @@
 
     " php manual doc
     call dein#add('drwX/php-manual.vim')
+
+    " call dein#add('autozimu/LanguageClient-neovim', {
+    "             \ 'rev': 'next',
+    "             \ 'build': 'bash install.sh',
+    "             \ })
 
     " call dein#add('tobyS/pdv', {'depends' :)
     "             \ [
@@ -302,7 +314,7 @@
     call dein#add('tpope/vim-repeat')
 
     " Repeat motions [for which a count was given]
-    call dein#add('github.com/Houl/repmo-vim')
+    call dein#add('Houl/repmo-vim')
 
     " Find out which project a file belongs to, easy to use in scripts/mappings
     call dein#add('dbakker/vim-projectroot')

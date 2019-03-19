@@ -55,6 +55,7 @@ set scrolloff=10
 set hlsearch              "highlight search results
 set incsearch             "incremental searching
 set inccommand=nosplit    "incremental search & replace
+se nostartofline          "don't jump to start of line when switching buffers
 
 " Fix slow syntax highlighting
 set synmaxcol=350           " stop highlighting wide columns
