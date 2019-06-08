@@ -15,6 +15,10 @@
   // Controls if the minimap is shown
   "editor.minimap.enabled": false,
 
+  // Enables font ligatures
+//   "editor.fontLigatures": true,
+//   "editor.fontFamily": "Fira Code",
+
 // File Explorer
 
 	// Number of editors shown in the Open Editors pane. Set it to 0 to hide the pane.
@@ -31,7 +35,7 @@
     // Use system clipboard for unnamed register.
 	// install xclip
 	"vim.useSystemClipboard": true,
-	"workbench.colorTheme": "Monokai Dimmed",
+	"workbench.colorTheme": "Monokai",
 
     "vim.insertModeKeyBindingsNonRecursive": [
         {
@@ -73,6 +77,16 @@
 				}
 			]
         },
+		{
+			"before": ["<leader>", "b", "d"],
+			"after": ["<Esc>"],
+			"commands": [
+				{
+					"command": "workbench.action.closeActiveEditor",
+					"args": []
+				}
+			]
+        },
         {
             "before": ["<C-]>"],
 			"commands": [
@@ -89,5 +103,10 @@
 
 	"vim.disableAnnoyingNeovimMessage": true,
 	"vim.disableAnnoyingGcMessage": true,
-	"window.zoomLevel": 0
+	"window.zoomLevel": 0,
+	"editor.renderWhitespace": "boundary",
+	"ruby.intellisense": "rubyLocate",
+	"workbench.statusBar.feedback.visible": false,
+	"window.titleBarStyle": "native",
+	"liveshare.featureSet": "stable"
 }

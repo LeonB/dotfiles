@@ -18,5 +18,10 @@
         "key": "ctrl+]",
         "command": "editor.action.goToDeclaration",
         "when": "vim.active && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "editor.action.previewDeclaration",
+        "when": "vim.active && editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
     }
 ]
