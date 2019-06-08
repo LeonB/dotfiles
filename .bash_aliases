@@ -26,8 +26,9 @@ alias slic3r='Slic3r-1.3.1-dev-880e9a5-x86_64.AppImage'
 alias cura='Cura-3.6.0.AppImage'
 # alias slic3rpe='Slic3rPE-1.41.0+linux64-full-201809010758.AppImage'
 alias slic3rpe-stable='Slic3rPE-1.41.2+linux64-full-201811221508.AppImage'
-alias slic3rpe='XLIB_SKIP_ARGB_VISUALS=1 Slic3rPE-1.42.0-beta+linux64-full-201903171406.AppImage'
+alias slic3rpe='XLIB_SKIP_ARGB_VISUALS=1 Slic3rPE-1.42.0-beta2+linux64-full-201904140843.AppImage'
+alias prusaslicer='XLIB_SKIP_ARGB_VISUALS=1 PrusaSlicer-2.0.0+linux64-201905201652.AppImage'
 alias openscad="$HOME/bin/OpenSCAD-Release-0-Build36.20.glibc2.14-x86_64.AppImage"
 alias freecad0.17="$HOME/bin/FreeCAD-0.17.13541.9948ee4.glibc2.17-x86_64.AppImage"
-alias freecad0.18="$HOME/bin/FreeCAD_0.18.15900_Conda_Py3Qt5_glibc2.12-x86_64.AppImage"
+alias freecad0.18="$HOME/bin/FreeCAD_0.18-16117-Linux-Conda_Py3Qt5_glibc2.12-x86_64.AppImage"
 alias freecad="freecad0.17"
