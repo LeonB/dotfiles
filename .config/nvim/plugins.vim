@@ -1,79 +1,79 @@
 " Syntax / File types  / Indenting {{{1
 
     "Puppet niceties for your Vim setup
-    " call dein#add('rodjek/vim-puppet')
+    " Plug 'rodjek/vim-puppet'
 
     " Vim/Ruby Configuration File
-    " call dein#add('vim-ruby/vim-ruby')
+    " Plug 'vim-ruby/vim-ruby'
 
     "PHP-Correct-Indenting VIM script
-    call dein#add('2072/PHP-Indenting-for-VIm')
+    Plug '2072/PHP-Indenting-for-VIm'
 
     " Cutting-edge vim css syntax file
-    call dein#add('JulesWang/css.vim')
+    Plug 'JulesWang/css.vim'
 
     "Vim syntax file for scss (Sassy CSS)
-    call dein#add('cakebaker/scss-syntax.vim')
+    Plug 'cakebaker/scss-syntax.vim'
 
     " Vastly improved Javascript indentation and syntax support in Vim.
-    call dein#add("pangloss/vim-javascript")
+    Plug 'pangloss/vim-javascript'
 
     " CoffeeScript support for vim
-    " call dein#add('kchmck/vim-coffee-script')
+    " Plug 'kchmck/vim-coffee-script'
 
     "Vim Markdown runtime files
-    call dein#add('tpope/vim-markdown')
+    Plug 'tpope/vim-markdown'
 
     " jinja plugins for vim (syntax and indent)
-    call dein#add('lepture/vim-jinja')
+    Plug 'lepture/vim-jinja'
 
     " Add additional support for Ansible in VIM
-    call dein#add('chase/vim-ansible-yaml')
+    Plug 'chase/vim-ansible-yaml'
 
     " nginx vim syntax
-    call dein#add('chr4/nginx.vim')
+    Plug 'chr4/nginx.vim'
 
     " Vim syntax highlighting for Blade templates.
-    call dein#add('xsbeats/vim-blade')
+    Plug 'xsbeats/vim-blade'
 
     " Go development plugin for Vim
-    " call dein#add('fatih/vim-go', { 'rev': '*' })
-    call dein#add('fatih/vim-go')
+    " Plug 'fatih/vim-go', { 'rev': '*' })
+    Plug 'fatih/vim-go'
 
     " mustache and handlebars mode for vim
-    " call dein#add('mustache/vim-mustache-handlebars')
+    " Plug 'mustache/vim-mustache-handlebars'
 
     " A better JSON for Vim
-    " call dein#add('elzr/vim-json')
+    " Plug 'elzr/vim-json'
 
     " Twig syntax highlighting, snipMate, etc.
-    call dein#add('qbbr/vim-twig')
+    Plug 'qbbr/vim-twig'
 
     " Arduino syntax files for Vim http://hardwarefun.com/projects/
-    call dein#add('sudar/vim-arduino-syntax')
+    Plug 'sudar/vim-arduino-syntax'
 
     " Syntax highlighting for jq files in vim/neovim
-    call dein#add('vito-c/jq.vim')
+    Plug 'vito-c/jq.vim'
 
     " A Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation.
-    call dein#add('jparise/vim-graphql')
+    Plug 'jparise/vim-graphql'
 
 " }}}1
 
 " (Omni)completion {{{1
 
     " Improved PHP omnicompletion
-    " call dein#add('shawncplus/phpcomplete.vim')
+    " Plug 'shawncplus/phpcomplete.vim'
 
     " php manual doc
-    call dein#add('drwX/php-manual.vim')
+    Plug 'drwX/php-manual.vim'
 
-    " call dein#add('autozimu/LanguageClient-neovim', {
+    " Plug 'autozimu/LanguageClient-neovim', {
     "             \ 'rev': 'next',
     "             \ 'build': 'bash install.sh',
     "             \ })
 
-    " call dein#add('tobyS/pdv', {'depends' :)
+    " Plug 'tobyS/pdv', {'depends' :)
     "             \ [
     "             \   'tobyS/vmustache',
     "             \   'SirVer/ultisnips',
@@ -84,186 +84,190 @@
 " Color schemes {{{1
 
     " Monokai colorschem
-    call dein#add('sickill/vim-monokai')
+    Plug 'sickill/vim-monokai'
 
     " Wombat for 256 color xterms
-    call dein#add('vim-scripts/wombat256.vim')
+    Plug 'vim-scripts/wombat256.vim'
 
     " Molokai color scheme for Vim
-    call dein#add('tomasr/molokai')
+    Plug 'tomasr/molokai'
 
     "Color theme Hemisu
-    call dein#add('noahfrederick/Hemisu')
+    Plug 'noahfrederick/Hemisu'
 
     "Color theme Bad Wolf
-    call dein#add('sjl/badwolf')
+    Plug 'sjl/badwolf'
 
     "precision colorscheme for the vim text editor
-    call dein#add('altercation/vim-colors-solarized')
+    Plug 'altercation/vim-colors-solarized'
 
     " Dark, high contrast vim colorscheme
-    call dein#add('MaxSt/FlatColor')
+    Plug 'MaxSt/FlatColor'
 
     " Dark, high contrast gvim colorscheme inspired by molokai and bad wolf.
-    call dein#add('nielsmadan/harlequin')
+    Plug 'nielsmadan/harlequin'
 
     " precision colorscheme for the vim text editor
-    call dein#add('altercation/vim-colors-solarized')
+    Plug 'altercation/vim-colors-solarized'
 
     " a low-contrast Vim color scheme based on Seoul Colors
-    call dein#add('junegunn/seoul256.vim')
+    Plug 'junegunn/seoul256.vim'
 
     " A GUI & 256 color port of the Railscasts Textmate theme to Vim
-    call dein#add('dhruvasagar/vim-railscasts-theme')
+    Plug 'dhruvasagar/vim-railscasts-theme'
 
     " Sexier version of Railscasts vim color scheme / theme
-    call dein#add('oguzbilgic/sexy-railscasts-theme')
+    Plug 'oguzbilgic/sexy-railscasts-theme'
 
     " The original IR_Black color scheme for vim
-    call dein#add('twerth/ir_black')
+    Plug 'twerth/ir_black'
 
     " A colorful, dark color scheme for Vim
-    call dein#add('nanotech/jellybeans.vim')
+    Plug 'nanotech/jellybeans.vim'
 
     " Gary Bernhardt's grb256 vim theme packaged to work with Pathogen/Vundle
-    call dein#add('quanganhdo/grb256')
+    Plug 'quanganhdo/grb256'
 
     " codeschool vim theme
-    call dein#add('29decibel/codeschool-vim-theme')
+    Plug '29decibel/codeschool-vim-theme'
 
     " Zenburn is a low-contrast color scheme for Vim
-    call dein#add('jnurmine/Zenburn')
+    Plug 'jnurmine/Zenburn'
 
     " A fork of desert256.vim aims to make it a bit warm and more friendly for
     " my eyes.
-    call dein#add('rainux/vim-desert-warm-256')
+    Plug 'rainux/vim-desert-warm-256'
 
     " A slightly-modified desert theme, for 88- and 256-color xterms
-    call dein#add('vim-scripts/desert256.vim')
+    Plug 'vim-scripts/desert256.vim'
 
     " summerfruit color scheme in 256 colors
-    call dein#add('vim-scripts/summerfruit256.vim')
+    Plug 'vim-scripts/summerfruit256.vim'
 
     " light color scheme
-    call dein#add('therubymug/vim-pyte')
+    Plug 'therubymug/vim-pyte'
 
     " Color scheme for the Gnome2 "nuvola" theme
-    call dein#add('vim-scripts/nuvola.vim')
+    Plug 'vim-scripts/nuvola.vim'
 
     " A colorscheme and syntax for Vim
-    call dein#add('itchyny/landscape.vim')
+    Plug 'itchyny/landscape.vim'
 
     " A dark theme for Atom, Alfred, Chrome DevTools, iTerm, Sublime Text,
     " Textmate, Terminal.app, Vim, Xcode, Zsh
     " look into on_source
-    call dein#add('zenorocha/dracula-theme', {'rtp' : 'vim'})
+    Plug 'zenorocha/dracula-theme'
 
-    call dein#add('chriskempson/tomorrow-theme', {'rtp': 'vim'})
+    Plug 'chriskempson/tomorrow-theme'
 
     " A vim colorscheme based on Github's syntax highlighting.
-    call dein#add('endel/vim-github-colorscheme')
+    Plug 'endel/vim-github-colorscheme'
 
     " Dark-background GUI color scheme
-    call dein#add('vim-scripts/Liquid-Carbon')
+    Plug 'vim-scripts/Liquid-Carbon'
 
     " A slightly modified version of the original mustang-colorscheme for vim by hcalves.
-    call dein#add('croaker/mustang-vim')
+    Plug 'croaker/mustang-vim'
 
     " Spiritual successor to Skittles Dark
-    call dein#add('shawncplus/skittles_berry')
+    Plug 'shawncplus/skittles_berry'
 
     " Port of the Sunburst TextMate theme to Vim
-    call dein#add('gigamo/sunburst.vim')
+    Plug 'gigamo/sunburst.vim'
 
     " A(nother) port of TextMate's Twilight theme to Vim.
-    call dein#add('matthewtodd/vim-twilight')
-
+    Plug 'matthewtodd/vim-twilight'
 
     " Dark gray color scheme sharing some similarities with Desert
-    call dein#add('vim-scripts/Wombat')
+    Plug 'vim-scripts/Wombat'
 
     " Lucius color scheme for vim
-    call dein#add('jonathanfilip/vim-lucius')
+    Plug 'jonathanfilip/vim-lucius'
 
     " Vim color scheme
-    call dein#add('zeis/vim-kolor')
+    Plug 'zeis/vim-kolor'
 
     " Let's keep Vim warm
-    call dein#add('nice/sweater')
+    Plug 'nice/sweater'
 
     " Retro groove color scheme for Vim
-    call dein#add('morhetz/gruvbox')
+    Plug 'morhetz/gruvbox'
 
     " The colorscheme with neovim in mind
-    call dein#add('freeo/vim-kalisi')
+    Plug 'freeo/vim-kalisi'
 
-    call dein#add('geoffharcourt/one-dark.vim')
+    Plug 'geoffharcourt/one-dark.vim'
 
 " }}}1
 
 " Navigation {{{1
 
     " Powerful file explorer implemented by Vim script
-    call dein#add('Shougo/vimfiler')
+    Plug 'Shougo/vimfiler'
+
+    " The dark powered file explorer implementation
+    Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
     " Unite and create user interfaces
-    call dein#add('Shougo/unite.vim')
+    Plug 'Shougo/unite.vim'
 
     " MRU plugin includes unite.vim MRU sources
-    call dein#add('Shougo/neomru.vim')
+    Plug 'Shougo/neomru.vim'
 
     "extended % matching for HTML
-    call dein#add('vim-scripts/matchit.zip')
+    Plug 'vim-scripts/matchit.zip'
 
     "Updates entries in a tags file automatically when saving
-    " call dein#add('craigemery/vim-autotag')
+    " Plug 'craigemery/vim-autotag'
 
     " Automated tag file generation and syntax highlighting of tags in Vim
     " #slow-on-sshfs
-    " call dein#add('xolox/vim-easytags')
-    " call dein#add('xolox/vim-misc')
+    " Plug 'xolox/vim-easytags'
+    " Plug 'xolox/vim-misc'
 
     " Ctags generator for Vim (written in Vimscript)
-    " call dein#add('szw/vim-tags')
+    " Plug 'szw/vim-tags'
 
     " Vim plugin that displays tags in a window, ordered by class etc.
-    call dein#add('majutsushi/tagbar')
+    Plug 'majutsushi/tagbar'
 
     " A 'jump to previous buffer' command that behaves as you would expect
-    call dein#add('LeonB/vim-previous-buffer')
+    Plug 'LeonB/vim-previous-buffer'
+
+    Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " }}}1
 
 " GUI {{{1
 
     " Highlight colors in css files
-    call dein#add('ap/vim-css-color')
+    Plug 'ap/vim-css-color'
 
     " A light and configurable statusline/tabline for Vim
-    call dein#add('itchyny/lightline.vim')
+    Plug 'itchyny/lightline.vim'
 
 " }}}1
 
 " Commands {{{1
 
     " commentary.vim: comment stuff out
-    call dein#add('tpope/vim-commentary')
+    Plug 'tpope/vim-commentary'
 
     "Syntax checking hacks for Vim"
-    call dein#add('scrooloose/syntastic')
+    Plug 'scrooloose/syntastic'
 
     "Provides insert mode auto-completion for quotes, parens, brackets, etc
-    call dein#add('Raimondi/delimitMate')
+    Plug 'Raimondi/delimitMate'
 
     "Vim script for text filtering and alignment
-    call dein#add('godlygeek/tabular')
+    Plug 'godlygeek/tabular'
 
     " This is an atomic save function for vim
-    " call dein#add('vim-scripts/Atomic-Save')
+    " Plug 'vim-scripts/Atomic-Save'
 
     " Delete buffers and close files in Vim without closing your windows or
     " messing up your layout
-    call dein#add('moll/vim-bbye')
+    Plug 'moll/vim-bbye'
 
     " abolish.vim: easily search for, substitute, and abbreviate multiple variants of a word
     " convert cases
@@ -272,71 +276,71 @@
     " cr_ or crs to convert to foo_bar
     " cru to convert to FOO_BAR
     " cr- to convert to foo-bar
-    call dein#add('tpope/vim-abolish')
+    Plug 'tpope/vim-abolish'
 
 " }}}1
 
 " Text objects {{{1
 
     "quoting/parenthesizing made simple
-    call dein#add('tpope/vim-surround')
+    Plug 'tpope/vim-surround'
 
     "Vim plugin that provides additional text objects (pair, quote, separator)
-    call dein#add('wellle/targets.vim')
+    Plug 'wellle/targets.vim'
 
     " Vim plugin: Text objects for functions
-    call dein#add('kana/vim-textobj-user')
+    Plug 'kana/vim-textobj-user'
 
     " Vim plugin: Text objects for functions
-    call dein#add('kana/vim-textobj-function', {'depends': 'kana/vim-textobj-user'})
+    Plug 'kana/vim-textobj-function'
 
     " Text object for php functions
-    call dein#add('kentaro/vim-textobj-function-php', {'depends': 'kana/vim-textobj-user'})
+    Plug 'kentaro/vim-textobj-function-php'
 
     " Vim plugin: Text objects for the current line
-    call dein#add('kana/vim-textobj-line')
+    Plug 'kana/vim-textobj-line'
 
     " Vim plugin that defines a new text object representing lines of code at
     " the same indent level. Useful for python/vim scripts, etc
-    call dein#add('michaeljsmith/vim-indent-object')
+    Plug 'michaeljsmith/vim-indent-object'
 
     "Vim text objects for search matches
-    call dein#add('Raimondi/vim_search_objects')
+    Plug 'Raimondi/vim_search_objects'
 
     " Vim plugin that adds a new url text object
-    call dein#add('LeonB/vim-textobj-url', {'depends': 'kana/vim-textobj-user'})
+    Plug 'LeonB/vim-textobj-url'
 
 " }}}1
 
 " Libs {{{1
 
     "enable repeating supported plugin maps with \".\"
-    call dein#add('tpope/vim-repeat')
+    Plug 'tpope/vim-repeat'
 
     " Repeat motions [for which a count was given]
-    call dein#add('Houl/repmo-vim')
+    Plug 'Houl/repmo-vim'
 
     " Find out which project a file belongs to, easy to use in scripts/mappings
-    call dein#add('dbakker/vim-projectroot')
+    Plug 'dbakker/vim-projectroot'
 
     " Vim plugin: Testing framework for Vim script
-    " call dein#add('kana/vim-vspec')
+    " Plug 'kana/vim-vspec'
 
     " Interactive command execution in Vim.
-    call dein#add('Shougo/vimproc.vim', {'build': 'make'})
+    Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 
     " Vim interface to Web API
-    " call dein#add('mattn/webapi-vim')
+    " Plug 'mattn/webapi-vim'
 
 " }}}1
 
 " Utilities {{{1
 
     " Vim plugin for Livedown
-    " call dein#add('shime/vim-livedown')
+    " Plug 'shime/vim-livedown'
 
     " Make Vim handle line and column numbers in file names with a minimum of fuss
-    call dein#add('kopischke/vim-fetch')
+    Plug 'kopischke/vim-fetch'
 
 " }}}1
 
@@ -344,6 +348,6 @@
 
     " EditorConfig plugin for Vim http://editorconfig.org
     " #slow-on-sshfs
-    call dein#add('editorconfig/editorconfig-vim')
+    Plug 'editorconfig/editorconfig-vim'
 
 " }}}

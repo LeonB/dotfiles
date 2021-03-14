@@ -51,6 +51,16 @@ vnoremap P "_dP
 " Make yaking lines consistent with D and C
 nnoremap Y y$
 
+" Copy filenames to clipboard
+nmap <leader>cs :let @+=expand("%")<CR>
+nmap <leader>cl :let @+=expand("%:p")<CR>
+
+" Make ctrl-s to save
+nmap <c-s> :w<cr>
+imap <c-s> <esc>:w<cr>a
+imap <c-s> <esc>:w<cr>
+
 runtime macros/smarthome_end.vim
 runtime macros/linenumber_toggle.vim
+runtime macros/move_lines.vim
 runtime macros/move_lines.vim
