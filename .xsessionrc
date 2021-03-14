@@ -41,5 +41,11 @@ synclient RightButtonAreaLeft=0
 synclient RightButtonAreaTop=0
 # Disable coasting after scrolling
 # synclient CoastingSpeed=0
+# Disable one-finger tap
+synclient TapButton1=0
+# Disable two-finger tap
+synclient TapButton2=0
+# enable palm detection
+synclient PalmDetect=1
 
 # vim: ft=sh
