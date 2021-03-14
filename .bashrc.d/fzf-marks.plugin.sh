@@ -20,6 +20,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+if [ ! -n "$BASH" ]; then
+    return
+fi
+
 command -v fzf >/dev/null 2>&1 || return
 
 if [[ -z "${FZF_MARKS_FILE}" ]] ; then

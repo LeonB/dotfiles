@@ -1,8 +1,9 @@
 export GOPATH=$HOME/Workspaces/go
 export PATH="$GOPATH/bin:$PATH"
+export GOPRIVATE=bitbucket.org/tim_online
 
-export GOROOT="$HOME/bin/go1.12/"
-export PATH="$GOROOT/bin:$PATH"
+# export GOROOT="$HOME/bin/go1.14/"
+# export PATH="$GOROOT/bin:$PATH"
 
 # export GO111MODULE="on"
 
