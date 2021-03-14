@@ -18,10 +18,8 @@ alias git-root='cd $(git rev-parse --show-toplevel)'
 alias pwgen='/usr/bin/pwgen --capitalize --secure --symbols 22'
 alias bean='sudo $HOME/.local/bin/bean'
 alias vim='nvim'
-alias nvim='nvim.appimage'
 # alias rtv='LC_ALL=C.UTF-8 LANG=C.UTF-8 rtv-lbo.rtv'
 alias fritzing="QT_AUTO_SCREEN_SCALE_FACTOR=0.75 $HOME/bin/fritzing-0.9.3b.linux.AMD64/Fritzing"
-alias postman="$HOME/bin/Postman/Postman"
 alias slic3r='Slic3r-1.3.1-dev-880e9a5-x86_64.AppImage'
 alias cura='Cura-3.6.0.AppImage'
 # alias slic3rpe='Slic3rPE-1.41.0+linux64-full-201809010758.AppImage'
